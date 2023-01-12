@@ -83,7 +83,6 @@
 		2EFF844829704F8200984165 = {
 			isa = PBXGroup;
 			children = (
-				2EFF848629706F0B00984165 /* CardView.swift */,
 				2EFF845329704F8200984165 /* Ariel */,
 				2EFF846A29704F8400984165 /* ArielTests */,
 				2EFF847429704F8400984165 /* ArielUITests */,
@@ -111,6 +110,7 @@
 				2EFF845D29704F8300984165 /* Assets.xcassets */,
 				2EFF845F29704F8300984165 /* LaunchScreen.storyboard */,
 				2EFF846229704F8300984165 /* Info.plist */,
+				2EFF848629706F0B00984165 /* CardView.swift */,
 				2EFF848429706B3E00984165 /* GameplayCardView.swift */,
 			);
 			path = Ariel;
