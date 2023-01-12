@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EFF845529704F8200984165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845429704F8200984165 /* AppDelegate.swift */; };
+		2EFF845729704F8200984165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845629704F8200984165 /* SceneDelegate.swift */; };
+		2EFF845929704F8200984165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845829704F8200984165 /* ViewController.swift */; };
+		2EFF845C29704F8200984165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845A29704F8200984165 /* Main.storyboard */; };
+		2EFF845E29704F8300984165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845D29704F8300984165 /* Assets.xcassets */; };
+		2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845F29704F8300984165 /* LaunchScreen.storyboard */; };
+		2EFF846C29704F8400984165 /* ArielTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF846B29704F8400984165 /* ArielTests.swift */; };
+		2EFF847629704F8400984165 /* ArielUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF847529704F8400984165 /* ArielUITests.swift */; };
+		2EFF847829704F8400984165 /* ArielUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF847729704F8400984165 /* ArielUITestsLaunchTests.swift */; };
+		2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF848429706B3E00984165 /* GameplayCardView.swift */; };
+		2EFF848729706F0B00984165 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF848629706F0B00984165 /* CardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EFF846829704F8400984165 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EFF844929704F8200984165 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EFF845029704F8200984165;
+			remoteInfo = Ariel;
+		};
+		2EFF847229704F8400984165 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EFF844929704F8200984165 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EFF845029704F8200984165;
+			remoteInfo = Ariel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2EFF845129704F8200984165 /* Ariel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ariel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFF845429704F8200984165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2EFF845629704F8200984165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2EFF845829704F8200984165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2EFF845B29704F8200984165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2EFF845D29704F8300984165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2EFF846029704F8300984165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2EFF846229704F8300984165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EFF846729704F8400984165 /* ArielTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArielTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFF846B29704F8400984165 /* ArielTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArielTests.swift; sourceTree = "<group>"; };
+		2EFF847129704F8400984165 /* ArielUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArielUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFF847529704F8400984165 /* ArielUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArielUITests.swift; sourceTree = "<group>"; };
+		2EFF847729704F8400984165 /* ArielUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArielUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2EFF848429706B3E00984165 /* GameplayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayCardView.swift; sourceTree = "<group>"; };
+		2EFF848629706F0B00984165 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EFF844E29704F8200984165 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EFF846429704F8400984165 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EFF846E29704F8400984165 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EFF844829704F8200984165 = {
+			isa = PBXGroup;
+			children = (
+				2EFF848629706F0B00984165 /* CardView.swift */,
+				2EFF845329704F8200984165 /* Ariel */,
+				2EFF846A29704F8400984165 /* ArielTests */,
+				2EFF847429704F8400984165 /* ArielUITests */,
+				2EFF845229704F8200984165 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EFF845229704F8200984165 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EFF845129704F8200984165 /* Ariel.app */,
+				2EFF846729704F8400984165 /* ArielTests.xctest */,
+				2EFF847129704F8400984165 /* ArielUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EFF845329704F8200984165 /* Ariel */ = {
+			isa = PBXGroup;
+			children = (
+				2EFF845429704F8200984165 /* AppDelegate.swift */,
+				2EFF845629704F8200984165 /* SceneDelegate.swift */,
+				2EFF845829704F8200984165 /* ViewController.swift */,
+				2EFF845A29704F8200984165 /* Main.storyboard */,
+				2EFF845D29704F8300984165 /* Assets.xcassets */,
+				2EFF845F29704F8300984165 /* LaunchScreen.storyboard */,
+				2EFF846229704F8300984165 /* Info.plist */,
+				2EFF848429706B3E00984165 /* GameplayCardView.swift */,
+			);
+			path = Ariel;
+			sourceTree = "<group>";
+		};
+		2EFF846A29704F8400984165 /* ArielTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EFF846B29704F8400984165 /* ArielTests.swift */,
+			);
+			path = ArielTests;
+			sourceTree = "<group>";
+		};
+		2EFF847429704F8400984165 /* ArielUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2EFF847529704F8400984165 /* ArielUITests.swift */,
+				2EFF847729704F8400984165 /* ArielUITestsLaunchTests.swift */,
+			);
+			path = ArielUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EFF845029704F8200984165 /* Ariel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EFF847B29704F8400984165 /* Build configuration list for PBXNativeTarget "Ariel" */;
+			buildPhases = (
+				2EFF844D29704F8200984165 /* Sources */,
+				2EFF844E29704F8200984165 /* Frameworks */,
+				2EFF844F29704F8200984165 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ariel;
+			productName = Ariel;
+			productReference = 2EFF845129704F8200984165 /* Ariel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EFF846629704F8400984165 /* ArielTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EFF847E29704F8400984165 /* Build configuration list for PBXNativeTarget "ArielTests" */;
+			buildPhases = (
+				2EFF846329704F8400984165 /* Sources */,
+				2EFF846429704F8400984165 /* Frameworks */,
+				2EFF846529704F8400984165 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EFF846929704F8400984165 /* PBXTargetDependency */,
+			);
+			name = ArielTests;
+			productName = ArielTests;
+			productReference = 2EFF846729704F8400984165 /* ArielTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2EFF847029704F8400984165 /* ArielUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EFF848129704F8400984165 /* Build configuration list for PBXNativeTarget "ArielUITests" */;
+			buildPhases = (
+				2EFF846D29704F8400984165 /* Sources */,
+				2EFF846E29704F8400984165 /* Frameworks */,
+				2EFF846F29704F8400984165 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EFF847329704F8400984165 /* PBXTargetDependency */,
+			);
+			name = ArielUITests;
+			productName = ArielUITests;
+			productReference = 2EFF847129704F8400984165 /* ArielUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EFF844929704F8200984165 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					2EFF845029704F8200984165 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					2EFF846629704F8400984165 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 2EFF845029704F8200984165;
+					};
+					2EFF847029704F8400984165 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 2EFF845029704F8200984165;
+					};
+				};
+			};
+			buildConfigurationList = 2EFF844C29704F8200984165 /* Build configuration list for PBXProject "Ariel" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EFF844829704F8200984165;
+			productRefGroup = 2EFF845229704F8200984165 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EFF845029704F8200984165 /* Ariel */,
+				2EFF846629704F8400984165 /* ArielTests */,
+				2EFF847029704F8400984165 /* ArielUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EFF844F29704F8200984165 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */,
+				2EFF845E29704F8300984165 /* Assets.xcassets in Resources */,
+				2EFF845C29704F8200984165 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EFF846529704F8400984165 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EFF846F29704F8400984165 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EFF844D29704F8200984165 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EFF845929704F8200984165 /* ViewController.swift in Sources */,
+				2EFF845529704F8200984165 /* AppDelegate.swift in Sources */,
+				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
+				2EFF845729704F8200984165 /* SceneDelegate.swift in Sources */,
+				2EFF848729706F0B00984165 /* CardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EFF846329704F8400984165 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EFF846C29704F8400984165 /* ArielTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EFF846D29704F8400984165 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EFF847829704F8400984165 /* ArielUITestsLaunchTests.swift in Sources */,
+				2EFF847629704F8400984165 /* ArielUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EFF846929704F8400984165 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EFF845029704F8200984165 /* Ariel */;
+			targetProxy = 2EFF846829704F8400984165 /* PBXContainerItemProxy */;
+		};
+		2EFF847329704F8400984165 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EFF845029704F8200984165 /* Ariel */;
+			targetProxy = 2EFF847229704F8400984165 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2EFF845A29704F8200984165 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EFF845B29704F8200984165 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2EFF845F29704F8300984165 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EFF846029704F8300984165 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EFF847929704F8400984165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2EFF847A29704F8400984165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EFF847C29704F8400984165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PWV57K9HFD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ariel/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eduardoliveira.Ariel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2EFF847D29704F8400984165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PWV57K9HFD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ariel/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eduardoliveira.Ariel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2EFF847F29704F8400984165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PWV57K9HFD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eduardoliveira.ArielTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ariel.app/Ariel";
+			};
+			name = Debug;
+		};
+		2EFF848029704F8400984165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PWV57K9HFD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eduardoliveira.ArielTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ariel.app/Ariel";
+			};
+			name = Release;
+		};
+		2EFF848229704F8400984165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PWV57K9HFD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eduardoliveira.ArielUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ariel;
+			};
+			name = Debug;
+		};
+		2EFF848329704F8400984165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PWV57K9HFD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eduardoliveira.ArielUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ariel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EFF844C29704F8200984165 /* Build configuration list for PBXProject "Ariel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EFF847929704F8400984165 /* Debug */,
+				2EFF847A29704F8400984165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EFF847B29704F8400984165 /* Build configuration list for PBXNativeTarget "Ariel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EFF847C29704F8400984165 /* Debug */,
+				2EFF847D29704F8400984165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EFF847E29704F8400984165 /* Build configuration list for PBXNativeTarget "ArielTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EFF847F29704F8400984165 /* Debug */,
+				2EFF848029704F8400984165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EFF848129704F8400984165 /* Build configuration list for PBXNativeTarget "ArielUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EFF848229704F8400984165 /* Debug */,
+				2EFF848329704F8400984165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EFF844929704F8200984165 /* Project object */;
+}
