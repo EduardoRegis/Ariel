@@ -9,20 +9,25 @@ import SwiftUI
 
 struct CardView: View {
     
-    var person: String
+    var dialogue: Dialogue
+    
+    @State private var textCard: String = ""
     @State private var offset = CGSize.zero
-    @State private var color: Color = .black
+    @State private var color: Color = .clear
     
     var body: some View {
         ZStack {
+            Image(dialogue.imageName)
+                .resizable()
+                .frame(width: 280, height: 280)
             Rectangle()
                 .frame(width: 280, height: 280)
                 .border(.white, width: 6.0)
                 .cornerRadius(4.0)
-                .foregroundColor(color.opacity(0.9))
+                .foregroundColor(color.opacity(0.7))
                 .shadow(radius: 4)
             HStack {
-                Text(person)
+                Text(textCard)
                     .font(.largeTitle)
                     .foregroundColor(.white)
             }
@@ -35,42 +40,55 @@ struct CardView: View {
                 withAnimation {
                     changeColor(width: offset.width)
                 }
+                changeText(width: offset.width)
             } .onEnded { _ in
                 withAnimation {
                     swipeCard(width: offset.width)
                     changeColor(width: offset.width)
                 }
+                changeText(width: offset.width)
             }
         )
     }
     
     func swipeCard(width: CGFloat) {
         switch width {
-        case -500...(-150):
-            print("\(person) removed")
+        case -500...(-100):
+            print("\(dialogue.leftCardText)")
             offset = CGSize(width: -500 , height: 0)
-        case 150...500:
-            print("\(person) added")
+        case 100...500:
+            print("\(dialogue.rightCardText)")
             offset = CGSize(width: 500 , height: 0)
         default:
             offset = .zero
         }
     }
     
+    func changeText(width: CGFloat) {
+        switch width {
+        case -500...(-100):
+            textCard = dialogue.leftCardText
+        case 100...500:
+            textCard = dialogue.rightCardText
+        default:
+            textCard = ""
+        }
+    }
+    
     func changeColor(width: CGFloat) {
         switch width {
-        case -500...(-130):
-            color = .red
-        case 130...500:
-            color = .green
+        case -500...(-100):
+            color = .white
+        case 100...500:
+            color = .white
         default:
-            color = .black
+            color = .clear
         }
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(person: "Teste")
+        CardView(dialogue: Dialogues.firstText.getDialogue())
     }
 }

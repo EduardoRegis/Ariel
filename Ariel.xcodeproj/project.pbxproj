@@ -18,6 +18,8 @@
 		2EFF847829704F8400984165 /* ArielUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF847729704F8400984165 /* ArielUITestsLaunchTests.swift */; };
 		2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF848429706B3E00984165 /* GameplayCardView.swift */; };
 		2EFF848729706F0B00984165 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF848629706F0B00984165 /* CardView.swift */; };
+		2EFF848A2970838600984165 /* DialogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF84892970838600984165 /* DialogueModel.swift */; };
+		2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF848B2970841C00984165 /* DialoguesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		2EFF847729704F8400984165 /* ArielUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArielUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2EFF848429706B3E00984165 /* GameplayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayCardView.swift; sourceTree = "<group>"; };
 		2EFF848629706F0B00984165 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2EFF84892970838600984165 /* DialogueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueModel.swift; sourceTree = "<group>"; };
+		2EFF848B2970841C00984165 /* DialoguesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialoguesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		2EFF845329704F8200984165 /* Ariel */ = {
 			isa = PBXGroup;
 			children = (
+				2EFF84882970835900984165 /* GameplayCard */,
 				2EFF845429704F8200984165 /* AppDelegate.swift */,
 				2EFF845629704F8200984165 /* SceneDelegate.swift */,
 				2EFF845829704F8200984165 /* ViewController.swift */,
@@ -110,8 +115,6 @@
 				2EFF845D29704F8300984165 /* Assets.xcassets */,
 				2EFF845F29704F8300984165 /* LaunchScreen.storyboard */,
 				2EFF846229704F8300984165 /* Info.plist */,
-				2EFF848629706F0B00984165 /* CardView.swift */,
-				2EFF848429706B3E00984165 /* GameplayCardView.swift */,
 			);
 			path = Ariel;
 			sourceTree = "<group>";
@@ -131,6 +134,17 @@
 				2EFF847729704F8400984165 /* ArielUITestsLaunchTests.swift */,
 			);
 			path = ArielUITests;
+			sourceTree = "<group>";
+		};
+		2EFF84882970835900984165 /* GameplayCard */ = {
+			isa = PBXGroup;
+			children = (
+				2EFF848629706F0B00984165 /* CardView.swift */,
+				2EFF848429706B3E00984165 /* GameplayCardView.swift */,
+				2EFF84892970838600984165 /* DialogueModel.swift */,
+				2EFF848B2970841C00984165 /* DialoguesList.swift */,
+			);
+			path = GameplayCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +281,8 @@
 				2EFF845929704F8200984165 /* ViewController.swift in Sources */,
 				2EFF845529704F8200984165 /* AppDelegate.swift in Sources */,
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
+				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,
+				2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */,
 				2EFF845729704F8200984165 /* SceneDelegate.swift in Sources */,
 				2EFF848729706F0B00984165 /* CardView.swift in Sources */,
 			);
