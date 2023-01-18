@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     
+    @Binding var nextDialogue: String
     var dialogue: Dialogue
     
     @State private var textCard: String = ""
@@ -46,6 +47,7 @@ struct CardView: View {
                     swipeCard(width: offset.width)
                     changeColor(width: offset.width)
                 }
+                nextCard(width: offset.width)
                 changeText(width: offset.width)
             }
         )
@@ -54,13 +56,24 @@ struct CardView: View {
     func swipeCard(width: CGFloat) {
         switch width {
         case -500...(-100):
-            print("\(dialogue.leftCardText)")
+//            print("\(dialogue.leftCardText)")
             offset = CGSize(width: -500 , height: 0)
         case 100...500:
-            print("\(dialogue.rightCardText)")
+//            print("\(dialogue.rightCardText)")
             offset = CGSize(width: 500 , height: 0)
         default:
             offset = .zero
+        }
+    }
+    
+    func nextCard(width: CGFloat) {
+        switch width {
+        case -500...(-100):
+            self.nextDialogue = dialogue.nextLeftDialogue ?? ""
+        case 100...500:
+            self.nextDialogue = dialogue.nextRightDialogue ?? ""
+        default:
+            break
         }
     }
     
@@ -84,11 +97,5 @@ struct CardView: View {
         default:
             color = .clear
         }
-    }
-}
-
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(dialogue: Dialogues.firstText.getDialogue())
     }
 }
