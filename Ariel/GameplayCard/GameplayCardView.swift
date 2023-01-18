@@ -10,8 +10,14 @@ import SwiftUI
 struct GameplayCardView: View {
 
     @State private var dialogue: Dialogue = Dialogues.firstText.getDialogue()
+    @State var nextDialogue: String = ""
+    // Control variables to auto filling description text
     @State private var descriptionText: String = ""
-    @State var nextDialogue: String = "" 
+    @State private var isTextTimerActive = false
+    @State private var stringCounter: Int = 0
+    @State private var stringLimit: Int = 10
+    
+    let textTimer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
     
     var body: some View {
         
@@ -23,15 +29,25 @@ struct GameplayCardView: View {
                 .frame(width: gp.size.width, height: gp.size.height * 0.2)
                 VStack {
                     Text(self.descriptionText)
-                        .onChange(of: dialogue.descriptionText)
+                        .onChange(of: self.dialogue.descriptionText)
                         { newValue in
-                            for char in newValue {
-                                self.descriptionText += "\(char)"
-                                print(self.descriptionText)
-                            }
+                            self.descriptionText = ""
+                            isTextTimerActive.toggle()
+                            self.stringLimit = newValue.count
                         }
                 }
                 .frame(width: gp.size.width * 0.6, height: gp.size.height * 0.3)
+                .onReceive(textTimer, perform: { _ in
+                    guard isTextTimerActive else { return }
+                    
+                    if self.descriptionText != self.dialogue.descriptionText {
+                        self.descriptionText += self.dialogue.descriptionText[stringCounter]
+                        stringCounter += 1
+                    } else {
+                        isTextTimerActive = false
+                        stringCounter = 0
+                    }
+                })
                 VStack {
                     ZStack {
                         Rectangle()
@@ -57,6 +73,8 @@ struct GameplayCardView: View {
             // TODO: - Carregar aqui o progresso do usuário
             let data = Dialogues.firstText
             self.dialogue = data.getDialogue()
+            isTextTimerActive.toggle()
+            self.stringLimit = self.dialogue.descriptionText.count
         }
     }
 }

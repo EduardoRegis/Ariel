@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F0F77297839AD00D37CB4 /* StringSplited.swift */; };
 		2EFF845529704F8200984165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845429704F8200984165 /* AppDelegate.swift */; };
 		2EFF845729704F8200984165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845629704F8200984165 /* SceneDelegate.swift */; };
 		2EFF845929704F8200984165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845829704F8200984165 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E0F0F77297839AD00D37CB4 /* StringSplited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSplited.swift; sourceTree = "<group>"; };
 		2EFF845129704F8200984165 /* Ariel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ariel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFF845429704F8200984165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EFF845629704F8200984165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0F0F762978399600D37CB4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E0F0F77297839AD00D37CB4 /* StringSplited.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2EFF844829704F8200984165 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		2EFF845329704F8200984165 /* Ariel */ = {
 			isa = PBXGroup;
 			children = (
+				2E0F0F762978399600D37CB4 /* Extensions */,
 				2EFF84882970835900984165 /* GameplayCard */,
 				2EFF845429704F8200984165 /* AppDelegate.swift */,
 				2EFF845629704F8200984165 /* SceneDelegate.swift */,
@@ -280,6 +291,7 @@
 			files = (
 				2EFF845929704F8200984165 /* ViewController.swift in Sources */,
 				2EFF845529704F8200984165 /* AppDelegate.swift in Sources */,
+				2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */,
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
 				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,
 				2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */,
