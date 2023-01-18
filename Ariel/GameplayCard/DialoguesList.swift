@@ -31,10 +31,15 @@ class DialogueManager {
 }
 
 enum Dialogues {
-    case firstText, secondText, thirdText
+    case nullText, firstText, secondText, thirdText
     
     func getDialogue() -> Dialogue {
         switch self {
+        case .nullText:
+            return Dialogue(descriptionText: "",
+                            leftCardText: "",
+                            rightCardText: "",
+                            imageName: "")
         case .firstText:
             return Dialogue(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             leftCardText: "Nada a ver",
@@ -54,7 +59,7 @@ enum Dialogues {
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "Poder",
-                            nextLeftDialogue: "sixthText",
+                            nextLeftDialogue: "secondText",
                             nextRightDialogue: "seventhText")
         }
     }
