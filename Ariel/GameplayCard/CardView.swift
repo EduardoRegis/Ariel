@@ -7,13 +7,17 @@
 
 import SwiftUI
 
+let defaultOutOfBoundsPosition: CGSize = CGSize(width: -300 , height: -2500)
+
 struct CardView: View {
     
     @Binding var nextDialogue: String
+    @Binding var isTextTimerActive: Bool
+    
     var dialogue: Dialogue
     
     @State private var textCard: String = ""
-    @State private var offset = CGSize.zero
+    @State private var offset = defaultOutOfBoundsPosition
     @State private var color: Color = .clear
     
     var body: some View {
@@ -21,6 +25,16 @@ struct CardView: View {
             Image(dialogue.imageName)
                 .resizable()
                 .frame(width: 280, height: 280)
+                .onChange(of: dialogue, perform: {
+                    newValue in
+                    repositioningCardOutOfBounds()
+                })
+                .onChange(of: isTextTimerActive, perform: {
+                    newValue in
+                    if (newValue == false) {
+                        positioningCard()
+                    }
+                })
             Rectangle()
                 .frame(width: 280, height: 280)
                 .border(.white, width: 6.0)
@@ -53,13 +67,23 @@ struct CardView: View {
         )
     }
     
+    func repositioningCardOutOfBounds() {
+        textCard = ""
+        offset = defaultOutOfBoundsPosition
+        color = .clear
+    }
+    
+    func positioningCard() {
+        withAnimation {
+            offset = .zero
+        }
+    }
+    
     func swipeCard(width: CGFloat) {
         switch width {
         case -500...(-100):
-//            print("\(dialogue.leftCardText)")
             offset = CGSize(width: -500 , height: 0)
         case 100...500:
-//            print("\(dialogue.rightCardText)")
             offset = CGSize(width: 500 , height: 0)
         default:
             offset = .zero

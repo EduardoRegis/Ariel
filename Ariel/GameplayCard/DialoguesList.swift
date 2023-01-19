@@ -31,17 +31,13 @@ class DialogueManager {
 }
 
 enum Dialogues {
-    case nullText, firstText, secondText, thirdText
+    
+    case firstText, secondText, thirdText
     
     func getDialogue() -> Dialogue {
         switch self {
-        case .nullText:
-            return Dialogue(descriptionText: "",
-                            leftCardText: "",
-                            rightCardText: "",
-                            imageName: "")
         case .firstText:
-            return Dialogue(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return Dialogue(descriptionText: "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             leftCardText: "Nada a ver",
                             rightCardText: "Pô, vdd",
                             imageName: "Poder",
@@ -56,9 +52,9 @@ enum Dialogues {
                             nextRightDialogue: "fifthText")
         case .thirdText:
             return Dialogue(descriptionText: "CUESTA 🇦🇷 NA MEIA 🧦 ESQUERDA⬅️⬅️AMEAÇOU 🔫🔪 NÃO BATEU 🚫🥊 VEM PRA TABELA 📉📈 PEGLOW ☄️ PRO CUESTA 🇦🇷 BATEU CRUZADO 💴⚔️✝️ EDENILSOOOOOOOOOOOOOOOOON 👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾  QUARENTA E UM ANOS 4️⃣1️⃣ 👉👌👴🏻🏆GOOOOOOOOOOOOOOL ⚽👨🏾🤸🏾‍♂️👨🏾 pipipi 🧏‍♂️🙋‍♂️🙋‍♂️🗽🚩",
-                            leftCardText: "Tá zoando",
-                            rightCardText: "Pode crer",
-                            imageName: "Poder",
+                            leftCardText: "Mó paia",
+                            rightCardText: "Com certeza",
+                            imageName: "Capela",
                             nextLeftDialogue: "secondText",
                             nextRightDialogue: "seventhText")
         }
