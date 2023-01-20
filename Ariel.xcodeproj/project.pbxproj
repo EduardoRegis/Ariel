@@ -28,6 +28,10 @@
 		2EC8FBFD297AFAE700C7203C /* ArchetypesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBFC297AFAE700C7203C /* ArchetypesScreenViewController.swift */; };
 		2EC8FBFF297AFAFC00C7203C /* ArchetypesScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBFE297AFAFC00C7203C /* ArchetypesScreenPresenter.swift */; };
 		2EC8FC01297AFB1700C7203C /* ArchetypesScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FC00297AFB1700C7203C /* ArchetypesScreenViewController.xib */; };
+		2EC8FC03297AFD7800C7203C /* CreditsScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC02297AFD7800C7203C /* CreditsScreenRouter.swift */; };
+		2EC8FC05297AFDCA00C7203C /* CreditsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC04297AFDCA00C7203C /* CreditsScreenViewController.swift */; };
+		2EC8FC07297AFE2100C7203C /* CreditsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC06297AFE2100C7203C /* CreditsScreenPresenter.swift */; };
+		2EC8FC09297AFE5D00C7203C /* CreditsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FC08297AFE5D00C7203C /* CreditsScreenViewController.xib */; };
 		2EFF845529704F8200984165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845429704F8200984165 /* AppDelegate.swift */; };
 		2EFF845E29704F8300984165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845D29704F8300984165 /* Assets.xcassets */; };
 		2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845F29704F8300984165 /* LaunchScreen.storyboard */; };
@@ -79,6 +83,10 @@
 		2EC8FBFC297AFAE700C7203C /* ArchetypesScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesScreenViewController.swift; sourceTree = "<group>"; };
 		2EC8FBFE297AFAFC00C7203C /* ArchetypesScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesScreenPresenter.swift; sourceTree = "<group>"; };
 		2EC8FC00297AFB1700C7203C /* ArchetypesScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchetypesScreenViewController.xib; sourceTree = "<group>"; };
+		2EC8FC02297AFD7800C7203C /* CreditsScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScreenRouter.swift; sourceTree = "<group>"; };
+		2EC8FC04297AFDCA00C7203C /* CreditsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScreenViewController.swift; sourceTree = "<group>"; };
+		2EC8FC06297AFE2100C7203C /* CreditsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScreenPresenter.swift; sourceTree = "<group>"; };
+		2EC8FC08297AFE5D00C7203C /* CreditsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditsScreenViewController.xib; sourceTree = "<group>"; };
 		2EFF845129704F8200984165 /* Ariel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ariel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFF845429704F8200984165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EFF845D29704F8300984165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +235,10 @@
 		2EC8FBEF297AE0FD00C7203C /* Credits */ = {
 			isa = PBXGroup;
 			children = (
+				2EC8FC02297AFD7800C7203C /* CreditsScreenRouter.swift */,
+				2EC8FC04297AFDCA00C7203C /* CreditsScreenViewController.swift */,
+				2EC8FC06297AFE2100C7203C /* CreditsScreenPresenter.swift */,
+				2EC8FC08297AFE5D00C7203C /* CreditsScreenViewController.xib */,
 			);
 			path = Credits;
 			sourceTree = "<group>";
@@ -409,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC8FC09297AFE5D00C7203C /* CreditsScreenViewController.xib in Resources */,
 				2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */,
 				2EC8FBEC297ACF4000C7203C /* MenuScreenViewController.xib in Resources */,
 				2EC8FBE0297AC82700C7203C /* SplashScreenViewController.xib in Resources */,
@@ -442,6 +455,7 @@
 				2EC8FBD4297AC3D400C7203C /* BasePresenterDelegate.swift in Sources */,
 				2EC8FBDA297AC4DE00C7203C /* SplashScreenViewController.swift in Sources */,
 				2EC8FBE6297ACDCE00C7203C /* MenuScreenRouter.swift in Sources */,
+				2EC8FC05297AFDCA00C7203C /* CreditsScreenViewController.swift in Sources */,
 				2EFF845529704F8200984165 /* AppDelegate.swift in Sources */,
 				2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */,
 				2EC8FBDC297AC50000C7203C /* SplashScreenPresenter.swift in Sources */,
@@ -449,10 +463,12 @@
 				2EC8FBFD297AFAE700C7203C /* ArchetypesScreenViewController.swift in Sources */,
 				2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */,
 				2EC8FBFB297AFAC500C7203C /* ArchetypesScreenRouter.swift in Sources */,
+				2EC8FC03297AFD7800C7203C /* CreditsScreenRouter.swift in Sources */,
 				2EC8FBD8297AC4CB00C7203C /* SplashScreenRouter.swift in Sources */,
 				2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */,
 				2EC8FBFF297AFAFC00C7203C /* ArchetypesScreenPresenter.swift in Sources */,
 				2EC8FBF7297AF01300C7203C /* HerosJourneyScreenPresenter.swift in Sources */,
+				2EC8FC07297AFE2100C7203C /* CreditsScreenPresenter.swift in Sources */,
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
 				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,
 				2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */,

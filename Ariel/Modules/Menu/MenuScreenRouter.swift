@@ -30,7 +30,7 @@ class MenuScreenRouter: BaseRouter {
     
     func navigateToCredits() {
         print("GO TO CREDITS")
-//        self.push(CreditsScreenRouter.makeModule(), animated: true)
+        self.push(CreditsScreenRouter.makeModule(), animated: true)
     }
     
     func navigateToConfigurations() {
