@@ -32,6 +32,10 @@
 		2EC8FC05297AFDCA00C7203C /* CreditsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC04297AFDCA00C7203C /* CreditsScreenViewController.swift */; };
 		2EC8FC07297AFE2100C7203C /* CreditsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC06297AFE2100C7203C /* CreditsScreenPresenter.swift */; };
 		2EC8FC09297AFE5D00C7203C /* CreditsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FC08297AFE5D00C7203C /* CreditsScreenViewController.xib */; };
+		2EC8FC0B297B005F00C7203C /* ConfigurationsScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC0A297B005F00C7203C /* ConfigurationsScreenRouter.swift */; };
+		2EC8FC0D297B00A300C7203C /* ConfigurationsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC0C297B00A300C7203C /* ConfigurationsScreenViewController.swift */; };
+		2EC8FC0F297B00F800C7203C /* ConfigurationsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC0E297B00F800C7203C /* ConfigurationsScreenPresenter.swift */; };
+		2EC8FC11297B012F00C7203C /* ConfigurationsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FC10297B012F00C7203C /* ConfigurationsScreenViewController.xib */; };
 		2EFF845529704F8200984165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845429704F8200984165 /* AppDelegate.swift */; };
 		2EFF845E29704F8300984165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845D29704F8300984165 /* Assets.xcassets */; };
 		2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845F29704F8300984165 /* LaunchScreen.storyboard */; };
@@ -87,6 +91,10 @@
 		2EC8FC04297AFDCA00C7203C /* CreditsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScreenViewController.swift; sourceTree = "<group>"; };
 		2EC8FC06297AFE2100C7203C /* CreditsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScreenPresenter.swift; sourceTree = "<group>"; };
 		2EC8FC08297AFE5D00C7203C /* CreditsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditsScreenViewController.xib; sourceTree = "<group>"; };
+		2EC8FC0A297B005F00C7203C /* ConfigurationsScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsScreenRouter.swift; sourceTree = "<group>"; };
+		2EC8FC0C297B00A300C7203C /* ConfigurationsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsScreenViewController.swift; sourceTree = "<group>"; };
+		2EC8FC0E297B00F800C7203C /* ConfigurationsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsScreenPresenter.swift; sourceTree = "<group>"; };
+		2EC8FC10297B012F00C7203C /* ConfigurationsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigurationsScreenViewController.xib; sourceTree = "<group>"; };
 		2EFF845129704F8200984165 /* Ariel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ariel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFF845429704F8200984165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EFF845D29704F8300984165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -246,6 +254,10 @@
 		2EC8FBF0297AE10500C7203C /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				2EC8FC0A297B005F00C7203C /* ConfigurationsScreenRouter.swift */,
+				2EC8FC0C297B00A300C7203C /* ConfigurationsScreenViewController.swift */,
+				2EC8FC0E297B00F800C7203C /* ConfigurationsScreenPresenter.swift */,
+				2EC8FC10297B012F00C7203C /* ConfigurationsScreenViewController.xib */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -422,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EC8FC09297AFE5D00C7203C /* CreditsScreenViewController.xib in Resources */,
+				2EC8FC11297B012F00C7203C /* ConfigurationsScreenViewController.xib in Resources */,
 				2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */,
 				2EC8FBEC297ACF4000C7203C /* MenuScreenViewController.xib in Resources */,
 				2EC8FBE0297AC82700C7203C /* SplashScreenViewController.xib in Resources */,
@@ -472,9 +485,12 @@
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
 				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,
 				2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */,
+				2EC8FC0B297B005F00C7203C /* ConfigurationsScreenRouter.swift in Sources */,
+				2EC8FC0F297B00F800C7203C /* ConfigurationsScreenPresenter.swift in Sources */,
 				2EC8FBE8297ACE4B00C7203C /* MenuScreenViewController.swift in Sources */,
 				2EC8FBEA297ACEA300C7203C /* MenuScreenPresenter.swift in Sources */,
 				2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */,
+				2EC8FC0D297B00A300C7203C /* ConfigurationsScreenViewController.swift in Sources */,
 				2EFF848729706F0B00984165 /* CardView.swift in Sources */,
 				2EC8FBF5297AEF6B00C7203C /* HerosJourneyScreenViewController.swift in Sources */,
 			);

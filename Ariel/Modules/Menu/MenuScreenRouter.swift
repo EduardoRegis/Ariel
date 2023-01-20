@@ -35,7 +35,7 @@ class MenuScreenRouter: BaseRouter {
     
     func navigateToConfigurations() {
         print("GO TO CONFIGURATIONS")
-//        self.push(ConfigurationsScreenRouter.makeModule(), animated: true)
+        self.push(ConfigurationsScreenRouter.makeModule(), animated: true)
     }
     
     func navigateToHelp() {
