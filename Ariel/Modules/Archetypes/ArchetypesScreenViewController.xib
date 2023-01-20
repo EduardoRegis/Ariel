@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HerosJourneyScreenViewController" customModule="Ariel" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArchetypesScreenViewController" customModule="Ariel" customModuleProvider="target">
             <connections>
-                <outlet property="backButton" destination="dBg-Qz-qLy" id="rDB-r3-ClY"/>
-                <outlet property="view" destination="iN0-l3-epB" id="nqv-Zo-xkl"/>
+                <outlet property="backButton" destination="Ibg-jI-NQo" id="dFt-f7-Yj2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Rng-CP-tFD"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,30 +20,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jornada do Herói" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcF-QW-rhb">
-                    <rect key="frame" x="141.66666666666666" y="357.66666666666669" width="130.99999999999997" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arquétipos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cA-bf-mzb">
+                    <rect key="frame" x="165.33333333333334" y="357.66666666666669" width="83.333333333333343" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-Qz-qLy">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibg-jI-NQo">
                     <rect key="frame" x="172.66666666666666" y="681" width="68.666666666666657" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Voltar"/>
                     <connections>
-                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="T2U-Ba-xVx"/>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="kWO-fQ-g4x"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="dBg-Qz-qLy" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="2JU-Vg-QsE"/>
-                <constraint firstItem="YcF-QW-rhb" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="B8X-KM-XU6"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dBg-Qz-qLy" secondAttribute="bottom" constant="20" id="EMo-tP-rHb"/>
-                <constraint firstItem="YcF-QW-rhb" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="MnG-tJ-oRw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ibg-jI-NQo" secondAttribute="bottom" constant="20" id="L1z-3a-pha"/>
+                <constraint firstItem="Ibg-jI-NQo" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="du8-Hc-Lkp"/>
+                <constraint firstItem="3cA-bf-mzb" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="nbZ-K0-n8F"/>
+                <constraint firstItem="3cA-bf-mzb" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="vKP-uC-Z87"/>
             </constraints>
-            <point key="canvasLocation" x="138" y="20"/>
+            <point key="canvasLocation" x="139" y="21"/>
         </view>
     </objects>
     <resources>

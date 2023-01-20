@@ -25,7 +25,7 @@ class MenuScreenRouter: BaseRouter {
     
     func navigateToArchetypes() {
         print("GO TO ARCHETYPES")
-//        self.push(ArchetypesScreenRouter.makeModule(), animated: true)
+        self.push(ArchetypesScreenRouter.makeModule(), animated: true)
     }
     
     func navigateToCredits() {
