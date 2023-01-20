@@ -93,7 +93,7 @@ class MenuScreenViewController: BaseViewController {
     }
     
     @IBAction func helpsAction(_ sender: Any) {
-        self.presenter.navigateToCredits()
+        self.presenter.navigateToHelp()
     }
 }
 

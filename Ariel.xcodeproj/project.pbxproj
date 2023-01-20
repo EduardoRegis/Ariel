@@ -20,6 +20,10 @@
 		2EC8FBE8297ACE4B00C7203C /* MenuScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBE7297ACE4B00C7203C /* MenuScreenViewController.swift */; };
 		2EC8FBEA297ACEA300C7203C /* MenuScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBE9297ACEA300C7203C /* MenuScreenPresenter.swift */; };
 		2EC8FBEC297ACF4000C7203C /* MenuScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FBEB297ACF4000C7203C /* MenuScreenViewController.xib */; };
+		2EC8FBF3297AE21A00C7203C /* HerosJourneyScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBF2297AE21A00C7203C /* HerosJourneyScreenRouter.swift */; };
+		2EC8FBF5297AEF6B00C7203C /* HerosJourneyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBF4297AEF6B00C7203C /* HerosJourneyScreenViewController.swift */; };
+		2EC8FBF7297AF01300C7203C /* HerosJourneyScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBF6297AF01300C7203C /* HerosJourneyScreenPresenter.swift */; };
+		2EC8FBF9297AF1E000C7203C /* HerosJourneyScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FBF8297AF1E000C7203C /* HerosJourneyScreenViewController.xib */; };
 		2EFF845529704F8200984165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845429704F8200984165 /* AppDelegate.swift */; };
 		2EFF845929704F8200984165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845829704F8200984165 /* ViewController.swift */; };
 		2EFF845C29704F8200984165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845A29704F8200984165 /* Main.storyboard */; };
@@ -65,6 +69,10 @@
 		2EC8FBE7297ACE4B00C7203C /* MenuScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenViewController.swift; sourceTree = "<group>"; };
 		2EC8FBE9297ACEA300C7203C /* MenuScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenPresenter.swift; sourceTree = "<group>"; };
 		2EC8FBEB297ACF4000C7203C /* MenuScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuScreenViewController.xib; sourceTree = "<group>"; };
+		2EC8FBF2297AE21A00C7203C /* HerosJourneyScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyScreenRouter.swift; sourceTree = "<group>"; };
+		2EC8FBF4297AEF6B00C7203C /* HerosJourneyScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyScreenViewController.swift; sourceTree = "<group>"; };
+		2EC8FBF6297AF01300C7203C /* HerosJourneyScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyScreenPresenter.swift; sourceTree = "<group>"; };
+		2EC8FBF8297AF1E000C7203C /* HerosJourneyScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HerosJourneyScreenViewController.xib; sourceTree = "<group>"; };
 		2EFF845129704F8200984165 /* Ariel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ariel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFF845429704F8200984165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EFF845829704F8200984165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +138,11 @@
 		2EC8FBD5297AC49D00C7203C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2EC8FBF1297AE10C00C7203C /* Help */,
+				2EC8FBF0297AE10500C7203C /* Configurations */,
+				2EC8FBEF297AE0FD00C7203C /* Credits */,
+				2EC8FBEE297AE0F600C7203C /* Archetypes */,
+				2EC8FBED297AE0E200C7203C /* HerosJourney */,
 				2EC8FBE4297ACD9500C7203C /* Menu */,
 				2EC8FBD6297AC4B000C7203C /* Splash */,
 				2EFF84882970835900984165 /* GameplayCard */,
@@ -183,6 +196,45 @@
 				2EC8FBEB297ACF4000C7203C /* MenuScreenViewController.xib */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		2EC8FBED297AE0E200C7203C /* HerosJourney */ = {
+			isa = PBXGroup;
+			children = (
+				2EC8FBF2297AE21A00C7203C /* HerosJourneyScreenRouter.swift */,
+				2EC8FBF4297AEF6B00C7203C /* HerosJourneyScreenViewController.swift */,
+				2EC8FBF6297AF01300C7203C /* HerosJourneyScreenPresenter.swift */,
+				2EC8FBF8297AF1E000C7203C /* HerosJourneyScreenViewController.xib */,
+			);
+			path = HerosJourney;
+			sourceTree = "<group>";
+		};
+		2EC8FBEE297AE0F600C7203C /* Archetypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Archetypes;
+			sourceTree = "<group>";
+		};
+		2EC8FBEF297AE0FD00C7203C /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		2EC8FBF0297AE10500C7203C /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		2EC8FBF1297AE10C00C7203C /* Help */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		2EFF844829704F8200984165 = {
@@ -356,6 +408,7 @@
 				2EC8FBE0297AC82700C7203C /* SplashScreenViewController.xib in Resources */,
 				2EFF845E29704F8300984165 /* Assets.xcassets in Resources */,
 				2EFF845C29704F8200984165 /* Main.storyboard in Resources */,
+				2EC8FBF9297AF1E000C7203C /* HerosJourneyScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,9 +440,11 @@
 				2EFF845529704F8200984165 /* AppDelegate.swift in Sources */,
 				2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */,
 				2EC8FBDC297AC50000C7203C /* SplashScreenPresenter.swift in Sources */,
+				2EC8FBF3297AE21A00C7203C /* HerosJourneyScreenRouter.swift in Sources */,
 				2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */,
 				2EC8FBD8297AC4CB00C7203C /* SplashScreenRouter.swift in Sources */,
 				2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */,
+				2EC8FBF7297AF01300C7203C /* HerosJourneyScreenPresenter.swift in Sources */,
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
 				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,
 				2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */,
@@ -397,6 +452,7 @@
 				2EC8FBEA297ACEA300C7203C /* MenuScreenPresenter.swift in Sources */,
 				2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */,
 				2EFF848729706F0B00984165 /* CardView.swift in Sources */,
+				2EC8FBF5297AEF6B00C7203C /* HerosJourneyScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

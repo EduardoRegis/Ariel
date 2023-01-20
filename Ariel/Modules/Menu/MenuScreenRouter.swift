@@ -20,26 +20,26 @@ class MenuScreenRouter: BaseRouter {
     
     func navigateToHerosJourney() {
         print("GO TO HERO`S JOURNEY")
-//        self.push(HerosJourneyRouter.makeModule(), animated: true)
+        self.push(HerosJourneyScreenRouter.makeModule(), animated: true)
     }
     
     func navigateToArchetypes() {
         print("GO TO ARCHETYPES")
-//        self.push(ArchetypesRouter.makeModule(), animated: true)
+//        self.push(ArchetypesScreenRouter.makeModule(), animated: true)
     }
     
     func navigateToCredits() {
         print("GO TO CREDITS")
-//        self.push(CreditsRouter.makeModule(), animated: true)
+//        self.push(CreditsScreenRouter.makeModule(), animated: true)
     }
     
     func navigateToConfigurations() {
         print("GO TO CONFIGURATIONS")
-//        self.push(ConfigurationsRouter.makeModule(), animated: true)
+//        self.push(ConfigurationsScreenRouter.makeModule(), animated: true)
     }
     
     func navigateToHelp() {
         print("GO TO HELP")
-//        self.push(HelpRouter.makeModule(), animated: true)
+//        self.push(HelpScreenRouter.makeModule(), animated: true)
     }
 }

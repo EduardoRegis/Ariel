@@ -45,8 +45,8 @@ class MenuScreenPresenter {
         self.router.navigateToConfigurations()
     }
     
-    func navigateToHelps() {
-        self.router.navigateToCredits()
+    func navigateToHelp() {
+        self.router.navigateToHelp()
     }
 }
 

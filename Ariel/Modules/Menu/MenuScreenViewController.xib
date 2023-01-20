@@ -61,7 +61,7 @@
                                 <action selector="archetypesAction:" destination="-1" eventType="touchUpInside" id="WnZ-Dc-LmA"/>
                             </connections>
                         </button>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-Wq-yaJ">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-Wq-yaJ">
                             <rect key="frame" x="0.0" y="197.33333333333334" width="331.33333333333331" height="34.333333333333343"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFg-IF-jdf">
