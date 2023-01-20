@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuScreenViewController" customModule="Ariel" customModuleProvider="target">
+            <connections>
+                <outlet property="archetypesButton" destination="8Bz-vo-4tD" id="cLs-D4-XzE"/>
+                <outlet property="configurationsButton" destination="2Mp-P6-gCQ" id="njK-18-RU1"/>
+                <outlet property="continueButton" destination="gW4-Wc-fDx" id="tTu-15-jzO"/>
+                <outlet property="creditsButton" destination="WFg-IF-jdf" id="xt6-Mh-uwD"/>
+                <outlet property="helpsButton" destination="0F9-9L-x3w" id="C1V-Sg-bxz"/>
+                <outlet property="herosJourneyButton" destination="k4R-1c-XRR" id="iUL-e5-eOy"/>
+                <outlet property="newJourneyButton" destination="aet-WP-pei" id="P2s-Ou-b4M"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7s3-v8-QrH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gu0-wX-7aE">
+                    <rect key="frame" x="41.333333333333343" y="252.33333333333337" width="331.33333333333326" height="231.66666666666663"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aet-WP-pei">
+                            <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Nova Jornada"/>
+                            <connections>
+                                <action selector="newJourneyAction:" destination="-1" eventType="touchUpInside" id="iyL-q0-BTL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gW4-Wc-fDx">
+                            <rect key="frame" x="0.0" y="49.333333333333343" width="331.33333333333331" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Continuar"/>
+                            <connections>
+                                <action selector="continueAction:" destination="-1" eventType="touchUpInside" id="XfO-dy-jMF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4R-1c-XRR">
+                            <rect key="frame" x="0.0" y="98.666666666666657" width="331.33333333333331" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Jornada do Herói"/>
+                            <connections>
+                                <action selector="herosJourneyAction:" destination="-1" eventType="touchUpInside" id="XIs-B9-G6f"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-vo-4tD">
+                            <rect key="frame" x="0.0" y="147.99999999999997" width="331.33333333333331" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Arquétipos"/>
+                            <connections>
+                                <action selector="archetypesAction:" destination="-1" eventType="touchUpInside" id="WnZ-Dc-LmA"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-Wq-yaJ">
+                            <rect key="frame" x="0.0" y="197.33333333333334" width="331.33333333333331" height="34.333333333333343"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFg-IF-jdf">
+                                    <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    <connections>
+                                        <action selector="creditsAction:" destination="-1" eventType="touchUpInside" id="1Xk-Ct-40v"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-P6-gCQ">
+                                    <rect key="frame" x="115.33333333333331" y="0.0" width="100.66666666666669" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    <connections>
+                                        <action selector="configurationsAction:" destination="-1" eventType="touchUpInside" id="1uv-fg-3DT"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-9L-x3w">
+                                    <rect key="frame" x="230.99999999999997" y="0.0" width="100.33333333333334" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    <connections>
+                                        <action selector="helpsAction:" destination="-1" eventType="touchUpInside" id="6gB-Q6-Zic"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gu0-wX-7aE" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="1fL-Jq-PuY"/>
+                <constraint firstItem="gu0-wX-7aE" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="dg2-1I-du9"/>
+                <constraint firstItem="gu0-wX-7aE" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="kl5-Ci-Lzc"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
