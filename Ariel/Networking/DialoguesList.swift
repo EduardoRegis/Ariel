@@ -47,14 +47,14 @@ enum Dialogues {
     func getDialogue() -> Dialogue {
         switch self {
         case .firstText:
-            return Dialogue(descriptionText: "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return Dialogue(descriptionText: "Lorem ipsum {World} sit amet, (consectetur) adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             leftCardText: "Nada a ver",
                             rightCardText: "Pô, vdd",
                             imageName: "Poder",
                             nextLeftDialogue: "secondText",
                             nextRightDialogue: "thirdText")
         case .secondText:
-            return Dialogue(descriptionText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            return Dialogue(descriptionText: "Sed ut (perspiciatis) unde omnis {iste} natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "Treinador",

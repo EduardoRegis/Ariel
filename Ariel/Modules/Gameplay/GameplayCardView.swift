@@ -14,6 +14,7 @@ struct GameplayCardView: View {
     @State private var dialogue: Dialogue = Dialogues.firstText.getDialogue()
     @State var nextDialogue: String = ""
     @Environment(\.presentationMode) var presentationMode
+    @State private var coloredWords: [String] = []
     
     // Control variables to auto filling description text
     @State private var descriptionText: String = ""
@@ -38,6 +39,10 @@ struct GameplayCardView: View {
                     Text(coloringWords(text: self.descriptionText))
                         .onChange(of: self.dialogue.descriptionText)
                         { newValue in
+                            if isTextTimerActive == false {
+                                let regex = "\\{(.*?)\\}"
+                                self.coloredWords = self.matchesForRegexInText(regex: regex, text: newValue)
+                            }
                             self.descriptionText = ""
                             isTextTimerActive.toggle()
                             self.stringLimit = newValue.count
@@ -82,6 +87,8 @@ struct GameplayCardView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 let data = Dialogues.firstText
                 if (self.dialogue == data.getDialogue()) {
+                    let regex = "\\{(.*?)\\}"
+                    self.coloredWords = self.matchesForRegexInText(regex: regex, text: self.dialogue.descriptionText)
                     isTextTimerActive.toggle()
                 }
                 self.dialogue = data.getDialogue()
@@ -91,15 +98,24 @@ struct GameplayCardView: View {
     }
     
     func coloringWords(text: String) -> NSMutableAttributedString {
-        let stringToColor = "World"
-        
-        let range = (text as NSString).range(of: stringToColor)
-
         let mutableAttributedString = NSMutableAttributedString.init(string: text)
-        mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: range)
-
+        for word in self.coloredWords {
+            let range = (text as NSString).range(of: word)
+            mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: range)
+        }
+        
         return mutableAttributedString
-//        textField = UITextField.init(frame: CGRect(x:10, y:20, width:100, height: 100))
-//        textField.attributedText = mutableAttributedString
+    }
+    
+    func matchesForRegexInText(regex: String!, text: String!) -> [String] {
+        do {
+            let regex = try NSRegularExpression(pattern: regex, options: [])
+            let nsString = text as NSString
+            let results = regex.matches(in: text, options: [], range: NSMakeRange(0, nsString.length))
+            return results.map { nsString.substring(with: $0.range)}
+        } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            return []
+        }
     }
 }
