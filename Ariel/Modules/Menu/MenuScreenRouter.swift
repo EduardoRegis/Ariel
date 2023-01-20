@@ -40,6 +40,6 @@ class MenuScreenRouter: BaseRouter {
     
     func navigateToHelp() {
         print("GO TO HELP")
-//        self.push(HelpScreenRouter.makeModule(), animated: true)
+        self.push(HelpScreenRouter.makeModule(), animated: true)
     }
 }

@@ -13,6 +13,7 @@ struct GameplayCardView: View {
 
     @State private var dialogue: Dialogue = Dialogues.firstText.getDialogue()
     @State var nextDialogue: String = ""
+    @Environment(\.presentationMode) var presentationMode
     
     // Control variables to auto filling description text
     @State private var descriptionText: String = ""
@@ -25,9 +26,14 @@ struct GameplayCardView: View {
         GeometryReader { gp in
             VStack {
                 VStack {
-                    Rectangle().foregroundColor(.black)
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left").foregroundColor(.white)
+                    }
                 }
-                .frame(width: gp.size.width, height: gp.size.height * 0.1)
+                .frame(width: gp.size.width, height: gp.size.height * 0.1, alignment: .leading)
+                .background(.black)
                 VStack {
                     Text(coloringWords(text: self.descriptionText))
                         .onChange(of: self.dialogue.descriptionText)
@@ -73,12 +79,14 @@ struct GameplayCardView: View {
         }
         .onAppear {
             // TODO: - Carregar aqui o progresso do usuário
-            let data = Dialogues.firstText
-            if (self.dialogue == data.getDialogue()) {
-                isTextTimerActive.toggle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                let data = Dialogues.firstText
+                if (self.dialogue == data.getDialogue()) {
+                    isTextTimerActive.toggle()
+                }
+                self.dialogue = data.getDialogue()
+                self.stringLimit = self.dialogue.descriptionText.count
             }
-            self.dialogue = data.getDialogue()
-            self.stringLimit = self.dialogue.descriptionText.count
         }
     }
     
