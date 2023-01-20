@@ -24,6 +24,16 @@ class DialogueManager {
             return Dialogues.secondText.getDialogue()
         case "thirdText":
             return Dialogues.thirdText.getDialogue()
+        case "fourthText":
+            return Dialogues.fourthText.getDialogue()
+        case "fifthText":
+            return Dialogues.fifthText.getDialogue()
+        case "sixthText":
+            return Dialogues.sixthText.getDialogue()
+        case "seventhText":
+            return Dialogues.seventhText.getDialogue()
+        case "eighthText":
+            return Dialogues.eighthText.getDialogue()
         default:
             return nil
         }
@@ -32,7 +42,7 @@ class DialogueManager {
 
 enum Dialogues {
     
-    case firstText, secondText, thirdText
+    case firstText, secondText, thirdText, fourthText, fifthText, sixthText, seventhText, eighthText
     
     func getDialogue() -> Dialogue {
         switch self {
@@ -48,15 +58,50 @@ enum Dialogues {
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "Treinador",
-                            nextLeftDialogue: "fourthText",
-                            nextRightDialogue: "fifthText")
+                            nextLeftDialogue: "thirdText",
+                            nextRightDialogue: "fourthText")
         case .thirdText:
             return Dialogue(descriptionText: "CUESTA 🇦🇷 NA MEIA 🧦 ESQUERDA⬅️⬅️AMEAÇOU 🔫🔪 NÃO BATEU 🚫🥊 VEM PRA TABELA 📉📈 PEGLOW ☄️ PRO CUESTA 🇦🇷 BATEU CRUZADO 💴⚔️✝️ EDENILSOOOOOOOOOOOOOOOOON 👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾  QUARENTA E UM ANOS 4️⃣1️⃣ 👉👌👴🏻🏆GOOOOOOOOOOOOOOL ⚽👨🏾🤸🏾‍♂️👨🏾 pipipi 🧏‍♂️🙋‍♂️🙋‍♂️🗽🚩",
                             leftCardText: "Mó paia",
                             rightCardText: "Com certeza",
                             imageName: "Capela",
-                            nextLeftDialogue: "secondText",
+                            nextLeftDialogue: "fourthText",
+                            nextRightDialogue: "fifthText")
+        case .fourthText:
+            return Dialogue(descriptionText: "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            leftCardText: "Nada a ver",
+                            rightCardText: "Pô, vdd",
+                            imageName: "Ariel_chega_casa",
+                            nextLeftDialogue: "fifthText",
+                            nextRightDialogue: "sixthText")
+        case .fifthText:
+            return Dialogue(descriptionText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                            leftCardText: "Tá zoando",
+                            rightCardText: "Pode crer",
+                            imageName: "Solum - Magia",
+                            nextLeftDialogue: "sixthText",
                             nextRightDialogue: "seventhText")
+        case .sixthText:
+            return Dialogue(descriptionText: "CUESTA 🇦🇷 NA MEIA 🧦 ESQUERDA⬅️⬅️AMEAÇOU 🔫🔪 NÃO BATEU 🚫🥊 VEM PRA TABELA 📉📈 PEGLOW ☄️ PRO CUESTA 🇦🇷 BATEU CRUZADO 💴⚔️✝️ EDENILSOOOOOOOOOOOOOOOOON 👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾  QUARENTA E UM ANOS 4️⃣1️⃣ 👉👌👴🏻🏆GOOOOOOOOOOOOOOL ⚽👨🏾🤸🏾‍♂️👨🏾 pipipi 🧏‍♂️🙋‍♂️🙋‍♂️🗽🚩",
+                            leftCardText: "Mó paia",
+                            rightCardText: "Com certeza",
+                            imageName: "Solum - sequestro",
+                            nextLeftDialogue: "seventhText",
+                            nextRightDialogue: "eighthText")
+        case .seventhText:
+            return Dialogue(descriptionText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                            leftCardText: "Tá zoando",
+                            rightCardText: "Pode crer",
+                            imageName: "Rato",
+                            nextLeftDialogue: "eighthText",
+                            nextRightDialogue: "")
+        case .eighthText:
+            return Dialogue(descriptionText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                            leftCardText: "Tá zoando",
+                            rightCardText: "Pode crer",
+                            imageName: "Rato",
+                            nextLeftDialogue: "",
+                            nextRightDialogue: "")
         }
     }
 }

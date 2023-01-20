@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let defaultTimeForCharTyped: CGFloat = 0.012
+
 struct GameplayCardView: View {
 
     @State private var dialogue: Dialogue = Dialogues.firstText.getDialogue()
@@ -17,7 +19,7 @@ struct GameplayCardView: View {
     @State private var isTextTimerActive = false
     @State private var stringCounter: Int = 0
     @State private var stringLimit: Int = 10
-    let textTimer = Timer.publish(every: 0.012, on: .main, in: .common).autoconnect()
+    let textTimer = Timer.publish(every: defaultTimeForCharTyped, on: .main, in: .common).autoconnect()
     
     var body: some View {
         GeometryReader { gp in
@@ -25,7 +27,7 @@ struct GameplayCardView: View {
                 VStack {
                     Rectangle().foregroundColor(.black)
                 }
-                .frame(width: gp.size.width, height: gp.size.height * 0.2)
+                .frame(width: gp.size.width, height: gp.size.height * 0.1)
                 VStack {
                     Text(coloringWords(text: self.descriptionText))
                         .onChange(of: self.dialogue.descriptionText)
@@ -66,7 +68,7 @@ struct GameplayCardView: View {
                                 }
                     }
                 }
-                .frame(width: gp.size.width, height: gp.size.height * 0.5)
+                .frame(width: gp.size.width, height: gp.size.height * 0.5, alignment: .top)
             }
         }
         .onAppear {
