@@ -42,6 +42,7 @@ struct GameplayCardView: View {
                             if isTextTimerActive == false {
                                 let regex = "\\{(.*?)\\}"
                                 self.coloredWords = self.matchesForRegexInText(regex: regex, text: newValue)
+                                self.removeCurlyBraces()
                             }
                             self.descriptionText = ""
                             isTextTimerActive.toggle()
@@ -51,8 +52,11 @@ struct GameplayCardView: View {
                 .frame(width: gp.size.width * 0.6, height: gp.size.height * 0.3, alignment: .top)
                 .onReceive(textTimer, perform: { _ in
                     guard isTextTimerActive else { return }
-                    if self.descriptionText != self.dialogue.descriptionText {
-                        self.descriptionText += self.dialogue.descriptionText[stringCounter]
+                    if stringCounter < self.dialogue.descriptionText.count {
+                        if (self.dialogue.descriptionText[stringCounter] != "{") &&
+                            (self.dialogue.descriptionText[stringCounter] != "}") {
+                            self.descriptionText += self.dialogue.descriptionText[stringCounter]
+                        }
                         stringCounter += 1
                     } else {
                         isTextTimerActive = false
@@ -89,6 +93,7 @@ struct GameplayCardView: View {
                 if (self.dialogue == data.getDialogue()) {
                     let regex = "\\{(.*?)\\}"
                     self.coloredWords = self.matchesForRegexInText(regex: regex, text: self.dialogue.descriptionText)
+                    self.removeCurlyBraces()
                     isTextTimerActive.toggle()
                 }
                 self.dialogue = data.getDialogue()
@@ -117,5 +122,13 @@ struct GameplayCardView: View {
             print("invalid regex: \(error.localizedDescription)")
             return []
         }
+    }
+    
+    func removeCurlyBraces() {
+        var newColoredWords: [String] = []
+        for coloredWord in self.coloredWords {
+            newColoredWords.append(String(coloredWord.dropFirst().dropLast()))
+        }
+        self.coloredWords = newColoredWords
     }
 }

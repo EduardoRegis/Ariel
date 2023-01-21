@@ -34,6 +34,8 @@ class DialogueManager {
             return Dialogues.seventhText.getDialogue()
         case "eighthText":
             return Dialogues.eighthText.getDialogue()
+        case "ninthText":
+            return Dialogues.ninthText.getDialogue()
         default:
             return nil
         }
@@ -42,7 +44,7 @@ class DialogueManager {
 
 enum Dialogues {
     
-    case firstText, secondText, thirdText, fourthText, fifthText, sixthText, seventhText, eighthText
+    case firstText, secondText, thirdText, fourthText, fifthText, sixthText, seventhText, eighthText, ninthText
     
     func getDialogue() -> Dialogue {
         switch self {
@@ -50,7 +52,7 @@ enum Dialogues {
             return Dialogue(descriptionText: "Lorem ipsum {World} sit amet, (consectetur) adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             leftCardText: "Nada a ver",
                             rightCardText: "Pô, vdd",
-                            imageName: "Poder",
+                            imageName: "ariel still",
                             nextLeftDialogue: "secondText",
                             nextRightDialogue: "thirdText")
         case .secondText:
@@ -100,6 +102,13 @@ enum Dialogues {
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "Rato",
+                            nextLeftDialogue: "",
+                            nextRightDialogue: "")
+        case .ninthText:
+            return Dialogue(descriptionText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                            leftCardText: "Tá zoando",
+                            rightCardText: "Pode crer",
+                            imageName: "Poder",
                             nextLeftDialogue: "",
                             nextRightDialogue: "")
         }
