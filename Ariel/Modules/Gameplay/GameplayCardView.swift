@@ -53,8 +53,7 @@ struct GameplayCardView: View {
                 .onReceive(textTimer, perform: { _ in
                     guard isTextTimerActive else { return }
                     if stringCounter < self.dialogue.descriptionText.count {
-                        if (self.dialogue.descriptionText[stringCounter] != "{") &&
-                            (self.dialogue.descriptionText[stringCounter] != "}") {
+                        if !(SpecialCharacteresToRegexText.contains(self.dialogue.descriptionText[stringCounter])) {
                             self.descriptionText += self.dialogue.descriptionText[stringCounter]
                         }
                         stringCounter += 1
@@ -125,11 +124,10 @@ struct GameplayCardView: View {
     
     func coloringWords(text: String) -> NSMutableAttributedString {
         let mutableAttributedString = NSMutableAttributedString.init(string: text)
-        for word in self.coloredWords {
-            let range = (text as NSString).range(of: word)
-            mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: range)
+        for (index, name) in self.coloredWords.enumerated() {
+            let range = (text as NSString).range(of: name)
+            mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: RegexColors[index], range: range)
         }
-        
         return mutableAttributedString
     }
     
