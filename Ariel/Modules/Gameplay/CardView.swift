@@ -24,7 +24,10 @@ struct CardView: View {
         ZStack {
             Image(dialogue.imageName)
                 .resizable()
-                .frame(width: 280, height: 280)
+                .frame(width: UIScreen.screenWidth * 0.85, height: UIScreen.screenWidth * 0.85)
+                .border(.white, width: 6.0)
+                .cornerRadius(4.0)
+                .shadow(radius: 4)
                 .onChange(of: dialogue, perform: {
                     newValue in
                     repositioningCardOutOfBounds()
@@ -36,11 +39,9 @@ struct CardView: View {
                     }
                 })
             Rectangle()
-                .frame(width: 280, height: 280)
-                .border(.white, width: 6.0)
+                .frame(width: UIScreen.screenWidth * 0.75, height: UIScreen.screenWidth * 0.75)
                 .cornerRadius(4.0)
                 .foregroundColor(color.opacity(0.7))
-                .shadow(radius: 4)
             HStack {
                 Text(textCard)
                     .font(.largeTitle)
@@ -81,9 +82,9 @@ struct CardView: View {
     
     func swipeCard(width: CGFloat) {
         switch width {
-        case -500...(-100):
+        case -500...(-50):
             offset = CGSize(width: -500 , height: 0)
-        case 100...500:
+        case 50...500:
             offset = CGSize(width: 500 , height: 0)
         default:
             offset = .zero
@@ -92,9 +93,9 @@ struct CardView: View {
     
     func nextCard(width: CGFloat) {
         switch width {
-        case -500...(-100):
+        case -500...(-50):
             self.nextDialogue = dialogue.nextLeftDialogue ?? ""
-        case 100...500:
+        case 50...500:
             self.nextDialogue = dialogue.nextRightDialogue ?? ""
         default:
             break
@@ -103,9 +104,9 @@ struct CardView: View {
     
     func changeText(width: CGFloat) {
         switch width {
-        case -500...(-100):
+        case -500...(-50):
             textCard = dialogue.leftCardText
-        case 100...500:
+        case 50...500:
             textCard = dialogue.rightCardText
         default:
             textCard = ""
@@ -114,9 +115,9 @@ struct CardView: View {
     
     func changeColor(width: CGFloat) {
         switch width {
-        case -500...(-100):
+        case -500...(-50):
             color = .white
-        case 100...500:
+        case 50...500:
             color = .white
         default:
             color = .clear

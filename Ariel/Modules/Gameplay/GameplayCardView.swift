@@ -31,7 +31,7 @@ struct GameplayCardView: View {
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "chevron.left").foregroundColor(.white)
-                    }
+                    }.padding(.leading, 20)
                 }
                 .frame(width: gp.size.width, height: gp.size.height * 0.1, alignment: .leading)
                 .background(.black)
@@ -66,7 +66,7 @@ struct GameplayCardView: View {
                 VStack {
                     ZStack {
                         Rectangle()
-                            .frame(width: 280, height: 280)
+                            .frame(width: UIScreen.screenWidth * 0.85, height: UIScreen.screenWidth * 0.85)
                             .cornerRadius(4.0)
                             .foregroundColor(.black)
                             .shadow(radius: 4)
@@ -88,7 +88,7 @@ struct GameplayCardView: View {
         }
         .onAppear {
             // TODO: - Carregar aqui o progresso do usuário
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 let data = Dialogues.firstText
                 if (self.dialogue == data.getDialogue()) {
                     let regex = "\\{(.*?)\\}"
