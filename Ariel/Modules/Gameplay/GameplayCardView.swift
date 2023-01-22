@@ -15,6 +15,7 @@ struct GameplayCardView: View {
     @State var nextDialogue: String = ""
     @Environment(\.presentationMode) var presentationMode
     @State private var coloredWords: [String] = []
+    @State private var colorsIndexes: [Int] = []
     
     // Control variables to auto filling description text
     @State private var descriptionText: String = ""
@@ -40,8 +41,7 @@ struct GameplayCardView: View {
                         .onChange(of: self.dialogue.descriptionText)
                         { newValue in
                             if isTextTimerActive == false {
-                                let regex = "\\{(.*?)\\}"
-                                self.coloredWords = self.matchesForRegexInText(regex: regex, text: newValue)
+                                self.coloredWords = self.matchesForRegexesInText(text: newValue)
                                 self.removeCurlyBraces()
                             }
                             self.descriptionText = ""
@@ -89,15 +89,36 @@ struct GameplayCardView: View {
         .onAppear {
             // TODO: - Carregar aqui o progresso do usuário
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                let data = Dialogues.firstText
-                if (self.dialogue == data.getDialogue()) {
-                    let regex = "\\{(.*?)\\}"
-                    self.coloredWords = self.matchesForRegexInText(regex: regex, text: self.dialogue.descriptionText)
+                var data = Dialogues.firstText.getDialogue()
+                if UserDefaults.standard.bool(forKey: "isNewJourney") {
+                    UserDefaults.standard.set("firstText", forKey: "lastDialogueSaved")
+                } else {
+                    let lastDialogueSaved = UserDefaults.standard.string(forKey: "lastDialogueSaved")
+                    if lastDialogueSaved == "" {
+                        if let firstDialogue = DialogueManager.shared.getDialogueByString(name: "firstText") {
+                            data = firstDialogue
+                        }
+                    } else {
+                        if let lastDialogueSaved = UserDefaults.standard.string(forKey: "lastDialogueSaved") {
+                            if let dialogueSaved = DialogueManager.shared.getDialogueByString(name: lastDialogueSaved) {
+                                data = dialogueSaved
+                            }
+                        }
+                    }
+                }
+                if (self.dialogue == data) {
+                    self.coloredWords = self.matchesForRegexesInText(text: self.dialogue.descriptionText)
                     self.removeCurlyBraces()
                     isTextTimerActive.toggle()
                 }
-                self.dialogue = data.getDialogue()
+                self.dialogue = data
                 self.stringLimit = self.dialogue.descriptionText.count
+            }
+        }
+        .onDisappear {
+            print(self.nextDialogue)
+            if UserDefaults.standard.string(forKey: "lastDialogueSaved") != "" {
+                UserDefaults.standard.set(self.nextDialogue, forKey: "lastDialogueSaved")
             }
         }
     }
@@ -110,6 +131,20 @@ struct GameplayCardView: View {
         }
         
         return mutableAttributedString
+    }
+    
+    func matchesForRegexesInText(text: String!) -> [String] {
+        let regexes = ["\\{(.*?)\\}", "\\[(.*?)\\]", "\\%(.*?)\\%", "\\#(.*?)\\#"]
+        var regexesResults: [String] = []
+        
+        self.colorsIndexes = []
+        
+        for (index, name) in regexes.enumerated() {
+            let result = matchesForRegexInText(regex: name, text: text)
+            regexesResults.append(contentsOf: result)
+            self.colorsIndexes = Array(repeating: index, count: result.count)
+        }
+        return regexesResults
     }
     
     func matchesForRegexInText(regex: String!, text: String!) -> [String] {

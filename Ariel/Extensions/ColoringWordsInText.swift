@@ -5,7 +5,6 @@
 //  Created by Eduardo Oliveira on 20/01/23.
 //
 
-import Foundation
 import SwiftUI
 
 extension Text {
