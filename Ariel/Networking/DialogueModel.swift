@@ -12,14 +12,16 @@ struct Dialogue: Hashable {
     var leftCardText: String
     var rightCardText: String
     var imageName: String
+    var herosJourneysStage: String
     var nextLeftDialogue: String?
     var nextRightDialogue: String?
     
-    init (descriptionText: String, leftCardText: String, rightCardText: String, imageName: String, nextLeftDialogue: String? = "", nextRightDialogue: String? = "") {
+    init (descriptionText: String, leftCardText: String, rightCardText: String, imageName: String, herosJourneysStage: String, nextLeftDialogue: String? = "", nextRightDialogue: String? = "") {
         self.descriptionText = descriptionText
         self.leftCardText = leftCardText
         self.rightCardText = rightCardText
         self.imageName = imageName
+        self.herosJourneysStage = herosJourneysStage
         self.nextLeftDialogue = nextLeftDialogue
         self.nextRightDialogue = nextRightDialogue
     }

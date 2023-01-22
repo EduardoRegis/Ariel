@@ -40,6 +40,8 @@
 		2EC8FC16297B056300C7203C /* HelpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC15297B056300C7203C /* HelpScreenViewController.swift */; };
 		2EC8FC18297B064200C7203C /* HelpScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC17297B064200C7203C /* HelpScreenPresenter.swift */; };
 		2EC8FC1A297B068E00C7203C /* HelpScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FC19297B068E00C7203C /* HelpScreenViewController.xib */; };
+		2EC8FC1C297C3E4100C7203C /* ConstantsAndEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */; };
+		2EC8FC1E297DB31100C7203C /* ColorsToRegexText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */; };
 		2EFF845529704F8200984165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845429704F8200984165 /* AppDelegate.swift */; };
 		2EFF845E29704F8300984165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845D29704F8300984165 /* Assets.xcassets */; };
 		2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845F29704F8300984165 /* LaunchScreen.storyboard */; };
@@ -103,6 +105,8 @@
 		2EC8FC15297B056300C7203C /* HelpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenViewController.swift; sourceTree = "<group>"; };
 		2EC8FC17297B064200C7203C /* HelpScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenPresenter.swift; sourceTree = "<group>"; };
 		2EC8FC19297B068E00C7203C /* HelpScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpScreenViewController.xib; sourceTree = "<group>"; };
+		2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndEnums.swift; sourceTree = "<group>"; };
+		2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsToRegexText.swift; sourceTree = "<group>"; };
 		2EFF845129704F8200984165 /* Ariel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ariel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFF845429704F8200984165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EFF845D29704F8300984165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			children = (
 				2E0F0F77297839AD00D37CB4 /* StringSplited.swift */,
 				2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */,
+				2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */,
+				2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 				2EC8FBDC297AC50000C7203C /* SplashScreenPresenter.swift in Sources */,
 				2EC8FBF3297AE21A00C7203C /* HerosJourneyScreenRouter.swift in Sources */,
 				2EC8FBFD297AFAE700C7203C /* ArchetypesScreenViewController.swift in Sources */,
+				2EC8FC1C297C3E4100C7203C /* ConstantsAndEnums.swift in Sources */,
 				2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */,
 				2EC8FC14297B02F700C7203C /* HelpScreenRouter.swift in Sources */,
 				2EC8FBFB297AFAC500C7203C /* ArchetypesScreenRouter.swift in Sources */,
@@ -496,6 +503,7 @@
 				2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */,
 				2EC8FBFF297AFAFC00C7203C /* ArchetypesScreenPresenter.swift in Sources */,
 				2EC8FBF7297AF01300C7203C /* HerosJourneyScreenPresenter.swift in Sources */,
+				2EC8FC1E297DB31100C7203C /* ColorsToRegexText.swift in Sources */,
 				2EC8FC07297AFE2100C7203C /* CreditsScreenPresenter.swift in Sources */,
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
 				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,

@@ -34,6 +34,10 @@ class DialogueManager {
             return Dialogues.seventhText.getDialogue()
         case "eighthText":
             return Dialogues.eighthText.getDialogue()
+        case "ninthText":
+            return Dialogues.ninthText.getDialogue()
+        case "tenthText":
+            return Dialogues.tenthText.getDialogue()
         default:
             return nil
         }
@@ -42,22 +46,24 @@ class DialogueManager {
 
 enum Dialogues {
     
-    case firstText, secondText, thirdText, fourthText, fifthText, sixthText, seventhText, eighthText
+    case firstText, secondText, thirdText, fourthText, fifthText, sixthText, seventhText, eighthText, ninthText, tenthText
     
     func getDialogue() -> Dialogue {
         switch self {
         case .firstText:
-            return Dialogue(descriptionText: "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return Dialogue(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             leftCardText: "Nada a ver",
                             rightCardText: "Pô, vdd",
-                            imageName: "Poder",
-                            nextLeftDialogue: "secondText",
+                            imageName: "ariel still",
+                            herosJourneysStage: "Teste",
+                            nextLeftDialogue: "tenthText",
                             nextRightDialogue: "thirdText")
         case .secondText:
-            return Dialogue(descriptionText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            return Dialogue(descriptionText: "Sed ut (perspiciatis) unde omnis {iste} natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "Treinador",
+                            herosJourneysStage: "Teste",
                             nextLeftDialogue: "thirdText",
                             nextRightDialogue: "fourthText")
         case .thirdText:
@@ -65,6 +71,7 @@ enum Dialogues {
                             leftCardText: "Mó paia",
                             rightCardText: "Com certeza",
                             imageName: "Capela",
+                            herosJourneysStage: "Teste",
                             nextLeftDialogue: "fourthText",
                             nextRightDialogue: "fifthText")
         case .fourthText:
@@ -72,6 +79,7 @@ enum Dialogues {
                             leftCardText: "Nada a ver",
                             rightCardText: "Pô, vdd",
                             imageName: "Ariel_chega_casa",
+                            herosJourneysStage: "Teste",
                             nextLeftDialogue: "fifthText",
                             nextRightDialogue: "sixthText")
         case .fifthText:
@@ -79,6 +87,7 @@ enum Dialogues {
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "Solum - Magia",
+                            herosJourneysStage: "Teste",
                             nextLeftDialogue: "sixthText",
                             nextRightDialogue: "seventhText")
         case .sixthText:
@@ -86,6 +95,7 @@ enum Dialogues {
                             leftCardText: "Mó paia",
                             rightCardText: "Com certeza",
                             imageName: "Solum - sequestro",
+                            herosJourneysStage: "Teste",
                             nextLeftDialogue: "seventhText",
                             nextRightDialogue: "eighthText")
         case .seventhText:
@@ -93,6 +103,7 @@ enum Dialogues {
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "Rato",
+                            herosJourneysStage: "Teste",
                             nextLeftDialogue: "eighthText",
                             nextRightDialogue: "")
         case .eighthText:
@@ -100,6 +111,23 @@ enum Dialogues {
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "Rato",
+                            herosJourneysStage: "Teste",
+                            nextLeftDialogue: "",
+                            nextRightDialogue: "")
+        case .ninthText:
+            return Dialogue(descriptionText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                            leftCardText: "Tá zoando",
+                            rightCardText: "Pode crer",
+                            imageName: "Poder",
+                            herosJourneysStage: "Teste",
+                            nextLeftDialogue: "",
+                            nextRightDialogue: "")
+        case .tenthText:
+            return Dialogue(descriptionText: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                            leftCardText: "Tá zoando",
+                            rightCardText: "Pode crer",
+                            imageName: "smd_logo",
+                            herosJourneysStage: "Teste",
                             nextLeftDialogue: "",
                             nextRightDialogue: "")
         }
