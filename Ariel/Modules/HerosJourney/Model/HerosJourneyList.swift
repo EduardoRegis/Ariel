@@ -18,29 +18,29 @@ class HerosJourneyManager {
     
     func getHerosJourneyByString(name: String) -> HerosJourneyModel? {
         switch name {
-        case "ordinaryWorld":
+        case "1":
             return HerosJourneyModels.ordinaryWorld.getHerosJourney()
-        case "callToAdventure":
+        case "2":
             return HerosJourneyModels.callToAdventure.getHerosJourney()
-        case "refusalOfTheCall":
+        case "3":
             return HerosJourneyModels.refusalOfTheCall.getHerosJourney()
-        case "meetingTheMentor":
+        case "4":
             return HerosJourneyModels.meetingTheMentor.getHerosJourney()
-        case "crossingTheThreshold":
+        case "5":
             return HerosJourneyModels.crossingTheThreshold.getHerosJourney()
-        case "testsAlliesEnemies":
+        case "6":
             return HerosJourneyModels.testsAlliesEnemies.getHerosJourney()
-        case "approachToTheInmostCave":
+        case "7":
             return HerosJourneyModels.approachToTheInmostCave.getHerosJourney()
-        case "ordeal":
+        case "8":
             return HerosJourneyModels.ordeal.getHerosJourney()
-        case "reward":
+        case "9":
             return HerosJourneyModels.reward.getHerosJourney()
-        case "theRoadBack":
+        case "10":
             return HerosJourneyModels.theRoadBack.getHerosJourney()
-        case "resurrection":
+        case "11":
             return HerosJourneyModels.resurrection.getHerosJourney()
-        case "returnWithTheElixir":
+        case "12":
             return HerosJourneyModels.returnWithTheElixir.getHerosJourney()
         default:
             return nil
@@ -59,8 +59,8 @@ enum HerosJourneyModels {
                             imageName: "ariel still",
                             herosJourneysStage: "Ordinary World")
         case .callToAdventure:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
+            return HerosJourneyModel(descriptionText: "Lorem ipsum World sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            imageName: "Poder",
                             herosJourneysStage: "Call To Adventure")
         case .refusalOfTheCall:
             return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
