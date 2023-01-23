@@ -1,0 +1,6 @@
+framework module Pods_Ariel_ArielUITests {
+  umbrella header "Pods-Ariel-ArielUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

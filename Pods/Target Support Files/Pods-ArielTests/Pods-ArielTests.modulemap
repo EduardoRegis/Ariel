@@ -1,0 +1,6 @@
+framework module Pods_ArielTests {
+  umbrella header "Pods-ArielTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

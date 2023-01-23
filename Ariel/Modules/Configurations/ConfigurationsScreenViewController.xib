@@ -20,12 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configurações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miI-sA-bG0">
-                    <rect key="frame" x="151.33333333333334" y="357.66666666666669" width="111.33333333333334" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZJ-Sr-yV4">
                     <rect key="frame" x="172.66666666666666" y="681" width="68.666666666666657" height="35"/>
                     <state key="normal" title="Button"/>
@@ -39,8 +33,6 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="aZJ-Sr-yV4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="6gs-5p-xdz"/>
-                <constraint firstItem="miI-sA-bG0" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Pi1-QH-zZS"/>
-                <constraint firstItem="miI-sA-bG0" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="WsS-hs-4YA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aZJ-Sr-yV4" secondAttribute="bottom" constant="20" id="fX8-EF-cqo"/>
             </constraints>
             <point key="canvasLocation" x="76" y="20"/>
