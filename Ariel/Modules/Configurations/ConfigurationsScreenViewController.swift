@@ -58,6 +58,7 @@ class ConfigurationsScreenViewController: BaseViewController {
             case .ended:
                 let value = musicSlider.value
                 UserDefaults.standard.set(value, forKey: "MusicVolume")
+                AudioManager.shared.ajustMusicVolume()
             default:
                 break
             }
