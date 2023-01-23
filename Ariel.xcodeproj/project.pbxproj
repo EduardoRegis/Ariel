@@ -10,6 +10,8 @@
 		2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F0F77297839AD00D37CB4 /* StringSplited.swift */; };
 		2E60C0EF297EFFD6007A2C01 /* ArchetypesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0EE297EFFD6007A2C01 /* ArchetypesModel.swift */; };
 		2E60C0F1297F0025007A2C01 /* ArchetypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */; };
+		2E60C0F3297F0A51007A2C01 /* nierCityRuins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */; };
+		2E60C0F6297F0B24007A2C01 /* forestSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */; };
 		2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */; };
 		2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCF297AC37300C7203C /* BaseRouter.swift */; };
 		2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */; };
@@ -82,6 +84,8 @@
 		2E0F0F77297839AD00D37CB4 /* StringSplited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSplited.swift; sourceTree = "<group>"; };
 		2E60C0EE297EFFD6007A2C01 /* ArchetypesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesModel.swift; sourceTree = "<group>"; };
 		2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesList.swift; sourceTree = "<group>"; };
+		2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nierCityRuins.mp3; sourceTree = "<group>"; };
+		2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = forestSound.mp3; sourceTree = "<group>"; };
 		2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringWordsInText.swift; sourceTree = "<group>"; };
 		2EC8FBCF297AC37300C7203C /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +195,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2E60C0F4297F0A61007A2C01 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */,
+				2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		2EC8FBCE297AC36100C7203C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +252,7 @@
 		2EC8FBE2297ACB0500C7203C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2E60C0F4297F0A61007A2C01 /* Sounds */,
 				2EFF845D29704F8300984165 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -412,7 +426,6 @@
 				53BAC863E2FB7B485287D5AF /* Pods-ArielTests.debug.xcconfig */,
 				5135165A09D85FE1DC385B77 /* Pods-ArielTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -526,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EC8FC09297AFE5D00C7203C /* CreditsScreenViewController.xib in Resources */,
+				2E60C0F3297F0A51007A2C01 /* nierCityRuins.mp3 in Resources */,
 				2EC8FC1A297B068E00C7203C /* HelpScreenViewController.xib in Resources */,
 				2EC8FC11297B012F00C7203C /* ConfigurationsScreenViewController.xib in Resources */,
 				2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */,
@@ -534,6 +548,7 @@
 				2EFF845E29704F8300984165 /* Assets.xcassets in Resources */,
 				2EC8FC01297AFB1700C7203C /* ArchetypesScreenViewController.xib in Resources */,
 				2EC8FBF9297AF1E000C7203C /* HerosJourneyScreenViewController.xib in Resources */,
+				2E60C0F6297F0B24007A2C01 /* forestSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

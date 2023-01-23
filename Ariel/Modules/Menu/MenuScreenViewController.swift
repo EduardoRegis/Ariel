@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import AVFoundation
 
 class MenuScreenViewController: BaseViewController {
 
@@ -21,6 +22,7 @@ class MenuScreenViewController: BaseViewController {
     
     // MARK: - Properties
     var presenter: MenuScreenPresenter!
+    var audioPlayer: AVAudioPlayer?
     
     // MARK: - View Lifecycle
     
@@ -35,6 +37,18 @@ class MenuScreenViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.didLoad()
+        
+        let pathToFind = Bundle.main.path(forResource: "nierCityRuins", ofType: "mp3")!
+        let url = URL(fileURLWithPath: pathToFind)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.setVolume(UserDefaults.standard.float(forKey: "MusicVolume"), fadeDuration: 0)
+            audioPlayer?.play()
+        } catch {
+            // AAAAA
+        }
+        
         configureUI()
     }
     

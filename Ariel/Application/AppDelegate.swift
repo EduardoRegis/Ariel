@@ -26,5 +26,18 @@ import UIKit
         window.makeKeyAndVisible()
         AppDelegate.windowView = window
     }
+    
+    func isFirstOpen() {
+        if let firstOpen = UserDefaults.standard.object(forKey: "FirstOpen") as? Date {
+            print("\("Este app foi aberto pela primeira vez em (localized)") \(firstOpen)")
+        } else {
+            print("Abrindo pela primeira vez (localized)")
+            UserDefaults.standard.set(Date(), forKey: "FirstOpen")
+            
+            UserDefaults.standard.set(0.5, forKey: "EffectSoundVolume")
+            UserDefaults.standard.set(0.5, forKey: "AmbientVolume")
+            UserDefaults.standard.set(0.5, forKey: "MusicVolume")
+        }
+    }
 }
 

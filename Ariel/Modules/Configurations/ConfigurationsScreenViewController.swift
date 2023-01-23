@@ -9,6 +9,10 @@ import UIKit
 
 class ConfigurationsScreenViewController: BaseViewController {
 
+    @IBOutlet weak var soundEffectSlider: UISlider!
+    @IBOutlet weak var ambientSlider: UISlider!
+    @IBOutlet weak var musicSlider: UISlider!
+    
     @IBOutlet weak var backButton: UIButton!
 
     // MARK: - Properties
@@ -42,10 +46,24 @@ class ConfigurationsScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
-        
+        musicSlider.setValue(UserDefaults.standard.float(forKey: "MusicVolume"), animated: true)
+        musicSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
     }
 
     // MARK: - Actions
+
+    @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
+        if let touchEvent = event.allTouches?.first {
+            switch touchEvent.phase {
+            case .ended:
+                let value = musicSlider.value
+                UserDefaults.standard.set(value, forKey: "MusicVolume")
+            default:
+                break
+            }
+        }
+    }
+    
     @IBAction func backAction(_ sender: Any) {
         self.presenter.backToMenu()
     }
