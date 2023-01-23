@@ -56,7 +56,7 @@ enum HerosJourneyModels {
         switch self {
         case .ordinaryWorld:
             return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
+                            imageName: "Capela",
                             herosJourneysStage: "Ordinary World")
         case .callToAdventure:
             return HerosJourneyModel(descriptionText: "Lorem ipsum World sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -64,7 +64,7 @@ enum HerosJourneyModels {
                             herosJourneysStage: "Call To Adventure")
         case .refusalOfTheCall:
             return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
+                            imageName: "Rato",
                             herosJourneysStage: "Refusal Of The Call")
         case .meetingTheMentor:
             return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

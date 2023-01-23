@@ -9,7 +9,13 @@ import UIKit
 
 class ArchetypesScreenViewController: BaseViewController {
     
+    @IBOutlet var collectionOfButtons: Array<UIButton>?
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionText: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - Properties
     var presenter: ArchetypesScreenPresenter!
@@ -26,6 +32,7 @@ class ArchetypesScreenViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set(2, forKey: "activeArchetypes")
         presenter.didLoad()
         configureUI()
     }
@@ -42,7 +49,32 @@ class ArchetypesScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
-        
+        self.scrollView.showsHorizontalScrollIndicator = false
+        if let collectionOfButtons = self.collectionOfButtons {
+            for (index, button) in collectionOfButtons.enumerated() {
+                button.addTarget(self, action:#selector(handleRegister(sender:)), for: .touchUpInside)
+                if index >= UserDefaults.standard.integer(forKey: "activeArchetypes") {
+                    button.isEnabled = false
+                }
+            }
+        }
+        if let archetypeModel = ArchetypeManager.shared.getArchetypeByString(name: "1") {
+            getinfoFormModel(archetype: archetypeModel)
+        }
+    }
+    
+    func getinfoFormModel(archetype: ArchetypeModel) {
+        self.titleLabel.text = archetype.archetypeStage
+        self.descriptionText.text = archetype.descriptionText
+        self.imageView.image = UIImage(named: archetype.imageName)
+    }
+    
+    @objc func handleRegister(sender: UIButton) {
+        if let value = sender.titleLabel?.text {
+            if let archetype = ArchetypeManager.shared.getArchetypeByString(name: value) {
+                getinfoFormModel(archetype: archetype)
+            }
+        }
     }
 
     // MARK: - Actions

@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="backButton" destination="dBg-Qz-qLy" id="rDB-r3-ClY"/>
                 <outlet property="imageView" destination="Yzo-v4-42e" id="OYy-dQ-qZj"/>
+                <outlet property="scrollView" destination="MrM-hN-Hts" id="Su7-tj-KsI"/>
                 <outlet property="textDescription" destination="JfI-ws-O6c" id="D0p-hq-v0Z"/>
                 <outlet property="titleLabel" destination="FVz-Ua-b4t" id="9c0-SS-Dad"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nqv-Zo-xkl"/>

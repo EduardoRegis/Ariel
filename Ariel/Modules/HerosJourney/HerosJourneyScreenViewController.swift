@@ -11,6 +11,7 @@ class HerosJourneyScreenViewController: BaseViewController {
     
     @IBOutlet var collectionOfButtons: Array<UIButton>?
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textDescription: UILabel!
@@ -48,6 +49,7 @@ class HerosJourneyScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
+        self.scrollView.showsHorizontalScrollIndicator = false
         if let collectionOfButtons = self.collectionOfButtons {
             for (index, button) in collectionOfButtons.enumerated() {
                 button.addTarget(self, action:#selector(handleRegister(sender:)), for: .touchUpInside)
