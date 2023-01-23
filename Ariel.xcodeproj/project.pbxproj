@@ -42,6 +42,8 @@
 		2EC8FC1A297B068E00C7203C /* HelpScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FC19297B068E00C7203C /* HelpScreenViewController.xib */; };
 		2EC8FC1C297C3E4100C7203C /* ConstantsAndEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */; };
 		2EC8FC1E297DB31100C7203C /* ColorsToRegexText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */; };
+		2EC8FC20297DC22800C7203C /* HerosJourneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1F297DC22800C7203C /* HerosJourneyModel.swift */; };
+		2EC8FC24297DC2D800C7203C /* HerosJourneyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC23297DC2D800C7203C /* HerosJourneyList.swift */; };
 		2EFF845529704F8200984165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845429704F8200984165 /* AppDelegate.swift */; };
 		2EFF845E29704F8300984165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845D29704F8300984165 /* Assets.xcassets */; };
 		2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845F29704F8300984165 /* LaunchScreen.storyboard */; };
@@ -107,6 +109,8 @@
 		2EC8FC19297B068E00C7203C /* HelpScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpScreenViewController.xib; sourceTree = "<group>"; };
 		2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndEnums.swift; sourceTree = "<group>"; };
 		2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsToRegexText.swift; sourceTree = "<group>"; };
+		2EC8FC1F297DC22800C7203C /* HerosJourneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyModel.swift; sourceTree = "<group>"; };
+		2EC8FC23297DC2D800C7203C /* HerosJourneyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyList.swift; sourceTree = "<group>"; };
 		2EFF845129704F8200984165 /* Ariel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ariel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFF845429704F8200984165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EFF845D29704F8300984165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,8 +219,6 @@
 		2EC8FBE3297ACD6200C7203C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2EFF84892970838600984165 /* DialogueModel.swift */,
-				2EFF848B2970841C00984165 /* DialoguesList.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -235,6 +237,7 @@
 		2EC8FBED297AE0E200C7203C /* HerosJourney */ = {
 			isa = PBXGroup;
 			children = (
+				2EC8FC22297DC26C00C7203C /* Model */,
 				2EC8FBF2297AE21A00C7203C /* HerosJourneyScreenRouter.swift */,
 				2EC8FBF4297AEF6B00C7203C /* HerosJourneyScreenViewController.swift */,
 				2EC8FBF6297AF01300C7203C /* HerosJourneyScreenPresenter.swift */,
@@ -285,6 +288,24 @@
 				2EC8FC19297B068E00C7203C /* HelpScreenViewController.xib */,
 			);
 			path = Help;
+			sourceTree = "<group>";
+		};
+		2EC8FC21297DC25100C7203C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2EFF84892970838600984165 /* DialogueModel.swift */,
+				2EFF848B2970841C00984165 /* DialoguesList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2EC8FC22297DC26C00C7203C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2EC8FC1F297DC22800C7203C /* HerosJourneyModel.swift */,
+				2EC8FC23297DC2D800C7203C /* HerosJourneyList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2EFF844829704F8200984165 = {
@@ -341,6 +362,7 @@
 		2EFF84882970835900984165 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
+				2EC8FC21297DC25100C7203C /* Model */,
 				2EFF848629706F0B00984165 /* CardView.swift */,
 				2EFF848429706B3E00984165 /* GameplayCardView.swift */,
 			);
@@ -488,6 +510,7 @@
 				2EC8FBDA297AC4DE00C7203C /* SplashScreenViewController.swift in Sources */,
 				2EC8FC18297B064200C7203C /* HelpScreenPresenter.swift in Sources */,
 				2EC8FBE6297ACDCE00C7203C /* MenuScreenRouter.swift in Sources */,
+				2EC8FC24297DC2D800C7203C /* HerosJourneyList.swift in Sources */,
 				2EC8FC05297AFDCA00C7203C /* CreditsScreenViewController.swift in Sources */,
 				2EFF845529704F8200984165 /* AppDelegate.swift in Sources */,
 				2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */,
@@ -510,6 +533,7 @@
 				2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */,
 				2EC8FC0B297B005F00C7203C /* ConfigurationsScreenRouter.swift in Sources */,
 				2EC8FC0F297B00F800C7203C /* ConfigurationsScreenPresenter.swift in Sources */,
+				2EC8FC20297DC22800C7203C /* HerosJourneyModel.swift in Sources */,
 				2EC8FC16297B056300C7203C /* HelpScreenViewController.swift in Sources */,
 				2EC8FBE8297ACE4B00C7203C /* MenuScreenViewController.swift in Sources */,
 				2EC8FBEA297ACEA300C7203C /* MenuScreenPresenter.swift in Sources */,

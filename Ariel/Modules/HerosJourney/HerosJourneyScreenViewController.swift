@@ -9,8 +9,12 @@ import UIKit
 
 class HerosJourneyScreenViewController: BaseViewController {
     
-    
+    @IBOutlet var collectionOfButtons: Array<UIButton>?
     @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textDescription: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - Properties
     var presenter: HerosJourneyScreenPresenter!
@@ -27,6 +31,7 @@ class HerosJourneyScreenViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set(3, forKey: "activeHerosJourney")
         presenter.didLoad()
         configureUI()
     }
@@ -43,7 +48,31 @@ class HerosJourneyScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
-        
+        if let collectionOfButtons = self.collectionOfButtons {
+            for (index, button) in collectionOfButtons.enumerated() {
+                button.addTarget(self, action:#selector(handleRegister(sender:)), for: .touchUpInside)
+                if index >= UserDefaults.standard.integer(forKey: "activeHerosJourney") {
+                    button.isEnabled = false
+                }
+            }
+        }
+        if let herosJourney = HerosJourneyManager.shared.getHerosJourneyByString(name: "1") {
+            getinfoFormModel(herosJourney: herosJourney)
+        }
+    }
+    
+    func getinfoFormModel(herosJourney: HerosJourneyModel) {
+        self.titleLabel.text = herosJourney.herosJourneysStage
+        self.textDescription.text = herosJourney.descriptionText
+        self.imageView.image = UIImage(named: herosJourney.imageName)
+    }
+    
+    @objc func handleRegister(sender: UIButton) {
+        if let value = sender.titleLabel?.text {
+            if let herosJourney = HerosJourneyManager.shared.getHerosJourneyByString(name: value) {
+                getinfoFormModel(herosJourney: herosJourney)
+            }
+        }
     }
 
     // MARK: - Actions
