@@ -54,13 +54,11 @@ class ConfigurationsScreenViewController: BaseViewController {
 
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
         if let touchEvent = event.allTouches?.first {
-            switch touchEvent.phase {
-            case .ended:
+            if touchEvent.phase == .ended {
                 let value = musicSlider.value
                 UserDefaults.standard.set(value, forKey: "MusicVolume")
                 AudioManager.shared.ajustMusicVolume()
-            default:
-                break
+                AudioManager.shared.playSoundEffect(name: "sliderButtonReleased")
             }
         }
     }

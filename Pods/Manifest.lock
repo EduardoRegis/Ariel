@@ -2,21 +2,17 @@ PODS:
   - SwiftMessages (9.0.6):
     - SwiftMessages/App (= 9.0.6)
   - SwiftMessages/App (9.0.6)
-  - SwiftySound (1.2.0)
 
 DEPENDENCIES:
   - SwiftMessages
-  - SwiftySound
 
 SPEC REPOS:
   trunk:
     - SwiftMessages
-    - SwiftySound
 
 SPEC CHECKSUMS:
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
-  SwiftySound: 9eb28bb14edb601b40027e44319e0ef8383f88bf
 
-PODFILE CHECKSUM: 3c161cb229e432b8ed20f0220360b9bc86788c68
+PODFILE CHECKSUM: caf406a30adf806b498d29289c917c0ad29ec26f
 
 COCOAPODS: 1.11.3

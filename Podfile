@@ -6,7 +6,6 @@ target 'Ariel' do
     use_frameworks!
   
     # Pods for Ariel
-    pod 'SwiftySound'
     pod 'SwiftMessages'
   
     target 'ArielTests' do

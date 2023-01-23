@@ -16,24 +16,59 @@ class AudioManager {
     
     private init() {}
     
-    var audioPlayer: AVAudioPlayer?
+    var musicPlayer: AVAudioPlayer?
+    var ambientPlayer: AVAudioPlayer?
+    var soundEffectPlayer: AVAudioPlayer?
     
     func playMusic() {
         let pathToFind = Bundle.main.path(forResource: "nierCityRuins", ofType: "mp3")!
         let url = URL(fileURLWithPath: pathToFind)
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.setVolume(UserDefaults.standard.float(forKey: "MusicVolume"), fadeDuration: 0)
-            audioPlayer?.play()
+            musicPlayer = try AVAudioPlayer(contentsOf: url)
+            musicPlayer?.setVolume(UserDefaults.standard.float(forKey: "MusicVolume"), fadeDuration: 0)
+            musicPlayer?.play()
         } catch {
-            // AAAAA
+            // localized
         }
     }
     
     func ajustMusicVolume() {
-        audioPlayer?.setVolume(UserDefaults.standard.float(forKey: "MusicVolume"), fadeDuration: 0)
+        musicPlayer?.setVolume(UserDefaults.standard.float(forKey: "MusicVolume"), fadeDuration: 0.2)
     }
     
+    func playAmbient() {
+        let pathToFind = Bundle.main.path(forResource: "forest", ofType: "mp3")!
+        let url = URL(fileURLWithPath: pathToFind)
+        
+        do {
+            ambientPlayer = try AVAudioPlayer(contentsOf: url)
+            ambientPlayer?.setVolume(UserDefaults.standard.float(forKey: "AmbientVolume"), fadeDuration: 0)
+            ambientPlayer?.play()
+        } catch {
+            // localized
+        }
+    }
+    
+    func ajustAmbientVolume() {
+        ambientPlayer?.setVolume(UserDefaults.standard.float(forKey: "AmbientVolume"), fadeDuration: 0.2)
+    }
+    
+    func playSoundEffect(name: String) {
+        let pathToFind = Bundle.main.path(forResource: name, ofType: "mp3")!
+        let url = URL(fileURLWithPath: pathToFind)
+        
+        do {
+            soundEffectPlayer = try AVAudioPlayer(contentsOf: url)
+            soundEffectPlayer?.setVolume(UserDefaults.standard.float(forKey: "SoundEffectVolume"), fadeDuration: 0)
+            soundEffectPlayer?.play()
+        } catch {
+            // localized
+        }
+    }
+    
+    func ajustSoundEffectVolume() {
+        soundEffectPlayer?.setVolume(UserDefaults.standard.float(forKey: "SoundEffectVolume"), fadeDuration: 0.2)
+    }
     
 }

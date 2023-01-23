@@ -13,6 +13,8 @@
 		2E60C0F3297F0A51007A2C01 /* nierCityRuins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */; };
 		2E60C0F6297F0B24007A2C01 /* forestSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */; };
 		2E60C0F8297F1BB5007A2C01 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */; };
+		2E60C0FB297F342B007A2C01 /* sliderButtonReleased.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F9297F342B007A2C01 /* sliderButtonReleased.mp3 */; };
+		2E60C0FC297F342B007A2C01 /* cardSideChoosen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0FA297F342B007A2C01 /* cardSideChoosen.mp3 */; };
 		2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */; };
 		2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCF297AC37300C7203C /* BaseRouter.swift */; };
 		2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */; };
@@ -88,6 +90,8 @@
 		2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nierCityRuins.mp3; sourceTree = "<group>"; };
 		2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = forestSound.mp3; sourceTree = "<group>"; };
 		2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		2E60C0F9297F342B007A2C01 /* sliderButtonReleased.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sliderButtonReleased.mp3; sourceTree = "<group>"; };
+		2E60C0FA297F342B007A2C01 /* cardSideChoosen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cardSideChoosen.mp3; sourceTree = "<group>"; };
 		2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringWordsInText.swift; sourceTree = "<group>"; };
 		2EC8FBCF297AC37300C7203C /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 		2E60C0F4297F0A61007A2C01 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				2E60C0FA297F342B007A2C01 /* cardSideChoosen.mp3 */,
+				2E60C0F9297F342B007A2C01 /* sliderButtonReleased.mp3 */,
 				2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */,
 				2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */,
 			);
@@ -547,10 +553,12 @@
 				2EC8FC11297B012F00C7203C /* ConfigurationsScreenViewController.xib in Resources */,
 				2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */,
 				2EC8FBEC297ACF4000C7203C /* MenuScreenViewController.xib in Resources */,
+				2E60C0FB297F342B007A2C01 /* sliderButtonReleased.mp3 in Resources */,
 				2EC8FBE0297AC82700C7203C /* SplashScreenViewController.xib in Resources */,
 				2EFF845E29704F8300984165 /* Assets.xcassets in Resources */,
 				2EC8FC01297AFB1700C7203C /* ArchetypesScreenViewController.xib in Resources */,
 				2EC8FBF9297AF1E000C7203C /* HerosJourneyScreenViewController.xib in Resources */,
+				2E60C0FC297F342B007A2C01 /* cardSideChoosen.mp3 in Resources */,
 				2E60C0F6297F0B24007A2C01 /* forestSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

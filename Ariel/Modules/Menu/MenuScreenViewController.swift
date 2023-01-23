@@ -36,9 +36,7 @@ class MenuScreenViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.didLoad()
-        
         AudioManager.shared.playMusic()
-        
         configureUI()
     }
     
