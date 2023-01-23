@@ -9,7 +9,7 @@ import UIKit
 
 class HerosJourneyScreenViewController: BaseViewController {
     
-    
+    @IBOutlet var collectionOfButtons: Array<UIButton>?
     @IBOutlet weak var backButton: UIButton!
     
     // MARK: - Properties
@@ -27,6 +27,7 @@ class HerosJourneyScreenViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set(3, forKey: "activeHerosJourney")
         presenter.didLoad()
         configureUI()
     }
@@ -44,6 +45,21 @@ class HerosJourneyScreenViewController: BaseViewController {
     // MARK: - Methods
     func configureUI() {
         
+        if let collectionOfButtons = self.collectionOfButtons {
+            for (index, button) in collectionOfButtons.enumerated() {
+                button.addTarget(self, action:#selector(handleRegister(sender:)), for: .touchUpInside)
+                if index >= UserDefaults.standard.integer(forKey: "activeHerosJourney") {
+                    button.isEnabled = false
+                }
+            }
+        }
+        
+    }
+    
+    @objc func handleRegister(sender: UIButton) {
+        if let value = sender.titleLabel?.text {
+            print(value)
+        }
     }
 
     // MARK: - Actions
