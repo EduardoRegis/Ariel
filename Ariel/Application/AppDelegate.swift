@@ -38,6 +38,9 @@ import UIKit
             UserDefaults.standard.set(0.5, forKey: "SoundEffectVolume")
             UserDefaults.standard.set(0.5, forKey: "AmbientVolume")
             UserDefaults.standard.set(0.5, forKey: "MusicVolume")
+            
+            UserDefaults.standard.set(0, forKey: "activeHerosJourney")
+            UserDefaults.standard.set(0, forKey: "activeArchetypes")
         }
     }
 }

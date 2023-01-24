@@ -31,6 +31,9 @@ struct CardView: View {
                 .onChange(of: dialogue, perform: {
                     newValue in
                     repositioningCardOutOfBounds()
+                    if let soundEffect = newValue.soundTrigger {
+                        triggeringSound(name: soundEffect)
+                    }
                 })
                 .onChange(of: isTextTimerActive, perform: {
                     newValue in
@@ -66,6 +69,12 @@ struct CardView: View {
                 changeText(width: offset.width)
             }
         )
+    }
+    
+    func triggeringSound(name: String) {
+        if name != "" {
+            AudioManager.shared.playSoundEffect(name: name)
+        }
     }
     
     func repositioningCardOutOfBounds() {

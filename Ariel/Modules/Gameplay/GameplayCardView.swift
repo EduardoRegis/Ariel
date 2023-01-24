@@ -86,7 +86,6 @@ struct GameplayCardView: View {
             }
         }
         .onAppear {
-            // TODO: - Carregar aqui o progresso do usuário
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 var data = Dialogues.firstText.getDialogue()
                 if UserDefaults.standard.bool(forKey: "isNewJourney") {
