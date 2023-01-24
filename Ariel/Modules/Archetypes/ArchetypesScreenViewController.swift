@@ -59,11 +59,11 @@ class ArchetypesScreenViewController: BaseViewController {
             }
         }
         if let archetypeModel = ArchetypeManager.shared.getArchetypeByString(name: "1") {
-            getinfoFormModel(archetype: archetypeModel)
+            getInfoFormModel(archetype: archetypeModel)
         }
     }
     
-    func getinfoFormModel(archetype: ArchetypeModel) {
+    func getInfoFormModel(archetype: ArchetypeModel) {
         self.titleLabel.text = archetype.archetypeStage
         self.descriptionText.text = archetype.descriptionText
         self.imageView.image = UIImage(named: archetype.imageName)
@@ -72,7 +72,7 @@ class ArchetypesScreenViewController: BaseViewController {
     @objc func handleRegister(sender: UIButton) {
         if let value = sender.titleLabel?.text {
             if let archetype = ArchetypeManager.shared.getArchetypeByString(name: value) {
-                getinfoFormModel(archetype: archetype)
+                getInfoFormModel(archetype: archetype)
             }
         }
     }

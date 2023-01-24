@@ -10,6 +10,11 @@
 		2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F0F77297839AD00D37CB4 /* StringSplited.swift */; };
 		2E60C0EF297EFFD6007A2C01 /* ArchetypesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0EE297EFFD6007A2C01 /* ArchetypesModel.swift */; };
 		2E60C0F1297F0025007A2C01 /* ArchetypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */; };
+		2E60C0F3297F0A51007A2C01 /* nierCityRuins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */; };
+		2E60C0F6297F0B24007A2C01 /* forestSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */; };
+		2E60C0F8297F1BB5007A2C01 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */; };
+		2E60C0FB297F342B007A2C01 /* sliderButtonReleased.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F9297F342B007A2C01 /* sliderButtonReleased.mp3 */; };
+		2E60C0FC297F342B007A2C01 /* cardSideChoosen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0FA297F342B007A2C01 /* cardSideChoosen.mp3 */; };
 		2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */; };
 		2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCF297AC37300C7203C /* BaseRouter.swift */; };
 		2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */; };
@@ -56,6 +61,9 @@
 		2EFF848729706F0B00984165 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF848629706F0B00984165 /* CardView.swift */; };
 		2EFF848A2970838600984165 /* DialogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF84892970838600984165 /* DialogueModel.swift */; };
 		2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF848B2970841C00984165 /* DialoguesList.swift */; };
+		984731D7AFC940F849EBFDF0 /* Pods_Ariel_ArielUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60EA8D93D8125252A5DB32D /* Pods_Ariel_ArielUITests.framework */; };
+		9DE0A0877829083EFECFC2D3 /* Pods_Ariel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECE597BA14DE6F30062CF82 /* Pods_Ariel.framework */; };
+		B029F0421220418FCD1322EA /* Pods_ArielTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F0EDB5E3C2A9D5EEF7051F /* Pods_ArielTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +87,11 @@
 		2E0F0F77297839AD00D37CB4 /* StringSplited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSplited.swift; sourceTree = "<group>"; };
 		2E60C0EE297EFFD6007A2C01 /* ArchetypesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesModel.swift; sourceTree = "<group>"; };
 		2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesList.swift; sourceTree = "<group>"; };
+		2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nierCityRuins.mp3; sourceTree = "<group>"; };
+		2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = forestSound.mp3; sourceTree = "<group>"; };
+		2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		2E60C0F9297F342B007A2C01 /* sliderButtonReleased.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sliderButtonReleased.mp3; sourceTree = "<group>"; };
+		2E60C0FA297F342B007A2C01 /* cardSideChoosen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cardSideChoosen.mp3; sourceTree = "<group>"; };
 		2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringWordsInText.swift; sourceTree = "<group>"; };
 		2EC8FBCF297AC37300C7203C /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +142,15 @@
 		2EFF848629706F0B00984165 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2EFF84892970838600984165 /* DialogueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueModel.swift; sourceTree = "<group>"; };
 		2EFF848B2970841C00984165 /* DialoguesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialoguesList.swift; sourceTree = "<group>"; };
+		30F0EDB5E3C2A9D5EEF7051F /* Pods_ArielTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArielTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5135165A09D85FE1DC385B77 /* Pods-ArielTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArielTests.release.xcconfig"; path = "Target Support Files/Pods-ArielTests/Pods-ArielTests.release.xcconfig"; sourceTree = "<group>"; };
+		53BAC863E2FB7B485287D5AF /* Pods-ArielTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArielTests.debug.xcconfig"; path = "Target Support Files/Pods-ArielTests/Pods-ArielTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A13984B2EB678AE41A9D0C5 /* Pods-Ariel-ArielUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ariel-ArielUITests.release.xcconfig"; path = "Target Support Files/Pods-Ariel-ArielUITests/Pods-Ariel-ArielUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A60EA8D93D8125252A5DB32D /* Pods_Ariel_ArielUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ariel_ArielUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A792FA7D5FDD7A7B2DB41092 /* Pods-Ariel-ArielUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ariel-ArielUITests.debug.xcconfig"; path = "Target Support Files/Pods-Ariel-ArielUITests/Pods-Ariel-ArielUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AECE597BA14DE6F30062CF82 /* Pods_Ariel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ariel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B411E43946A6B7001AA89658 /* Pods-Ariel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ariel.release.xcconfig"; path = "Target Support Files/Pods-Ariel/Pods-Ariel.release.xcconfig"; sourceTree = "<group>"; };
+		D9F2FEBF810F9C87ADABFDC3 /* Pods-Ariel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ariel.debug.xcconfig"; path = "Target Support Files/Pods-Ariel/Pods-Ariel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE0A0877829083EFECFC2D3 /* Pods_Ariel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B029F0421220418FCD1322EA /* Pods_ArielTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984731D7AFC940F849EBFDF0 /* Pods_Ariel_ArielUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +188,7 @@
 				2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */,
 				2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */,
 				2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */,
+				2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +200,17 @@
 				2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2E60C0F4297F0A61007A2C01 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2E60C0FA297F342B007A2C01 /* cardSideChoosen.mp3 */,
+				2E60C0F9297F342B007A2C01 /* sliderButtonReleased.mp3 */,
+				2E60C0F5297F0B24007A2C01 /* forestSound.mp3 */,
+				2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		2EC8FBCE297AC36100C7203C /* Utils */ = {
@@ -224,6 +261,7 @@
 		2EC8FBE2297ACB0500C7203C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2E60C0F4297F0A61007A2C01 /* Sounds */,
 				2EFF845D29704F8300984165 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -322,6 +360,8 @@
 				2EFF846A29704F8400984165 /* ArielTests */,
 				2EFF847429704F8400984165 /* ArielUITests */,
 				2EFF845229704F8200984165 /* Products */,
+				FD9072594C12D46871B8D71A /* Pods */,
+				670A047D1731EEAAA00080B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -375,6 +415,29 @@
 			path = Gameplay;
 			sourceTree = "<group>";
 		};
+		670A047D1731EEAAA00080B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AECE597BA14DE6F30062CF82 /* Pods_Ariel.framework */,
+				A60EA8D93D8125252A5DB32D /* Pods_Ariel_ArielUITests.framework */,
+				30F0EDB5E3C2A9D5EEF7051F /* Pods_ArielTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD9072594C12D46871B8D71A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9F2FEBF810F9C87ADABFDC3 /* Pods-Ariel.debug.xcconfig */,
+				B411E43946A6B7001AA89658 /* Pods-Ariel.release.xcconfig */,
+				A792FA7D5FDD7A7B2DB41092 /* Pods-Ariel-ArielUITests.debug.xcconfig */,
+				8A13984B2EB678AE41A9D0C5 /* Pods-Ariel-ArielUITests.release.xcconfig */,
+				53BAC863E2FB7B485287D5AF /* Pods-ArielTests.debug.xcconfig */,
+				5135165A09D85FE1DC385B77 /* Pods-ArielTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,9 +445,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EFF847B29704F8400984165 /* Build configuration list for PBXNativeTarget "Ariel" */;
 			buildPhases = (
+				76C37C10020C29548824BFF3 /* [CP] Check Pods Manifest.lock */,
 				2EFF844D29704F8200984165 /* Sources */,
 				2EFF844E29704F8200984165 /* Frameworks */,
 				2EFF844F29704F8200984165 /* Resources */,
+				1A0975046A3FE7AB7F26324F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +464,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EFF847E29704F8400984165 /* Build configuration list for PBXNativeTarget "ArielTests" */;
 			buildPhases = (
+				728ACD5D1CC3E6D4F7C8FD0E /* [CP] Check Pods Manifest.lock */,
 				2EFF846329704F8400984165 /* Sources */,
 				2EFF846429704F8400984165 /* Frameworks */,
 				2EFF846529704F8400984165 /* Resources */,
@@ -417,9 +483,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EFF848129704F8400984165 /* Build configuration list for PBXNativeTarget "ArielUITests" */;
 			buildPhases = (
+				4423FCDCEBC2756A7410EDBE /* [CP] Check Pods Manifest.lock */,
 				2EFF846D29704F8400984165 /* Sources */,
 				2EFF846E29704F8400984165 /* Frameworks */,
 				2EFF846F29704F8400984165 /* Resources */,
+				8C9E5DA79CF99B77F9B5BC08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -480,14 +548,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EC8FC09297AFE5D00C7203C /* CreditsScreenViewController.xib in Resources */,
+				2E60C0F3297F0A51007A2C01 /* nierCityRuins.mp3 in Resources */,
 				2EC8FC1A297B068E00C7203C /* HelpScreenViewController.xib in Resources */,
 				2EC8FC11297B012F00C7203C /* ConfigurationsScreenViewController.xib in Resources */,
 				2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */,
 				2EC8FBEC297ACF4000C7203C /* MenuScreenViewController.xib in Resources */,
+				2E60C0FB297F342B007A2C01 /* sliderButtonReleased.mp3 in Resources */,
 				2EC8FBE0297AC82700C7203C /* SplashScreenViewController.xib in Resources */,
 				2EFF845E29704F8300984165 /* Assets.xcassets in Resources */,
 				2EC8FC01297AFB1700C7203C /* ArchetypesScreenViewController.xib in Resources */,
 				2EC8FBF9297AF1E000C7203C /* HerosJourneyScreenViewController.xib in Resources */,
+				2E60C0FC297F342B007A2C01 /* cardSideChoosen.mp3 in Resources */,
+				2E60C0F6297F0B24007A2C01 /* forestSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +579,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A0975046A3FE7AB7F26324F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ariel/Pods-Ariel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ariel/Pods-Ariel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ariel/Pods-Ariel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4423FCDCEBC2756A7410EDBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ariel-ArielUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		728ACD5D1CC3E6D4F7C8FD0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArielTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76C37C10020C29548824BFF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ariel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C9E5DA79CF99B77F9B5BC08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ariel-ArielUITests/Pods-Ariel-ArielUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ariel-ArielUITests/Pods-Ariel-ArielUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ariel-ArielUITests/Pods-Ariel-ArielUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EFF844D29704F8200984165 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -514,6 +689,7 @@
 			files = (
 				2EC8FBD4297AC3D400C7203C /* BasePresenterDelegate.swift in Sources */,
 				2EC8FBDA297AC4DE00C7203C /* SplashScreenViewController.swift in Sources */,
+				2E60C0F8297F1BB5007A2C01 /* AudioManager.swift in Sources */,
 				2EC8FC18297B064200C7203C /* HelpScreenPresenter.swift in Sources */,
 				2EC8FBE6297ACDCE00C7203C /* MenuScreenRouter.swift in Sources */,
 				2EC8FC24297DC2D800C7203C /* HerosJourneyList.swift in Sources */,
@@ -712,6 +888,7 @@
 		};
 		2EFF847C29704F8400984165 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9F2FEBF810F9C87ADABFDC3 /* Pods-Ariel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -740,6 +917,7 @@
 		};
 		2EFF847D29704F8400984165 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B411E43946A6B7001AA89658 /* Pods-Ariel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -768,6 +946,7 @@
 		};
 		2EFF847F29704F8400984165 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53BAC863E2FB7B485287D5AF /* Pods-ArielTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -788,6 +967,7 @@
 		};
 		2EFF848029704F8400984165 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5135165A09D85FE1DC385B77 /* Pods-ArielTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -808,6 +988,7 @@
 		};
 		2EFF848229704F8400984165 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A792FA7D5FDD7A7B2DB41092 /* Pods-Ariel-ArielUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -826,6 +1007,7 @@
 		};
 		2EFF848329704F8400984165 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A13984B2EB678AE41A9D0C5 /* Pods-Ariel-ArielUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

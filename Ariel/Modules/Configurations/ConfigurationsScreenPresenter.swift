@@ -29,6 +29,24 @@ class ConfigurationsScreenPresenter {
     func didAppear() {
     }
     
+    func ajustVolume(tag: Int, value: Float) {
+        switch(tag) {
+        case 0:
+            UserDefaults.standard.set(value, forKey: "MusicVolume")
+            AudioManager.shared.ajustMusicVolume()
+        case 1:
+            UserDefaults.standard.set(value, forKey: "AmbientVolume")
+            AudioManager.shared.ajustAmbientVolume()
+        case 2:
+            UserDefaults.standard.set(value, forKey: "SoundEffectVolume")
+            AudioManager.shared.ajustSoundEffectVolume()
+        default:
+            break
+        }
+        AudioManager.shared.playSoundEffect(name: "sliderButtonReleased")
+       
+    }
+    
     func backToMenu() {
         self.router.backToMenu()
     }

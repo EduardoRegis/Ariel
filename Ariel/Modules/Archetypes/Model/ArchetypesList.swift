@@ -53,7 +53,7 @@ enum ArchetypeModels {
         case .callToAdventure:
             return ArchetypeModel(descriptionText: "Lorem ipsum World sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             imageName: "Mentor",
-                            archetypeStage: "Mentor")
+                            archetypeStage: "Treinador")
         case .refusalOfTheCall:
             return ArchetypeModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             imageName: "ariel still",

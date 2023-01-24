@@ -9,6 +9,10 @@ import UIKit
 
 class ConfigurationsScreenViewController: BaseViewController {
 
+    @IBOutlet weak var soundEffectSlider: UISlider!
+    @IBOutlet weak var ambientSlider: UISlider!
+    @IBOutlet weak var musicSlider: UISlider!
+    
     @IBOutlet weak var backButton: UIButton!
 
     // MARK: - Properties
@@ -42,10 +46,29 @@ class ConfigurationsScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
+        musicSlider.setValue(UserDefaults.standard.float(forKey: "MusicVolume"), animated: true)
+        musicSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+        musicSlider.tag = 0
         
+        ambientSlider.setValue(UserDefaults.standard.float(forKey: "AmbientVolume"), animated: true)
+        ambientSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+        ambientSlider.tag = 1
+        
+        soundEffectSlider.setValue(UserDefaults.standard.float(forKey: "SoundEffectVolume"), animated: true)
+        soundEffectSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+        soundEffectSlider.tag = 2
     }
 
     // MARK: - Actions
+
+    @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
+        if let touchEvent = event.allTouches?.first {
+            if touchEvent.phase == .ended {
+                presenter.ajustVolume(tag: slider.tag, value: slider.value)
+            }
+        }
+    }
+    
     @IBAction func backAction(_ sender: Any) {
         self.presenter.backToMenu()
     }

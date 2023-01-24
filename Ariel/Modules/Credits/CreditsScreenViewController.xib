@@ -20,12 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Créditos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuB-b3-gUD">
-                    <rect key="frame" x="175" y="358" width="65" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsj-b0-4bU">
                     <rect key="frame" x="172.66666666666666" y="681" width="68.666666666666657" height="35"/>
                     <state key="normal" title="Button"/>
@@ -38,10 +32,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="RuB-b3-gUD" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="653-TO-aFa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Zsj-b0-4bU" secondAttribute="bottom" constant="20" id="It0-7X-ADB"/>
                 <constraint firstItem="Zsj-b0-4bU" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="t08-HO-cRd"/>
-                <constraint firstItem="RuB-b3-gUD" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="zJF-4b-6zL"/>
             </constraints>
             <point key="canvasLocation" x="-89" y="20"/>
         </view>

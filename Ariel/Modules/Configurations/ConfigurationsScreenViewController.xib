@@ -11,7 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfigurationsScreenViewController" customModule="Ariel" customModuleProvider="target">
             <connections>
+                <outlet property="ambientSlider" destination="9cK-Cd-ctW" id="rP1-ET-ApQ"/>
                 <outlet property="backButton" destination="aZJ-Sr-yV4" id="ADt-iG-sWc"/>
+                <outlet property="musicSlider" destination="1VK-eV-nlb" id="Xzd-tC-ajQ"/>
+                <outlet property="soundEffectSlider" destination="CY6-ZH-JEe" id="IQn-hu-uDS"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uoq-BW-TaZ"/>
             </connections>
         </placeholder>
@@ -20,30 +23,81 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configurações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miI-sA-bG0">
-                    <rect key="frame" x="151.33333333333334" y="357.66666666666669" width="111.33333333333334" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZJ-Sr-yV4">
-                    <rect key="frame" x="172.66666666666666" y="681" width="68.666666666666657" height="35"/>
+                    <rect key="frame" x="172.66666666666666" y="681.66666666666663" width="68.666666666666657" height="34.333333333333371"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Voltar"/>
                     <connections>
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="KoJ-ng-x2w"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configurações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtX-uT-VB4">
+                    <rect key="frame" x="151.33333333333334" y="20" width="111.33333333333334" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="iy6-4C-zgk">
+                    <rect key="frame" x="32" y="260.66666666666669" width="350" height="215"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ytb-oa-2cj" userLabel="soundEffect">
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="50.333333333333336"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Efeitos Sonoros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TV7-he-DTH">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CY6-ZH-JEe" userLabel="soundEffectSlider">
+                                    <rect key="frame" x="-2" y="20.333333333333314" width="354" height="31"/>
+                                </slider>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xnP-Pj-Vhm" userLabel="ambient">
+                            <rect key="frame" x="0.0" y="82.333333333333314" width="350" height="50.333333333333343"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ambientação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwx-xE-tP0">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9cK-Cd-ctW" userLabel="ambientSlider">
+                                    <rect key="frame" x="-2" y="20.333333333333314" width="354" height="31"/>
+                                </slider>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VDI-Ni-P2A" userLabel="music">
+                            <rect key="frame" x="0.0" y="164.66666666666663" width="350" height="50.333333333333343"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Música" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWX-8Q-HiQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1VK-eV-nlb" userLabel="musicSlider">
+                                    <rect key="frame" x="-2" y="20.333333333333371" width="354" height="31"/>
+                                </slider>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="aZJ-Sr-yV4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="6gs-5p-xdz"/>
-                <constraint firstItem="miI-sA-bG0" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Pi1-QH-zZS"/>
-                <constraint firstItem="miI-sA-bG0" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="WsS-hs-4YA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iy6-4C-zgk" secondAttribute="trailing" constant="32" id="YfT-wK-GlP"/>
+                <constraint firstItem="iy6-4C-zgk" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="dzs-js-b8S"/>
+                <constraint firstItem="iy6-4C-zgk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="e9j-Uy-6eH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aZJ-Sr-yV4" secondAttribute="bottom" constant="20" id="fX8-EF-cqo"/>
+                <constraint firstItem="iy6-4C-zgk" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="gRx-H3-UZ8"/>
+                <constraint firstItem="LtX-uT-VB4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="n06-hQ-nyE"/>
+                <constraint firstItem="LtX-uT-VB4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="qR8-g2-Xeg"/>
             </constraints>
-            <point key="canvasLocation" x="76" y="20"/>
+            <point key="canvasLocation" x="75.362318840579718" y="19.565217391304348"/>
         </view>
     </objects>
     <resources>

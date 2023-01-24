@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import AVFoundation
 
 class MenuScreenViewController: BaseViewController {
 
@@ -62,17 +63,11 @@ class MenuScreenViewController: BaseViewController {
 
     // MARK: - Actions
     @IBAction func newJourneyAction(_ sender: Any) {
-        let swiftUIViewController = UIHostingController(rootView: GameplayCardView())
-        UserDefaults.standard.set(true, forKey: "isNewJourney")
-        swiftUIViewController.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        self.present(swiftUIViewController, animated: true, completion: nil)
+        self.present(presenter.navigateToGameplay(isNewJourney: true), animated: true, completion: nil)
     }
     
     @IBAction func continueAction(_ sender: Any) {
-        let swiftUIViewController = UIHostingController(rootView: GameplayCardView())
-        UserDefaults.standard.set(false, forKey: "isNewJourney")
-        swiftUIViewController.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        self.present(swiftUIViewController, animated: true, completion: nil)
+        self.present(presenter.navigateToGameplay(isNewJourney: false), animated: true, completion: nil)
     }
     
     @IBAction func herosJourneyAction(_ sender: Any) {
