@@ -95,8 +95,10 @@ struct CardView: View {
         switch width {
         case -500...(-50):
             self.nextDialogue = dialogue.nextLeftDialogue ?? ""
+            AudioManager.shared.playSoundEffect(name: "cardSideChoosen")
         case 50...500:
             self.nextDialogue = dialogue.nextRightDialogue ?? ""
+            AudioManager.shared.playSoundEffect(name: "cardSideChoosen")
         default:
             break
         }
