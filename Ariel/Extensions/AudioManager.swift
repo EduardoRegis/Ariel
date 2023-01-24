@@ -38,12 +38,13 @@ class AudioManager {
     }
     
     func playAmbient() {
-        let pathToFind = Bundle.main.path(forResource: "forest", ofType: "mp3")!
+        let pathToFind = Bundle.main.path(forResource: "forestSound", ofType: "mp3")!
         let url = URL(fileURLWithPath: pathToFind)
         
         do {
             ambientPlayer = try AVAudioPlayer(contentsOf: url)
             ambientPlayer?.setVolume(UserDefaults.standard.float(forKey: "AmbientVolume"), fadeDuration: 0)
+            ambientPlayer?.numberOfLoops = -1
             ambientPlayer?.play()
         } catch {
             // localized

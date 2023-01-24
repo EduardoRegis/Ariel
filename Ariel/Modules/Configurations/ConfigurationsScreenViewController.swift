@@ -48,6 +48,15 @@ class ConfigurationsScreenViewController: BaseViewController {
     func configureUI() {
         musicSlider.setValue(UserDefaults.standard.float(forKey: "MusicVolume"), animated: true)
         musicSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+        musicSlider.tag = 0
+        
+        ambientSlider.setValue(UserDefaults.standard.float(forKey: "AmbientVolume"), animated: true)
+        ambientSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+        ambientSlider.tag = 1
+        
+        soundEffectSlider.setValue(UserDefaults.standard.float(forKey: "SoundEffectVolume"), animated: true)
+        soundEffectSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+        soundEffectSlider.tag = 2
     }
 
     // MARK: - Actions
@@ -55,10 +64,7 @@ class ConfigurationsScreenViewController: BaseViewController {
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
         if let touchEvent = event.allTouches?.first {
             if touchEvent.phase == .ended {
-                let value = musicSlider.value
-                UserDefaults.standard.set(value, forKey: "MusicVolume")
-                AudioManager.shared.ajustMusicVolume()
-                AudioManager.shared.playSoundEffect(name: "sliderButtonReleased")
+                presenter.ajustVolume(tag: slider.tag, value: slider.value)
             }
         }
     }

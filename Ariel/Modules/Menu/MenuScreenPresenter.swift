@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol MenuScreenPresenterDelegate: BasePresenterDelegate {
 }
@@ -21,12 +22,21 @@ class MenuScreenPresenter {
         self.router = router
     }
     func didLoad() {
+        AudioManager.shared.playMusic()
+        AudioManager.shared.playAmbient()
     }
     
     func willAppear() {
     }
     
     func didAppear() {
+    }
+    
+    func navigateToGameplay(isNewJourney: Bool) -> UIViewController {
+        let swiftUIViewController = UIHostingController(rootView: GameplayCardView())
+        UserDefaults.standard.set(isNewJourney, forKey: "isNewJourney")
+        swiftUIViewController.modalPresentationStyle = .fullScreen
+        return swiftUIViewController
     }
     
     func navigateToHerosJourney() {
