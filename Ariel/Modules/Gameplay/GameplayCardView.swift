@@ -77,6 +77,7 @@ struct GameplayCardView: View {
                                     if let newDialogue = DialogueManager.shared.getDialogueByString(name: nextDialogue) {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                             self.dialogue = newDialogue
+                                            checkTrigger(dialogue: newDialogue)
                                         }
                                     }
                                 }
@@ -162,5 +163,25 @@ struct GameplayCardView: View {
             newColoredWords.append(String(coloredWord.dropFirst().dropLast()))
         }
         self.coloredWords = newColoredWords
+    }
+    
+    func checkTrigger(dialogue: Dialogue) {
+        if let genericTrigger = dialogue.genericTrigger, genericTrigger != "" {
+            if genericTrigger.contains("babaca") {
+                UserDefaults.standard.set(UserDefaults.standard.integer(forKey: "duchbagCounter") + 1, forKey: "duchbagCounter")
+            } else if genericTrigger.contains("herosJourney") {
+                let triggerSplited = genericTrigger.components(separatedBy: "_")
+                guard let herosJourneyIndex = Int(triggerSplited[1]) else { return }
+                if herosJourneyIndex > UserDefaults.standard.integer(forKey: "activeHerosJourney") {
+                    UserDefaults.standard.set(herosJourneyIndex, forKey: "activeHerosJourney")
+                }
+            } else if genericTrigger.contains("archetype") {
+                let triggerSplited = genericTrigger.components(separatedBy: "_")
+                guard let archetypeIndex = Int(triggerSplited[1]) else { return }
+                if archetypeIndex > UserDefaults.standard.integer(forKey: "activeArchetypes") {
+                    UserDefaults.standard.set(archetypeIndex, forKey: "activeArchetypes")
+                }
+            }
+        }
     }
 }

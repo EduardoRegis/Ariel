@@ -33,7 +33,7 @@ class HerosJourneyScreenViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // TODO: Remover esse mock e fzer a adicao desse parametro via gameplay
-        UserDefaults.standard.set(3, forKey: "activeHerosJourney")
+//        UserDefaults.standard.set(3, forKey: "activeHerosJourney")
         presenter.didLoad()
         configureUI()
     }

@@ -41,6 +41,7 @@ import UIKit
             
             UserDefaults.standard.set(0, forKey: "activeHerosJourney")
             UserDefaults.standard.set(0, forKey: "activeArchetypes")
+            UserDefaults.standard.set(0, forKey: "duchbagCounter")
         }
     }
 }
