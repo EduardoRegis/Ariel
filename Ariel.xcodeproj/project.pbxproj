@@ -15,6 +15,7 @@
 		2E60C0F8297F1BB5007A2C01 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */; };
 		2E60C0FB297F342B007A2C01 /* sliderButtonReleased.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F9297F342B007A2C01 /* sliderButtonReleased.mp3 */; };
 		2E60C0FC297F342B007A2C01 /* cardSideChoosen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0FA297F342B007A2C01 /* cardSideChoosen.mp3 */; };
+		2E60C0FF2980A759007A2C01 /* Snackbars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0FE2980A759007A2C01 /* Snackbars.swift */; };
 		2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */; };
 		2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCF297AC37300C7203C /* BaseRouter.swift */; };
 		2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */; };
@@ -92,6 +93,7 @@
 		2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		2E60C0F9297F342B007A2C01 /* sliderButtonReleased.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sliderButtonReleased.mp3; sourceTree = "<group>"; };
 		2E60C0FA297F342B007A2C01 /* cardSideChoosen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cardSideChoosen.mp3; sourceTree = "<group>"; };
+		2E60C0FE2980A759007A2C01 /* Snackbars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snackbars.swift; sourceTree = "<group>"; };
 		2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringWordsInText.swift; sourceTree = "<group>"; };
 		2EC8FBCF297AC37300C7203C /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,14 @@
 				2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		2E60C0FD2980A735007A2C01 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2E60C0FE2980A759007A2C01 /* Snackbars.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2EC8FBCE297AC36100C7203C /* Utils */ = {
@@ -378,10 +388,11 @@
 		2EFF845329704F8200984165 /* Ariel */ = {
 			isa = PBXGroup;
 			children = (
-				2EC8FBE2297ACB0500C7203C /* Resources */,
 				2EC8FBE1297ACACC00C7203C /* Application */,
 				2E0F0F762978399600D37CB4 /* Extensions */,
+				2E60C0FD2980A735007A2C01 /* Helpers */,
 				2EC8FBD5297AC49D00C7203C /* Modules */,
+				2EC8FBE2297ACB0500C7203C /* Resources */,
 				2EC8FBCE297AC36100C7203C /* Utils */,
 				2EFF846229704F8300984165 /* Info.plist */,
 			);
@@ -715,6 +726,7 @@
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
 				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,
 				2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */,
+				2E60C0FF2980A759007A2C01 /* Snackbars.swift in Sources */,
 				2EC8FC0B297B005F00C7203C /* ConfigurationsScreenRouter.swift in Sources */,
 				2EC8FC0F297B00F800C7203C /* ConfigurationsScreenPresenter.swift in Sources */,
 				2EC8FC20297DC22800C7203C /* HerosJourneyModel.swift in Sources */,

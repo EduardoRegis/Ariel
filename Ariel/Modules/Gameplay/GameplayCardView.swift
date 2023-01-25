@@ -166,22 +166,36 @@ struct GameplayCardView: View {
     }
     
     func checkTrigger(dialogue: Dialogue) {
+        
+        let userDefaults = UserDefaults.standard
+        
         if let genericTrigger = dialogue.genericTrigger, genericTrigger != "" {
             if genericTrigger.contains("babaca") {
-                UserDefaults.standard.set(UserDefaults.standard.integer(forKey: "duchbagCounter") + 1, forKey: "duchbagCounter")
+                userDefaults.set(userDefaults.integer(forKey: "duchbagCounter") + 1, forKey: "duchbagCounter")
             } else if genericTrigger.contains("herosJourney") {
                 let triggerSplited = genericTrigger.components(separatedBy: "_")
                 guard let herosJourneyIndex = Int(triggerSplited[1]) else { return }
-                if herosJourneyIndex > UserDefaults.standard.integer(forKey: "activeHerosJourney") {
-                    UserDefaults.standard.set(herosJourneyIndex, forKey: "activeHerosJourney")
+                if herosJourneyIndex > userDefaults.integer(forKey: "activeHerosJourney") {
+                    userDefaults.set(herosJourneyIndex, forKey: "activeHerosJourney")
                 }
             } else if genericTrigger.contains("archetype") {
                 let triggerSplited = genericTrigger.components(separatedBy: "_")
                 guard let archetypeIndex = Int(triggerSplited[1]) else { return }
-                if archetypeIndex > UserDefaults.standard.integer(forKey: "activeArchetypes") {
-                    UserDefaults.standard.set(archetypeIndex, forKey: "activeArchetypes")
+                if archetypeIndex > userDefaults.integer(forKey: "activeArchetypes") {
+                    userDefaults.set(archetypeIndex, forKey: "activeArchetypes")
                 }
             }
         }
+        
+        if let archievementTrigger = dialogue.archievementTrigger, archievementTrigger != "" {
+            var strings: [String] = userDefaults.stringArray(forKey: "archievements") ?? []
+            
+            if !strings.contains(archievementTrigger) {
+                strings.append(archievementTrigger)
+                userDefaults.set(strings, forKey: "archievements")
+                SnackBarHelper.shared.showSuccessMessage(message: archievementTrigger)
+            }
+        }
+        
     }
 }

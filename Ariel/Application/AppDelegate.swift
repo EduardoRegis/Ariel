@@ -33,15 +33,21 @@ import UIKit
             print("\("Este app foi aberto pela primeira vez em (localized)") \(firstOpen)")
         } else {
             print("Abrindo pela primeira vez (localized)")
-            UserDefaults.standard.set(Date(), forKey: "FirstOpen")
             
-            UserDefaults.standard.set(0.5, forKey: "SoundEffectVolume")
-            UserDefaults.standard.set(0.5, forKey: "AmbientVolume")
-            UserDefaults.standard.set(0.5, forKey: "MusicVolume")
+            let userDefaults = UserDefaults.standard
             
-            UserDefaults.standard.set(0, forKey: "activeHerosJourney")
-            UserDefaults.standard.set(0, forKey: "activeArchetypes")
-            UserDefaults.standard.set(0, forKey: "duchbagCounter")
+            userDefaults.set(Date(), forKey: "FirstOpen")
+            
+            userDefaults.set(0.5, forKey: "SoundEffectVolume")
+            userDefaults.set(0.5, forKey: "AmbientVolume")
+            userDefaults.set(0.5, forKey: "MusicVolume")
+            
+            userDefaults.set(0, forKey: "activeHerosJourney")
+            userDefaults.set(0, forKey: "activeArchetypes")
+            userDefaults.set(0, forKey: "duchbagCounter")
+            
+            let array: [String] = []
+            userDefaults.set(array, forKey: "archievements")
         }
     }
 }

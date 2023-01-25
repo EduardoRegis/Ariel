@@ -30,9 +30,13 @@ class MenuScreenPresenter {
     }
     
     func didAppear() {
-        print("babaca ", UserDefaults.standard.integer(forKey: "duchbagCounter"))
-        print("hero's Journey ", UserDefaults.standard.integer(forKey: "activeHerosJourney"))
-        print("archetypes ", UserDefaults.standard.integer(forKey: "activeArchetypes"))
+        
+        let userDefaults = UserDefaults.standard
+        
+        print("\nbabaca ", userDefaults.integer(forKey: "duchbagCounter"))
+        print("hero's Journey ", userDefaults.integer(forKey: "activeHerosJourney"))
+        print("archetypes ", userDefaults.integer(forKey: "activeArchetypes"))
+        print("archievements", userDefaults.stringArray(forKey: "archievements"))
     }
     
     func navigateToGameplay(isNewJourney: Bool) -> UIViewController {
