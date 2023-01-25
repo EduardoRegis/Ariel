@@ -28,12 +28,55 @@
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="vQF-yy-GDS"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Créditos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ck5-aE-U4I">
+                    <rect key="frame" x="152.66666666666666" y="20" width="108.99999999999997" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aod-6u-Ctn" userLabel="ContainerView">
+                    <rect key="frame" x="32" y="88" width="350" height="561"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xU-sA-6e9">
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="561"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2o4-Yv-ndI" userLabel="ContentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="1200"/>
+                                    <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1200" id="c4P-Zj-Y9A"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="2o4-Yv-ndI" secondAttribute="trailing" id="9te-VV-3fX"/>
+                                <constraint firstItem="2o4-Yv-ndI" firstAttribute="top" secondItem="3xU-sA-6e9" secondAttribute="top" id="C4G-G4-gEH"/>
+                                <constraint firstItem="2o4-Yv-ndI" firstAttribute="leading" secondItem="3xU-sA-6e9" secondAttribute="leading" id="hNw-7A-mo1"/>
+                                <constraint firstAttribute="bottom" secondItem="2o4-Yv-ndI" secondAttribute="bottom" id="k4l-8z-vYV"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="3xU-sA-6e9" firstAttribute="top" secondItem="aod-6u-Ctn" secondAttribute="top" id="Iog-DX-sXC"/>
+                        <constraint firstItem="2o4-Yv-ndI" firstAttribute="width" secondItem="aod-6u-Ctn" secondAttribute="width" id="Z0O-Fn-Ul2"/>
+                        <constraint firstAttribute="trailing" secondItem="3xU-sA-6e9" secondAttribute="trailing" id="adZ-0Y-h2e"/>
+                        <constraint firstAttribute="bottom" secondItem="3xU-sA-6e9" secondAttribute="bottom" id="fcb-Nh-ohe"/>
+                        <constraint firstItem="3xU-sA-6e9" firstAttribute="leading" secondItem="aod-6u-Ctn" secondAttribute="leading" id="z0n-dm-Gsh"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="ck5-aE-U4I" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="14y-wW-JtP"/>
+                <constraint firstItem="Zsj-b0-4bU" firstAttribute="top" secondItem="aod-6u-Ctn" secondAttribute="bottom" constant="32" id="4b6-Z8-xm0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Zsj-b0-4bU" secondAttribute="bottom" constant="20" id="It0-7X-ADB"/>
+                <constraint firstItem="ck5-aE-U4I" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Jcs-hX-MJw"/>
+                <constraint firstItem="aod-6u-Ctn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="MPU-HP-qat"/>
                 <constraint firstItem="Zsj-b0-4bU" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="t08-HO-cRd"/>
+                <constraint firstItem="aod-6u-Ctn" firstAttribute="top" secondItem="ck5-aE-U4I" secondAttribute="bottom" constant="32" id="ukP-uj-xfR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aod-6u-Ctn" secondAttribute="trailing" constant="32" id="vrS-uB-vwf"/>
             </constraints>
             <point key="canvasLocation" x="-89" y="20"/>
         </view>
@@ -41,6 +84,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
