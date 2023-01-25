@@ -37,11 +37,38 @@
 // MARK: - Help Screen Texts
 "HelpScreenTexts_title" = "Ajuda";
 "HelpScreenTexts_first" = "Fazer Escolha";
-"HelpScreenTexts_second" = "Acessar Jornada";
-"HelpScreenTexts_third" = "Lorem Ipsum";
-"HelpScreenTexts_fourth" = "Lorem Ipsum";
 "HelpScreenTexts_firstDesc" = "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção.";
+"HelpScreenTexts_second" = "Acessar Jornada";
 "HelpScreenTexts_secondDesc" = "Para acessar a aba de Jornada do Herói basta clicar na barra superior, onde está escrito o nome do capítulo.";
+"HelpScreenTexts_third" = "Lorem Ipsum";
 "HelpScreenTexts_thirdDesc" = "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção.";
+"HelpScreenTexts_fourth" = "Lorem Ipsum";
 "HelpScreenTexts_fourthDesc" = "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção.";
 "HelpScreenTexts_back" = "Voltar";
+
+// MARK: - Heros Journey Screen Texts
+"HerosJourneyScreenTexts_firstTitle" = "Mundo normal";
+"HerosJourneyScreenTexts_firstDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_secondTitle" = "Chamado para a aventura";
+"HerosJourneyScreenTexts_secondDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_thirdTitle" = "Recusa da Chamada";
+"HerosJourneyScreenTexts_thirdDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_fourthTitle" = "Conhecendo o Mentor";
+"HerosJourneyScreenTexts_fourthDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_fifthTitle" = "Cruzando o Limiar";
+"HerosJourneyScreenTexts_fifthDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_sixthTitle" = "Testes, Aliados, Inimigos";
+"HerosJourneyScreenTexts_sixthDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_seventhTitle" = "Aproximação à Caverna Oculta";
+"HerosJourneyScreenTexts_seventhDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_eighthTitle" = "Provação";
+"HerosJourneyScreenTexts_eighthDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_ninthTitle" = "Recompensa (Agarrar a Espada)";
+"HerosJourneyScreenTexts_ninthDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_tenthTitle" = "O caminho de volta";
+"HerosJourneyScreenTexts_tenthDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_eleventhTitle" = "Ressurreição";
+"HerosJourneyScreenTexts_eleventhDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_twelfthTitle" = "Retorno com o Elixir";
+"HerosJourneyScreenTexts_twelfthDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.";
+"HerosJourneyScreenTexts_back" = "Voltar";

@@ -55,53 +55,53 @@ enum HerosJourneyModels {
     func getHerosJourney() -> HerosJourneyModel {
         switch self {
         case .ordinaryWorld:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "Capela",
-                            herosJourneysStage: "Ordinary World")
-        case .callToAdventure:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum World sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.firstDesc.localized(),
                             imageName: "Poder",
-                            herosJourneysStage: "Call To Adventure")
+                            herosJourneysStage: HerosJourneyScreenTexts.firstTitle.localized())
+        case .callToAdventure:
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.secondDesc.localized(),
+                            imageName: "Capela",
+                            herosJourneysStage: HerosJourneyScreenTexts.secondTitle.localized())
         case .refusalOfTheCall:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "Rato",
-                            herosJourneysStage: "Refusal Of The Call")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.thirdDesc.localized(),
+                            imageName: "Capela",
+                            herosJourneysStage: HerosJourneyScreenTexts.thirdTitle.localized())
         case .meetingTheMentor:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "Meeting The Mentor")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.fourthDesc.localized(),
+                            imageName: "Capela",
+                            herosJourneysStage: HerosJourneyScreenTexts.fourthTitle.localized())
         case .crossingTheThreshold:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "Crossing The Threshold")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.fifthDesc.localized(),
+                            imageName: "Capela",
+                            herosJourneysStage: HerosJourneyScreenTexts.fifthTitle.localized())
         case .testsAlliesEnemies:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "Tests, Allies, Enemies")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.sixthDesc.localized(),
+                            imageName: "Capela",
+                            herosJourneysStage: HerosJourneyScreenTexts.sixthTitle.localized())
         case .approachToTheInmostCave:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "Approach To The Inmost Cave")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.seventhDesc.localized(),
+                            imageName: "Capela",
+                            herosJourneysStage: HerosJourneyScreenTexts.seventhTitle.localized())
         case .ordeal:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "Ordeal")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.eighthDesc.localized(),
+                            imageName: "Capela",
+                            herosJourneysStage: HerosJourneyScreenTexts.eighthTitle.localized())
         case .reward:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "Reward (Seizing The Sword)")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.ninthDesc.localized(),
+                            imageName: "Capela",
+                                     herosJourneysStage: HerosJourneyScreenTexts.ninthTitle.localized())
         case .theRoadBack:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "The Road Back")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.tenthDesc.localized(),
+                            imageName: "Capela",
+                                     herosJourneysStage: HerosJourneyScreenTexts.tenthTitle.localized())
         case .resurrection:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "Resurrection")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.eleventhDesc.localized(),
+                            imageName: "Capela",
+                                     herosJourneysStage: HerosJourneyScreenTexts.eleventhTitle.localized())
         case .returnWithTheElixir:
-            return HerosJourneyModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "ariel still",
-                            herosJourneysStage: "Return With The Elixir")
+            return HerosJourneyModel(descriptionText: HerosJourneyScreenTexts.twelfthDesc.localized(),
+                            imageName: "Capela",
+                                     herosJourneysStage: HerosJourneyScreenTexts.twelfthTitle.localized())
             
         }
     }
