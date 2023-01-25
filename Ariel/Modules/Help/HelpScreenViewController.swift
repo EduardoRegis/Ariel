@@ -10,6 +10,10 @@ import UIKit
 class HelpScreenViewController: BaseViewController {
 
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet var collectionOfHelpTitles: Array<UILabel>?
+    @IBOutlet var collectionOfHelpImages: Array<UIImageView>?
+    @IBOutlet var collectionOfHelpDescriptions: Array<UILabel>?
+    
     
     // MARK: - Properties
     var presenter: HelpScreenPresenter!
@@ -42,7 +46,25 @@ class HelpScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
+        if let collectionOfHelpTitles = self.collectionOfHelpTitles {
+            for (index, label) in collectionOfHelpTitles.enumerated() {
+                label.text = presenter.helpTitle(index: index)
+            }
+        }
         
+        if let collectionOfHelpImages = self.collectionOfHelpImages {
+            for (index, imageView) in collectionOfHelpImages.enumerated() {
+                imageView.image = UIImage(named: presenter.helpImage(index: index))
+            }
+        }
+        
+        if let collectionOfHelpDescriptions = self.collectionOfHelpDescriptions {
+            for (index, label) in collectionOfHelpDescriptions.enumerated() {
+                label.lineBreakMode = .byWordWrapping
+                label.numberOfLines = 2
+                label.text = presenter.helpDescription(index: index)
+            }
+        }
     }
 
     // MARK: - Actions
