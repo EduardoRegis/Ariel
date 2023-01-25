@@ -9,3 +9,11 @@
 // MARK: - First Open Texts
 "FirstOpenTexts_firstOpen" = "Abrindo pela primeira vez";
 "FirstOpenTexts_notFirstOpen" = "Este app foi aberto pela primeira vez em ";
+
+// MARK: - Alert Texts
+"AlertTexts_alert" = "Atenção!";
+"AlertTexts_ok" = "Ok";
+"AlertTexts_cancel" = "Cancelar";
+
+// MARK: - Snackbar Texts
+"SnackbarTexts_archievementUnlocked" = "Conquista desbloqueada!";
