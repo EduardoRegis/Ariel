@@ -115,7 +115,6 @@ struct GameplayCardView: View {
             }
         }
         .onDisappear {
-            print(self.nextDialogue)
             if UserDefaults.standard.string(forKey: "lastDialogueSaved") != "" {
                 UserDefaults.standard.set(self.nextDialogue, forKey: "lastDialogueSaved")
             }

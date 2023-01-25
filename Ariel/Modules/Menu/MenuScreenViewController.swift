@@ -42,6 +42,7 @@ class MenuScreenViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.willAppear()
+        continueButton.isEnabled = UserDefaults.standard.bool(forKey: "gameInProgress")
     }
     
     override func viewDidAppear(_ animated: Bool) {

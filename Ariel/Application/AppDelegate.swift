@@ -46,6 +46,8 @@ import UIKit
             userDefaults.set(0, forKey: "activeArchetypes")
             userDefaults.set(0, forKey: "duchbagCounter")
             
+            userDefaults.set(false, forKey: "gameInProgress")
+            
             let array: [String] = []
             userDefaults.set(array, forKey: "archievements")
         }

@@ -38,15 +38,18 @@ class MenuScreenPresenter {
         print("archetypes ", userDefaults.integer(forKey: "activeArchetypes"))
         print("archievements", userDefaults.stringArray(forKey: "archievements"))
         
-        SnackBarHelper.shared.showSuccessMessage(message: "teste")
     }
     
     func navigateToGameplay(isNewJourney: Bool) -> UIViewController {
+        
+        let userDefaults = UserDefaults.standard
+        
         let swiftUIViewController = UIHostingController(rootView: GameplayCardView())
-        UserDefaults.standard.set(isNewJourney, forKey: "isNewJourney")
+        userDefaults.set(isNewJourney, forKey: "isNewJourney")
         swiftUIViewController.modalPresentationStyle = .fullScreen
         if isNewJourney == true {
-            UserDefaults.standard.set(0, forKey: "duchbagCounter")
+            userDefaults.set(true, forKey: "gameInProgress")
+            userDefaults.set(0, forKey: "duchbagCounter")
         }
         return swiftUIViewController
     }
