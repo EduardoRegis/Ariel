@@ -17,3 +17,9 @@
 
 // MARK: - Snackbar Texts
 "SnackbarTexts_archievementUnlocked" = "Conquista desbloqueada!";
+
+// MARK: - Menu Screen Texts
+"MenuScreenTexts_newJourney" = "Nova Jornada";
+"MenuScreenTexts_continue" = "Continuar";
+"MenuScreenTexts_herosJourney" = "Jornada do Herói";
+"MenuScreenTexts_archetypes" = "Arquétipos";

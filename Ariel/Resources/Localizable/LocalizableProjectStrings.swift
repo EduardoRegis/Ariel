@@ -21,3 +21,10 @@ enum AlertTexts: String, Localizable {
 enum SnackbarTexts: String, Localizable {
     case archievementUnlocked = "SnackbarTexts_archievementUnlocked"
 }
+
+enum MenuScreenTexts : String, Localizable {
+    case newJourney = "MenuScreenTexts_newJourney";
+    case continueJourney = "MenuScreenTexts_continue";
+    case herosJourney = "MenuScreenTexts_herosJourney";
+    case archetypes = "MenuScreenTexts_archetypes";
+}

@@ -17,3 +17,9 @@
 
 // MARK: - Snackbar Texts
 "SnackbarTexts_archievementUnlocked" = "Archievement unlocked!";
+
+// MARK: - Menu Screen Texts
+"MenuScreenTexts_newJourney" = "New Journey";
+"MenuScreenTexts_continue" = "Continue";
+"MenuScreenTexts_herosJourney" = "Hero`s Journey";
+"MenuScreenTexts_archetypes" = "Archetypes";
