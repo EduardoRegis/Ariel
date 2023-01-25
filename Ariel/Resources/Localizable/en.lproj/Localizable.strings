@@ -33,3 +33,15 @@
 "CreditsScreenTexts_fifth" = "Character Designer,\n Interface Designer, Illustrator";
 "CreditsScreenTexts_sixth" = "Interface Designer, UX Designer";
 "CreditsScreenTexts_back" = "Back";
+
+// MARK: - Help Screen Texts
+"HelpScreenTexts_title" = "Help";
+"HelpScreenTexts_first" = "Make Choice";
+"HelpScreenTexts_second" = "Acess Journey";
+"HelpScreenTexts_third" = "Lorem Ipsum";
+"HelpScreenTexts_fourth" = "Lorem Ipsum";
+"HelpScreenTexts_firstDesc" = "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção.";
+"HelpScreenTexts_secondDesc" = "Para acessar a aba de Jornada do Herói basta clicar na barra superior, onde está escrito o nome do capítulo.";
+"HelpScreenTexts_thirdDesc" = "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção.";
+"HelpScreenTexts_fourthDesc" = "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção.";
+"HelpScreenTexts_back" = "Back";

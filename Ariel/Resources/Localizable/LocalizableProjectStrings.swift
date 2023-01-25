@@ -39,3 +39,16 @@ enum CreditsScreenTexts: String, Localizable {
     case sixth = "CreditsScreenTexts_sixth"
     case back = "CreditsScreenTexts_back"
 }
+
+enum HelpScreenTexts: String, Localizable {
+    case title = "HelpScreenTexts_title"
+    case first = "HelpScreenTexts_first"
+    case second = "HelpScreenTexts_second"
+    case third = "HelpScreenTexts_third"
+    case fourth = "HelpScreenTexts_fourth"
+    case firstDesc = "HelpScreenTexts_firstDesc"
+    case secondDesc = "HelpScreenTexts_secondDesc"
+    case thirdDesc = "HelpScreenTexts_thirdDesc"
+    case fourthDesc = "HelpScreenTexts_fourthDesc"
+    case back = "HelpScreenTexts_back"
+}
