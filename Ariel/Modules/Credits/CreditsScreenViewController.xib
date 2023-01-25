@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreditsScreenViewController" customModule="Ariel" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="Zsj-b0-4bU" id="jKV-NY-Moe"/>
+                <outlet property="titleLabel" destination="ck5-aE-U4I" id="Hhy-xo-Icn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="hIb-am-mnZ"/>
                 <outletCollection property="collectionOfMembersFunctions" destination="Aum-aG-4gC" collectionClass="NSMutableArray" id="6yY-rD-CKJ"/>
                 <outletCollection property="collectionOfMembersFunctions" destination="Sgk-hM-ULv" collectionClass="NSMutableArray" id="lju-gL-Tcr"/>

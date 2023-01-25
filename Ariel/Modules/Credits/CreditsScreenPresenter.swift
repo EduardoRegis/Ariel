@@ -32,17 +32,17 @@ class CreditsScreenPresenter {
     func memberFunction(index: Int) -> String {
         switch index {
         case 0:
-            return "Avaliador, Roteirista, Ilustrador"
+            return CreditsScreenTexts.first.localized()
         case 1:
-            return "Revisor, Ilustrador, Designer de Som"
+            return CreditsScreenTexts.second.localized()
         case 2:
-            return "Programador"
+            return CreditsScreenTexts.third.localized()
         case 3:
-            return "Líder, Roteirista, Ilustradora"
+            return CreditsScreenTexts.fourth.localized()
         case 4:
-            return "Designer de Personagem, Designer de\n Interface, Ilustrador"
+            return CreditsScreenTexts.fifth.localized()
         case 5:
-            return "Designer de Interface, Designer UX"
+            return CreditsScreenTexts.sixth.localized()
         default:
             return ""
         }

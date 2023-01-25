@@ -23,3 +23,13 @@
 "MenuScreenTexts_continue" = "Continuar";
 "MenuScreenTexts_herosJourney" = "Jornada do Herói";
 "MenuScreenTexts_archetypes" = "Arquétipos";
+
+// MARK: - Credits Screen Texts
+"CreditsScreenTexts_title" = "Créditos";
+"CreditsScreenTexts_first" = "Avaliador, Roteirista, Ilustrador";
+"CreditsScreenTexts_second" = "Revisor, Ilustrador, Designer de Som";
+"CreditsScreenTexts_third" = "Programador";
+"CreditsScreenTexts_fourth" = "Líder, Roteirista, Ilustradora";
+"CreditsScreenTexts_fifth" = "Designer de Personagem, Designer de\n Interface, Ilustrador";
+"CreditsScreenTexts_sixth" = "Designer de Interface, Designer UX";
+"CreditsScreenTexts_back" = "Voltar";

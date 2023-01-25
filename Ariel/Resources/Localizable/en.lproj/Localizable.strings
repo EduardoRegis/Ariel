@@ -23,3 +23,13 @@
 "MenuScreenTexts_continue" = "Continue";
 "MenuScreenTexts_herosJourney" = "Hero`s Journey";
 "MenuScreenTexts_archetypes" = "Archetypes";
+
+// MARK: - Credits Screen Texts
+"CreditsScreenTexts_title" = "Credits";
+"CreditsScreenTexts_first" = "Rater, Screenwriter, Illustrator";
+"CreditsScreenTexts_second" = "Proofreader, Illustrator, Sound Designer";
+"CreditsScreenTexts_third" = "Developer";
+"CreditsScreenTexts_fourth" = "Leader, Screenwriter, Illustrator";
+"CreditsScreenTexts_fifth" = "Character Designer,\n Interface Designer, Illustrator";
+"CreditsScreenTexts_sixth" = "Interface Designer, UX Designer";
+"CreditsScreenTexts_back" = "Back";

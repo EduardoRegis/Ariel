@@ -22,9 +22,20 @@ enum SnackbarTexts: String, Localizable {
     case archievementUnlocked = "SnackbarTexts_archievementUnlocked"
 }
 
-enum MenuScreenTexts : String, Localizable {
-    case newJourney = "MenuScreenTexts_newJourney";
-    case continueJourney = "MenuScreenTexts_continue";
-    case herosJourney = "MenuScreenTexts_herosJourney";
-    case archetypes = "MenuScreenTexts_archetypes";
+enum MenuScreenTexts: String, Localizable {
+    case newJourney = "MenuScreenTexts_newJourney"
+    case continueJourney = "MenuScreenTexts_continue"
+    case herosJourney = "MenuScreenTexts_herosJourney"
+    case archetypes = "MenuScreenTexts_archetypes"
+}
+
+enum CreditsScreenTexts: String, Localizable {
+    case title = "CreditsScreenTexts_title"
+    case first = "CreditsScreenTexts_first"
+    case second = "CreditsScreenTexts_second"
+    case third = "CreditsScreenTexts_third"
+    case fourth = "CreditsScreenTexts_fourth"
+    case fifth = "CreditsScreenTexts_fifth"
+    case sixth = "CreditsScreenTexts_sixth"
+    case back = "CreditsScreenTexts_back"
 }
