@@ -24,6 +24,13 @@
 "MenuScreenTexts_herosJourney" = "Jornada do Herói";
 "MenuScreenTexts_archetypes" = "Arquétipos";
 
+// MARK: - Config Screen Texts
+"ConfigScreenTexts_title" = "Configurações";
+"ConfigScreenTexts_soundEffect" = "Efeitos Sonoros";
+"ConfigScreenTexts_ambience" = "Ambientação";
+"ConfigScreenTexts_music" = "Música";
+"ConfigScreenTexts_back" = "Voltar";
+
 // MARK: - Credits Screen Texts
 "CreditsScreenTexts_title" = "Créditos";
 "CreditsScreenTexts_first" = "Avaliador, Roteirista, Ilustrador";

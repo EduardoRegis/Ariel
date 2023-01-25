@@ -23,7 +23,7 @@ class MenuScreenPresenter {
     }
     func didLoad() {
         AudioManager.shared.playMusic()
-        AudioManager.shared.playAmbient()
+        AudioManager.shared.playAmbience()
     }
     
     func willAppear() {

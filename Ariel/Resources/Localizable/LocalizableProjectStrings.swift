@@ -29,6 +29,14 @@ enum MenuScreenTexts: String, Localizable {
     case archetypes = "MenuScreenTexts_archetypes"
 }
 
+enum ConfigScreenTexts: String, Localizable {
+    case title = "ConfigScreenTexts_title"
+    case soundEffect = "ConfigScreenTexts_soundEffect"
+    case ambience = "ConfigScreenTexts_ambience"
+    case music = "ConfigScreenTexts_music"
+    case back = "ConfigScreenTexts_back"
+}
+
 enum CreditsScreenTexts: String, Localizable {
     case title = "CreditsScreenTexts_title"
     case first = "CreditsScreenTexts_first"

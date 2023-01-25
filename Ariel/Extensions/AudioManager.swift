@@ -17,7 +17,7 @@ class AudioManager {
     private init() {}
     
     var musicPlayer: AVAudioPlayer?
-    var ambientPlayer: AVAudioPlayer?
+    var ambiencePlayer: AVAudioPlayer?
     var soundEffectPlayer: AVAudioPlayer?
     
     func playMusic() {
@@ -37,22 +37,22 @@ class AudioManager {
         musicPlayer?.setVolume(UserDefaults.standard.float(forKey: "MusicVolume"), fadeDuration: 0.2)
     }
     
-    func playAmbient() {
+    func playAmbience() {
         let pathToFind = Bundle.main.path(forResource: "forestSound", ofType: "mp3")!
         let url = URL(fileURLWithPath: pathToFind)
         
         do {
-            ambientPlayer = try AVAudioPlayer(contentsOf: url)
-            ambientPlayer?.setVolume(UserDefaults.standard.float(forKey: "AmbientVolume"), fadeDuration: 0)
-            ambientPlayer?.numberOfLoops = -1
-            ambientPlayer?.play()
+            ambiencePlayer = try AVAudioPlayer(contentsOf: url)
+            ambiencePlayer?.setVolume(UserDefaults.standard.float(forKey: "AmbienceVolume"), fadeDuration: 0)
+            ambiencePlayer?.numberOfLoops = -1
+            ambiencePlayer?.play()
         } catch {
             // localized
         }
     }
     
-    func ajustAmbientVolume() {
-        ambientPlayer?.setVolume(UserDefaults.standard.float(forKey: "AmbientVolume"), fadeDuration: 0.2)
+    func ajustAmbienceVolume() {
+        ambiencePlayer?.setVolume(UserDefaults.standard.float(forKey: "AmbienceVolume"), fadeDuration: 0.2)
     }
     
     func playSoundEffect(name: String) {

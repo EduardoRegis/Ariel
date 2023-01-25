@@ -11,10 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfigurationsScreenViewController" customModule="Ariel" customModuleProvider="target">
             <connections>
-                <outlet property="ambientSlider" destination="9cK-Cd-ctW" id="rP1-ET-ApQ"/>
+                <outlet property="ambienceLabel" destination="kwx-xE-tP0" id="3CI-28-dfG"/>
+                <outlet property="ambienceSlider" destination="9cK-Cd-ctW" id="qpg-Ya-FBy"/>
                 <outlet property="backButton" destination="aZJ-Sr-yV4" id="ADt-iG-sWc"/>
+                <outlet property="musicLabel" destination="DWX-8Q-HiQ" id="mSK-tB-ja6"/>
                 <outlet property="musicSlider" destination="1VK-eV-nlb" id="Xzd-tC-ajQ"/>
+                <outlet property="soundEffectLabel" destination="TV7-he-DTH" id="6ce-a5-kf0"/>
                 <outlet property="soundEffectSlider" destination="CY6-ZH-JEe" id="IQn-hu-uDS"/>
+                <outlet property="titleLabel" destination="LtX-uT-VB4" id="lBV-Lc-6gQ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uoq-BW-TaZ"/>
             </connections>
         </placeholder>
@@ -54,7 +58,7 @@
                                 </slider>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xnP-Pj-Vhm" userLabel="ambient">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xnP-Pj-Vhm" userLabel="ambience">
                             <rect key="frame" x="0.0" y="82.333333333333314" width="350" height="50.333333333333343"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ambientação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwx-xE-tP0">
@@ -63,7 +67,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9cK-Cd-ctW" userLabel="ambientSlider">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9cK-Cd-ctW" userLabel="ambienceSlider">
                                     <rect key="frame" x="-2" y="20.333333333333314" width="354" height="31"/>
                                 </slider>
                             </subviews>

@@ -39,7 +39,7 @@ import UIKit
             userDefaults.set(Date(), forKey: "FirstOpen")
             
             userDefaults.set(0.5, forKey: "SoundEffectVolume")
-            userDefaults.set(0.5, forKey: "AmbientVolume")
+            userDefaults.set(0.5, forKey: "AmbienceVolume")
             userDefaults.set(0.5, forKey: "MusicVolume")
             
             userDefaults.set(0, forKey: "activeHerosJourney")

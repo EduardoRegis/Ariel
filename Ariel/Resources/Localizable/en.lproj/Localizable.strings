@@ -24,6 +24,13 @@
 "MenuScreenTexts_herosJourney" = "Hero`s Journey";
 "MenuScreenTexts_archetypes" = "Archetypes";
 
+// MARK: - Config Screen Texts
+"ConfigScreenTexts_title" = "Settings";
+"ConfigScreenTexts_soundEffect" = "Sound Effects";
+"ConfigScreenTexts_ambience" = "Ambience";
+"ConfigScreenTexts_music" = "Music";
+"ConfigScreenTexts_back" = "Back";
+
 // MARK: - Credits Screen Texts
 "CreditsScreenTexts_title" = "Credits";
 "CreditsScreenTexts_first" = "Rater, Screenwriter, Illustrator";
