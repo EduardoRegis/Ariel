@@ -52,19 +52,19 @@ enum Dialogues {
     func getDialogue() -> Dialogue {
         switch self { // aqui vão os diálogos com escolhas
         case .firstText:
-            return Dialogue(descriptionText: "(firstText) Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            leftCardText: "Nada a ver",
-                            rightCardText: "Pô, vdd",
+            return Dialogue(descriptionText: DialogueTexts.first_text.localized(),
+                            leftCardText: DialogueTexts.first_leftCard.localized(),
+                            rightCardText: DialogueTexts.first_rightCard.localized(),
                             imageName: "ariel still",
-                            herosJourneysStage: "Teste",
+                            herosJourneysStage: HerosJourneysStageTexts.teste.localized(),
                             nextLeftDialogue: "secondText",
                             nextRightDialogue: "thirdText") // se não possuir parâmetro soundTrigger, ele apenas não emitirá nenhum efeito
         case .secondText:
-            return Dialogue(descriptionText: "(secondText) Sed ut (perspiciatis) unde omnis {iste} natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-                            leftCardText: "Tá zoando",
-                            rightCardText: "Pode crer",
+            return Dialogue(descriptionText: DialogueTexts.second_text.localized(),
+                            leftCardText: DialogueTexts.second_leftCard.localized(),
+                            rightCardText: DialogueTexts.second_rightCard.localized(),
                             imageName: "Treinador",
-                            herosJourneysStage: "Teste",
+                            herosJourneysStage: HerosJourneysStageTexts.teste.localized(),
                             nextLeftDialogue: "thirdText",
                             nextRightDialogue: "fourthText",
                             soundTrigger: "sliderButtonReleased") // aqui tem o parâmetro soundTrigger, onde vc coloca o nome do arquivo de som a ser tocado
