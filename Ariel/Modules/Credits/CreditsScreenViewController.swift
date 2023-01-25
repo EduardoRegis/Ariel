@@ -10,6 +10,7 @@ import UIKit
 class CreditsScreenViewController: BaseViewController {
 
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet var collectionOfMembersFunctions: Array<UILabel>?
     
     // MARK: - Properties
     var presenter: CreditsScreenPresenter!
@@ -42,7 +43,13 @@ class CreditsScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
-        
+        if let collectionOfMembersFunctions = self.collectionOfMembersFunctions {
+            for (index, label) in collectionOfMembersFunctions.enumerated() {
+                label.lineBreakMode = .byWordWrapping
+                label.numberOfLines = 2
+                label.text = presenter.memberFunction(index: index)
+            }
+        }
     }
 
     // MARK: - Actions

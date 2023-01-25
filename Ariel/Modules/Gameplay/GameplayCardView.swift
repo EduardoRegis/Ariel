@@ -77,6 +77,7 @@ struct GameplayCardView: View {
                                     if let newDialogue = DialogueManager.shared.getDialogueByString(name: nextDialogue) {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                             self.dialogue = newDialogue
+                                            checkTrigger(dialogue: newDialogue)
                                         }
                                     }
                                 }
@@ -86,7 +87,6 @@ struct GameplayCardView: View {
             }
         }
         .onAppear {
-            // TODO: - Carregar aqui o progresso do usuário
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 var data = Dialogues.firstText.getDialogue()
                 if UserDefaults.standard.bool(forKey: "isNewJourney") {
@@ -163,5 +163,39 @@ struct GameplayCardView: View {
             newColoredWords.append(String(coloredWord.dropFirst().dropLast()))
         }
         self.coloredWords = newColoredWords
+    }
+    
+    func checkTrigger(dialogue: Dialogue) {
+        
+        let userDefaults = UserDefaults.standard
+        
+        if let genericTrigger = dialogue.genericTrigger, genericTrigger != "" {
+            if genericTrigger.contains("babaca") {
+                userDefaults.set(userDefaults.integer(forKey: "duchbagCounter") + 1, forKey: "duchbagCounter")
+            } else if genericTrigger.contains("herosJourney") {
+                let triggerSplited = genericTrigger.components(separatedBy: "_")
+                guard let herosJourneyIndex = Int(triggerSplited[1]) else { return }
+                if herosJourneyIndex > userDefaults.integer(forKey: "activeHerosJourney") {
+                    userDefaults.set(herosJourneyIndex, forKey: "activeHerosJourney")
+                }
+            } else if genericTrigger.contains("archetype") {
+                let triggerSplited = genericTrigger.components(separatedBy: "_")
+                guard let archetypeIndex = Int(triggerSplited[1]) else { return }
+                if archetypeIndex > userDefaults.integer(forKey: "activeArchetypes") {
+                    userDefaults.set(archetypeIndex, forKey: "activeArchetypes")
+                }
+            }
+        }
+        
+        if let archievementTrigger = dialogue.archievementTrigger, archievementTrigger != "" {
+            var strings: [String] = userDefaults.stringArray(forKey: "archievements") ?? []
+            
+            if !strings.contains(archievementTrigger) {
+                strings.append(archievementTrigger)
+                userDefaults.set(strings, forKey: "archievements")
+                SnackBarHelper.shared.showSuccessMessage(message: archievementTrigger)
+            }
+        }
+        
     }
 }

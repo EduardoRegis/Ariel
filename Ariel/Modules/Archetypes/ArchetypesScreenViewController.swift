@@ -32,7 +32,8 @@ class ArchetypesScreenViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set(2, forKey: "activeArchetypes")
+        // TODO: Remover esse mock e fzer a adicao desse parametro via gameplay
+//        UserDefaults.standard.set(2, forKey: "activeArchetypes")
         presenter.didLoad()
         configureUI()
     }

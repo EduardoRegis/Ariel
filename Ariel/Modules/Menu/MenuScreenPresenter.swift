@@ -30,12 +30,22 @@ class MenuScreenPresenter {
     }
     
     func didAppear() {
+        
+        let userDefaults = UserDefaults.standard
+        
+        print("\nbabaca ", userDefaults.integer(forKey: "duchbagCounter"))
+        print("hero's Journey ", userDefaults.integer(forKey: "activeHerosJourney"))
+        print("archetypes ", userDefaults.integer(forKey: "activeArchetypes"))
+        print("archievements", userDefaults.stringArray(forKey: "archievements"))
     }
     
     func navigateToGameplay(isNewJourney: Bool) -> UIViewController {
         let swiftUIViewController = UIHostingController(rootView: GameplayCardView())
         UserDefaults.standard.set(isNewJourney, forKey: "isNewJourney")
         swiftUIViewController.modalPresentationStyle = .fullScreen
+        if isNewJourney == true {
+            UserDefaults.standard.set(0, forKey: "duchbagCounter")
+        }
         return swiftUIViewController
     }
     
