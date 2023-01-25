@@ -76,7 +76,7 @@ enum Dialogues {
                             herosJourneysStage: "Teste",
                             nextLeftDialogue: "fourthText",
                             nextRightDialogue: "fifthText",
-                            archievementTrigger: "prodígio") // caso chegar nesse Dialogue implique em ativar um archievement, é só colocar o nome do archievement nesse parâmetro. Caso não tenha archievement basta não colocar esse parâmetro
+                            archievementTrigger: "prodigy") // caso chegar nesse Dialogue implique em ativar um archievement, é só colocar o nome do archievement nesse parâmetro. Caso não tenha archievement basta não colocar esse parâmetro
         case .fourthText:
             return Dialogue(descriptionText: "(fourthText) Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             leftCardText: "Nada a ver",
@@ -94,6 +94,7 @@ enum Dialogues {
                             herosJourneysStage: "Teste",
                             nextLeftDialogue: "sixthText",
                             nextRightDialogue: "seventhText",
+                            archievementTrigger: "bestEnd",
                             genericTrigger: "herosJourney_1") // caso chegar nesse Dialogue implique em desbloquear um colecionável relativo a Jornada do Herói, basta colocar "herosJourney_?", com ? sendo o índice do colecionável em questão.
         case .sixthText:
             return Dialogue(descriptionText: "(sixthText) CUESTA 🇦🇷 NA MEIA 🧦 ESQUERDA⬅️⬅️AMEAÇOU 🔫🔪 NÃO BATEU 🚫🥊 VEM PRA TABELA 📉📈 PEGLOW ☄️ PRO CUESTA 🇦🇷 BATEU CRUZADO 💴⚔️✝️ EDENILSOOOOOOOOOOOOOOOOON 👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾  QUARENTA E UM ANOS 4️⃣1️⃣ 👉👌👴🏻🏆GOOOOOOOOOOOOOOL ⚽👨🏾🤸🏾‍♂️👨🏾 pipipi 🧏‍♂️🙋‍♂️🙋‍♂️🗽🚩",

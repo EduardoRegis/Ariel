@@ -98,3 +98,7 @@
 "HerosJourneyScreenTexts_twelfthTitle" = "Return With The Elixir";
 "HerosJourneyScreenTexts_twelfthDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 "HerosJourneyScreenTexts_back" = "Back";
+
+// MARK: - Achievement Texts
+"AchievementTexts_prodigy" = "Prodigy";
+"AchievementTexts_bestEnd" = "Best End";

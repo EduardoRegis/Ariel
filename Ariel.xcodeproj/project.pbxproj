@@ -19,6 +19,7 @@
 		2E60C10C29815C6E007A2C01 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C10E29815C6E007A2C01 /* Localizable.strings */; };
 		2E60C11129815D04007A2C01 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11029815D04007A2C01 /* Localizable.swift */; };
 		2E60C11329815D3B007A2C01 /* LocalizableProjectStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11229815D3B007A2C01 /* LocalizableProjectStrings.swift */; };
+		2E60C11529818E76007A2C01 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11429818E76007A2C01 /* Achievements.swift */; };
 		2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */; };
 		2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCF297AC37300C7203C /* BaseRouter.swift */; };
 		2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */; };
@@ -101,6 +102,7 @@
 		2E60C10F29815C81007A2C01 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2E60C11029815D04007A2C01 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		2E60C11229815D3B007A2C01 /* LocalizableProjectStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableProjectStrings.swift; sourceTree = "<group>"; };
+		2E60C11429818E76007A2C01 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringWordsInText.swift; sourceTree = "<group>"; };
 		2EC8FBCF297AC37300C7203C /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				2E60C0FE2980A759007A2C01 /* Snackbars.swift */,
+				2E60C11429818E76007A2C01 /* Achievements.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EC8FBD4297AC3D400C7203C /* BasePresenterDelegate.swift in Sources */,
+				2E60C11529818E76007A2C01 /* Achievements.swift in Sources */,
 				2EC8FBDA297AC4DE00C7203C /* SplashScreenViewController.swift in Sources */,
 				2E60C0F8297F1BB5007A2C01 /* AudioManager.swift in Sources */,
 				2EC8FC18297B064200C7203C /* HelpScreenPresenter.swift in Sources */,

@@ -193,7 +193,8 @@ struct GameplayCardView: View {
             if !strings.contains(archievementTrigger) {
                 strings.append(archievementTrigger)
                 userDefaults.set(strings, forKey: "archievements")
-                SnackBarHelper.shared.showSuccessMessage(message: archievementTrigger)
+                
+                SnackBarHelper.shared.showSuccessMessage(message: AchievementManager.shared.getAchievementByString(name: archievementTrigger))
             }
         }
         

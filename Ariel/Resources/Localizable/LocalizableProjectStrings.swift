@@ -108,3 +108,8 @@ enum HerosJourneyScreenTexts: String, Localizable {
     case twelfthDesc = "HerosJourneyScreenTexts_twelfthDesc"
     case back = "HerosJourneyScreenTexts_back"
 }
+
+enum AchievementTexts: String, Localizable {
+    case prodigy = "AchievementTexts_prodigy"
+    case bestEnd = "AchievementTexts_bestEnd"
+}
