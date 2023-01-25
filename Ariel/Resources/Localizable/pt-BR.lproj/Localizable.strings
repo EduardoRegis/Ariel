@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Ariel
+
+  Created by Eduardo Oliveira on 25/01/23.
+  
+*/
+
+// MARK: - First Open Texts
+"FirstOpenTexts_firstOpen" = "Abrindo pela primeira vez";
+"FirstOpenTexts_notFirstOpen" = "Este app foi aberto pela primeira vez em ";

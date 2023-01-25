@@ -30,9 +30,9 @@ import UIKit
     
     func isFirstOpen() {
         if let firstOpen = UserDefaults.standard.object(forKey: "FirstOpen") as? Date {
-            print("\("Este app foi aberto pela primeira vez em (localized)") \(firstOpen)")
+            print("\(FirstOpenTexts.notFirstOpen.localized()) \(firstOpen)")
         } else {
-            print("Abrindo pela primeira vez (localized)")
+            print(FirstOpenTexts.firstOpen.localized())
             
             let userDefaults = UserDefaults.standard
             

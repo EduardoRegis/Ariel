@@ -37,6 +37,8 @@ class MenuScreenPresenter {
         print("hero's Journey ", userDefaults.integer(forKey: "activeHerosJourney"))
         print("archetypes ", userDefaults.integer(forKey: "activeArchetypes"))
         print("archievements", userDefaults.stringArray(forKey: "archievements"))
+        
+        SnackBarHelper.shared.showSuccessMessage(message: "teste")
     }
     
     func navigateToGameplay(isNewJourney: Bool) -> UIViewController {
