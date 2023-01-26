@@ -186,14 +186,14 @@ struct GameplayCardView: View {
             }
         }
         
-        if let archievementTrigger = dialogue.archievementTrigger, archievementTrigger != "" {
-            var strings: [String] = userDefaults.stringArray(forKey: "archievements") ?? []
+        if let achievementTrigger = dialogue.achievementTrigger, achievementTrigger != "" {
+            var strings: [String] = userDefaults.stringArray(forKey: "achievements") ?? []
             
-            if !strings.contains(archievementTrigger) {
-                strings.append(archievementTrigger)
-                userDefaults.set(strings, forKey: "archievements")
+            if !strings.contains(achievementTrigger) {
+                strings.append(achievementTrigger)
+                userDefaults.set(strings, forKey: "achievements")
                 
-                SnackBarHelper.shared.showSuccessMessage(message: AchievementManager.shared.getAchievementByString(name: archievementTrigger))
+                SnackBarHelper.shared.showSuccessMessage(message: AchievementManager.shared.getAchievementByString(name: achievementTrigger))
             }
         }
         

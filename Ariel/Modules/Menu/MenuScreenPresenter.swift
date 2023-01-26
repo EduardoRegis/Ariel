@@ -36,7 +36,7 @@ class MenuScreenPresenter {
         print("\nbabaca ", userDefaults.integer(forKey: "duchbagCounter"))
         print("hero's Journey ", userDefaults.integer(forKey: "activeHerosJourney"))
         print("archetypes ", userDefaults.integer(forKey: "activeArchetypes"))
-        print("archievements", userDefaults.stringArray(forKey: "archievements"))
+        print("achievements", userDefaults.stringArray(forKey: "achievements"))
         
     }
     

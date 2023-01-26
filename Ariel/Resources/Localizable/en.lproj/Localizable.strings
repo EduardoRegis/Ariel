@@ -16,7 +16,7 @@
 "AlertTexts_cancel" = "Cancel";
 
 // MARK: - Snackbar Texts
-"SnackbarTexts_archievementUnlocked" = "Archievement unlocked!";
+"SnackbarTexts_achievementUnlocked" = "Achievement unlocked!";
 
 // MARK: - Menu Screen Texts
 "MenuScreenTexts_newJourney" = "New Journey";

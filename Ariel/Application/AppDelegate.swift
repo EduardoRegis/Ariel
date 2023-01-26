@@ -49,7 +49,7 @@ import UIKit
             userDefaults.set(false, forKey: "gameInProgress")
             
             let array: [String] = []
-            userDefaults.set(array, forKey: "archievements")
+            userDefaults.set(array, forKey: "achievements")
         }
     }
 }

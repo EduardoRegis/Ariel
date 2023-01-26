@@ -76,7 +76,7 @@ enum Dialogues {
                             herosJourneysStage: "Teste",
                             nextLeftDialogue: "fourthText",
                             nextRightDialogue: "fifthText",
-                            archievementTrigger: "prodigy") // caso chegar nesse Dialogue implique em ativar um archievement, é só colocar o nome do archievement nesse parâmetro. Caso não tenha archievement basta não colocar esse parâmetro
+                            achievementTrigger: "prodigy") // caso chegar nesse Dialogue implique em ativar um achievement, é só colocar o nome do achievement nesse parâmetro. Caso não tenha achievement basta não colocar esse parâmetro
         case .fourthText:
             return Dialogue(descriptionText: "(fourthText) Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             leftCardText: "Nada a ver",
@@ -85,7 +85,7 @@ enum Dialogues {
                             herosJourneysStage: "Teste",
                             nextLeftDialogue: "fifthText",
                             nextRightDialogue: "sixthText",
-                            genericTrigger: "babaca+1") // caso precise aumentar o indice de babaca, só chamar esse parâmetro com "babaca+1", o parâmetro assim como o archievementTrigger, é opcional
+                            genericTrigger: "babaca+1") // caso precise aumentar o indice de babaca, só chamar esse parâmetro com "babaca+1", o parâmetro assim como o achievementTrigger, é opcional
         case .fifthText:
             return Dialogue(descriptionText: "(fifthText) Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
                             leftCardText: "Tá zoando",
@@ -94,7 +94,7 @@ enum Dialogues {
                             herosJourneysStage: "Teste",
                             nextLeftDialogue: "sixthText",
                             nextRightDialogue: "seventhText",
-                            archievementTrigger: "bestEnd",
+                            achievementTrigger: "bestEnd",
                             genericTrigger: "herosJourney_1") // caso chegar nesse Dialogue implique em desbloquear um colecionável relativo a Jornada do Herói, basta colocar "herosJourney_?", com ? sendo o índice do colecionável em questão.
         case .sixthText:
             return Dialogue(descriptionText: "(sixthText) CUESTA 🇦🇷 NA MEIA 🧦 ESQUERDA⬅️⬅️AMEAÇOU 🔫🔪 NÃO BATEU 🚫🥊 VEM PRA TABELA 📉📈 PEGLOW ☄️ PRO CUESTA 🇦🇷 BATEU CRUZADO 💴⚔️✝️ EDENILSOOOOOOOOOOOOOOOOON 👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾  QUARENTA E UM ANOS 4️⃣1️⃣ 👉👌👴🏻🏆GOOOOOOOOOOOOOOL ⚽👨🏾🤸🏾‍♂️👨🏾 pipipi 🧏‍♂️🙋‍♂️🙋‍♂️🗽🚩",

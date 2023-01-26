@@ -19,7 +19,7 @@ enum AlertTexts: String, Localizable {
 }
 
 enum SnackbarTexts: String, Localizable {
-    case archievementUnlocked = "SnackbarTexts_archievementUnlocked"
+    case achievementUnlocked = "SnackbarTexts_achievementUnlocked"
 }
 
 enum MenuScreenTexts: String, Localizable {

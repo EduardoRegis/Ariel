@@ -16,7 +16,7 @@
 "AlertTexts_cancel" = "Cancelar";
 
 // MARK: - Snackbar Texts
-"SnackbarTexts_archievementUnlocked" = "Conquista desbloqueada!";
+"SnackbarTexts_achievementUnlocked" = "Conquista desbloqueada!";
 
 // MARK: - Menu Screen Texts
 "MenuScreenTexts_newJourney" = "Nova Jornada";

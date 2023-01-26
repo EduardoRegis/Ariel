@@ -19,7 +19,7 @@ class SnackBarHelper: NSObject {
     }
     
     func showSuccessMessage(message: String, duration: TimeInterval = 1.5) {
-        showMessage(title: SnackbarTexts.archievementUnlocked.localized(), message: message, duration: duration, type: .success)
+        showMessage(title: SnackbarTexts.achievementUnlocked.localized(), message: message, duration: duration, type: .success)
     }
     
     func showErrorMessage(message: String, duration: TimeInterval = 1.5) {
