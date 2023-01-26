@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpScreenViewController" customModule="Ariel" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="f3G-Re-eUw" id="tRa-6h-7FM"/>
+                <outlet property="titleLabel" destination="lib-Tz-zib" id="m76-4L-R8m"/>
                 <outlet property="view" destination="iN0-l3-epB" id="YcF-po-Zap"/>
                 <outletCollection property="collectionOfHelpTitles" destination="36S-L1-x1P" collectionClass="NSMutableArray" id="Vra-Tc-bdG"/>
                 <outletCollection property="collectionOfHelpTitles" destination="WRv-D8-cRc" collectionClass="NSMutableArray" id="w7h-yH-7dP"/>

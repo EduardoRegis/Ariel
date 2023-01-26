@@ -9,6 +9,7 @@ import UIKit
 
 class CreditsScreenViewController: BaseViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var collectionOfMembersFunctions: Array<UILabel>?
     
@@ -43,6 +44,7 @@ class CreditsScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
+        self.titleLabel.text = CreditsScreenTexts.title.localized()
         if let collectionOfMembersFunctions = self.collectionOfMembersFunctions {
             for (index, label) in collectionOfMembersFunctions.enumerated() {
                 label.lineBreakMode = .byWordWrapping
@@ -50,6 +52,7 @@ class CreditsScreenViewController: BaseViewController {
                 label.text = presenter.memberFunction(index: index)
             }
         }
+        self.backButton.setTitle(CreditsScreenTexts.back.localized(), for: .normal)
     }
 
     // MARK: - Actions

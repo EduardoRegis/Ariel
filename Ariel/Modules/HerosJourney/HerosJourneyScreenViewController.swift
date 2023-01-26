@@ -62,6 +62,8 @@ class HerosJourneyScreenViewController: BaseViewController {
         if let herosJourney = HerosJourneyManager.shared.getHerosJourneyByString(name: "1") {
             getinfoFormModel(herosJourney: herosJourney)
         }
+        
+        self.backButton.setTitle(HerosJourneyScreenTexts.back.localized(), for: .normal)
     }
     
     func getinfoFormModel(herosJourney: HerosJourneyModel) {

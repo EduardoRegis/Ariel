@@ -9,6 +9,7 @@ import UIKit
 
 class HelpScreenViewController: BaseViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var collectionOfHelpTitles: Array<UILabel>?
     @IBOutlet var collectionOfHelpImages: Array<UIImageView>?
@@ -46,6 +47,8 @@ class HelpScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
+        self.titleLabel.text = HelpScreenTexts.title.localized()
+        
         if let collectionOfHelpTitles = self.collectionOfHelpTitles {
             for (index, label) in collectionOfHelpTitles.enumerated() {
                 label.text = presenter.helpTitle(index: index)
@@ -65,6 +68,8 @@ class HelpScreenViewController: BaseViewController {
                 label.text = presenter.helpDescription(index: index)
             }
         }
+        
+        self.backButton.setTitle(HelpScreenTexts.back.localized(), for: .normal)
     }
 
     // MARK: - Actions

@@ -35,8 +35,8 @@ class ConfigurationsScreenPresenter {
             UserDefaults.standard.set(value, forKey: "MusicVolume")
             AudioManager.shared.ajustMusicVolume()
         case 1:
-            UserDefaults.standard.set(value, forKey: "AmbientVolume")
-            AudioManager.shared.ajustAmbientVolume()
+            UserDefaults.standard.set(value, forKey: "AmbienceVolume")
+            AudioManager.shared.ajustAmbienceVolume()
         case 2:
             UserDefaults.standard.set(value, forKey: "SoundEffectVolume")
             AudioManager.shared.ajustSoundEffectVolume()

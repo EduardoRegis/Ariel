@@ -62,6 +62,7 @@ class ArchetypesScreenViewController: BaseViewController {
         if let archetypeModel = ArchetypeManager.shared.getArchetypeByString(name: "1") {
             getInfoFormModel(archetype: archetypeModel)
         }
+        backButton.setTitle(ArchetypesScreenTexts.back.localized(), for: .normal)
     }
     
     func getInfoFormModel(archetype: ArchetypeModel) {

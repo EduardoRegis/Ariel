@@ -19,8 +19,7 @@ class SnackBarHelper: NSObject {
     }
     
     func showSuccessMessage(message: String, duration: TimeInterval = 1.5) {
-        // TODO: - Localizar
-        showMessage(title: "Conquista desbloqueada!", message: message, duration: duration, type: .success)
+        showMessage(title: SnackbarTexts.achievementUnlocked.localized(), message: message, duration: duration, type: .success)
     }
     
     func showErrorMessage(message: String, duration: TimeInterval = 1.5) {

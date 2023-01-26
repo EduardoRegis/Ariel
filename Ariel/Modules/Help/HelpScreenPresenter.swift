@@ -32,13 +32,13 @@ class HelpScreenPresenter {
     func helpTitle(index: Int) -> String {
         switch index {
         case 0:
-            return "Fazer Escolha"
+            return HelpScreenTexts.first.localized()
         case 1:
-            return "Acessar Jornada"
+            return HelpScreenTexts.second.localized()
         case 2:
-            return "Lorem Ipsum"
+            return HelpScreenTexts.third.localized()
         case 3:
-            return "Lorem Ipsum"
+            return HelpScreenTexts.fourth.localized()
         default:
             return ""
         }
@@ -62,13 +62,13 @@ class HelpScreenPresenter {
     func helpDescription(index: Int) -> String {
         switch index {
         case 0:
-            return "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção."
+            return HelpScreenTexts.firstDesc.localized()
         case 1:
-            return "Para acessar a aba de Jornada do Herói basta clicar na barra superior, onde está escrito o nome do capítulo."
+            return HelpScreenTexts.secondDesc.localized()
         case 2:
-            return "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção."
+            return HelpScreenTexts.thirdDesc.localized()
         case 3:
-            return "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção."
+            return HelpScreenTexts.fourthDesc.localized()
         default:
             return ""
         }

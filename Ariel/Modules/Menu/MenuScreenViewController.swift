@@ -42,6 +42,7 @@ class MenuScreenViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.willAppear()
+        continueButton.isEnabled = UserDefaults.standard.bool(forKey: "gameInProgress")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +60,11 @@ class MenuScreenViewController: BaseViewController {
         
         helpsButton.setTitle("", for: .normal)
         helpsButton.setImage(UIImage(systemName: "questionmark.circle.fill"), for: .normal)
+        
+        newJourneyButton.setTitle(MenuScreenTexts.newJourney.localized(), for: .normal)
+        continueButton.setTitle(MenuScreenTexts.continueJourney.localized(), for: .normal)
+        herosJourneyButton.setTitle(MenuScreenTexts.herosJourney.localized(), for: .normal)
+        archetypesButton.setTitle(MenuScreenTexts.archetypes.localized(), for: .normal)
     }
 
     // MARK: - Actions

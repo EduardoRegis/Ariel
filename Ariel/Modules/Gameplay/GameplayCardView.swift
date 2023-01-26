@@ -115,7 +115,6 @@ struct GameplayCardView: View {
             }
         }
         .onDisappear {
-            print(self.nextDialogue)
             if UserDefaults.standard.string(forKey: "lastDialogueSaved") != "" {
                 UserDefaults.standard.set(self.nextDialogue, forKey: "lastDialogueSaved")
             }
@@ -187,13 +186,14 @@ struct GameplayCardView: View {
             }
         }
         
-        if let archievementTrigger = dialogue.archievementTrigger, archievementTrigger != "" {
-            var strings: [String] = userDefaults.stringArray(forKey: "archievements") ?? []
+        if let achievementTrigger = dialogue.achievementTrigger, achievementTrigger != "" {
+            var strings: [String] = userDefaults.stringArray(forKey: "achievements") ?? []
             
-            if !strings.contains(archievementTrigger) {
-                strings.append(archievementTrigger)
-                userDefaults.set(strings, forKey: "archievements")
-                SnackBarHelper.shared.showSuccessMessage(message: archievementTrigger)
+            if !strings.contains(achievementTrigger) {
+                strings.append(achievementTrigger)
+                userDefaults.set(strings, forKey: "achievements")
+                
+                SnackBarHelper.shared.showSuccessMessage(message: AchievementManager.shared.getAchievementByString(name: achievementTrigger))
             }
         }
         

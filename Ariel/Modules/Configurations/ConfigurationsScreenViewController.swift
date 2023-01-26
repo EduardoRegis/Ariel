@@ -9,8 +9,14 @@ import UIKit
 
 class ConfigurationsScreenViewController: BaseViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var soundEffectLabel: UILabel!
+    @IBOutlet weak var ambienceLabel: UILabel!
+    @IBOutlet weak var musicLabel: UILabel!
+    
     @IBOutlet weak var soundEffectSlider: UISlider!
-    @IBOutlet weak var ambientSlider: UISlider!
+    @IBOutlet weak var ambienceSlider: UISlider!
     @IBOutlet weak var musicSlider: UISlider!
     
     @IBOutlet weak var backButton: UIButton!
@@ -46,17 +52,24 @@ class ConfigurationsScreenViewController: BaseViewController {
     
     // MARK: - Methods
     func configureUI() {
+        titleLabel.text = ConfigScreenTexts.title.localized()
+        
+        musicLabel.text = ConfigScreenTexts.music.localized()
         musicSlider.setValue(UserDefaults.standard.float(forKey: "MusicVolume"), animated: true)
         musicSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
         musicSlider.tag = 0
         
-        ambientSlider.setValue(UserDefaults.standard.float(forKey: "AmbientVolume"), animated: true)
-        ambientSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
-        ambientSlider.tag = 1
+        ambienceLabel.text = ConfigScreenTexts.ambience.localized()
+        ambienceSlider.setValue(UserDefaults.standard.float(forKey: "AmbienceVolume"), animated: true)
+        ambienceSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+        ambienceSlider.tag = 1
         
+        soundEffectLabel.text = ConfigScreenTexts.soundEffect.localized()
         soundEffectSlider.setValue(UserDefaults.standard.float(forKey: "SoundEffectVolume"), animated: true)
         soundEffectSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
         soundEffectSlider.tag = 2
+        
+        backButton.setTitle(ConfigScreenTexts.back.localized(), for: .normal)
     }
 
     // MARK: - Actions

@@ -111,6 +111,9 @@ struct CardView: View {
         default:
             break
         }
+        if (self.nextDialogue == "") {
+            UserDefaults.standard.set(false, forKey: "gameInProgress")
+        }
     }
     
     func changeText(width: CGFloat) {

@@ -47,37 +47,37 @@ enum ArchetypeModels {
     func getArchetype() -> ArchetypeModel {
         switch self {
         case .ordinaryWorld:
-            return ArchetypeModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return ArchetypeModel(descriptionText: ArchetypesScreenTexts.firstDesc.localized(),
                             imageName: "ariel still",
-                            archetypeStage: "Herói")
+                            archetypeStage: ArchetypesScreenTexts.firstTitle.localized())
         case .callToAdventure:
-            return ArchetypeModel(descriptionText: "Lorem ipsum World sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            imageName: "Mentor",
-                            archetypeStage: "Treinador")
+            return ArchetypeModel(descriptionText: ArchetypesScreenTexts.secondDesc.localized(),
+                            imageName: "ariel still",
+                            archetypeStage: ArchetypesScreenTexts.secondTitle.localized())
         case .refusalOfTheCall:
-            return ArchetypeModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return ArchetypeModel(descriptionText: ArchetypesScreenTexts.thirdDesc.localized(),
                             imageName: "ariel still",
-                            archetypeStage: "Refusal Of The Call")
+                                  archetypeStage: ArchetypesScreenTexts.thirdTitle.localized())
         case .meetingTheMentor:
-            return ArchetypeModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return ArchetypeModel(descriptionText: ArchetypesScreenTexts.fourthDesc.localized(),
                             imageName: "ariel still",
-                            archetypeStage: "Meeting The Mentor")
+                                  archetypeStage: ArchetypesScreenTexts.fourthTitle.localized())
         case .crossingTheThreshold:
-            return ArchetypeModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return ArchetypeModel(descriptionText: ArchetypesScreenTexts.fifthDesc.localized(),
                             imageName: "ariel still",
-                            archetypeStage: "Crossing The Threshold")
+                                  archetypeStage: ArchetypesScreenTexts.fifthTitle.localized())
         case .testsAlliesEnemies:
-            return ArchetypeModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return ArchetypeModel(descriptionText: ArchetypesScreenTexts.sixthDesc.localized(),
                             imageName: "ariel still",
-                            archetypeStage: "Tests, Allies, Enemies")
+                                  archetypeStage: ArchetypesScreenTexts.sixthTitle.localized())
         case .approachToTheInmostCave:
-            return ArchetypeModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return ArchetypeModel(descriptionText: ArchetypesScreenTexts.seventhDesc.localized(),
                             imageName: "ariel still",
-                            archetypeStage: "Approach To The Inmost Cave")
+                                  archetypeStage: ArchetypesScreenTexts.seventhTitle.localized())
         case .ordeal:
-            return ArchetypeModel(descriptionText: "Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            return ArchetypeModel(descriptionText: ArchetypesScreenTexts.eighthDesc.localized(),
                             imageName: "ariel still",
-                            archetypeStage: "Ordeal")
+                                  archetypeStage: ArchetypesScreenTexts.eighthTitle.localized())
         }
     }
 }

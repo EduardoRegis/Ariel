@@ -23,7 +23,7 @@ class MenuScreenPresenter {
     }
     func didLoad() {
         AudioManager.shared.playMusic()
-        AudioManager.shared.playAmbient()
+        AudioManager.shared.playAmbience()
     }
     
     func willAppear() {
@@ -36,15 +36,20 @@ class MenuScreenPresenter {
         print("\nbabaca ", userDefaults.integer(forKey: "duchbagCounter"))
         print("hero's Journey ", userDefaults.integer(forKey: "activeHerosJourney"))
         print("archetypes ", userDefaults.integer(forKey: "activeArchetypes"))
-        print("archievements", userDefaults.stringArray(forKey: "archievements"))
+        print("achievements", userDefaults.stringArray(forKey: "achievements"))
+        
     }
     
     func navigateToGameplay(isNewJourney: Bool) -> UIViewController {
+        
+        let userDefaults = UserDefaults.standard
+        
         let swiftUIViewController = UIHostingController(rootView: GameplayCardView())
-        UserDefaults.standard.set(isNewJourney, forKey: "isNewJourney")
+        userDefaults.set(isNewJourney, forKey: "isNewJourney")
         swiftUIViewController.modalPresentationStyle = .fullScreen
         if isNewJourney == true {
-            UserDefaults.standard.set(0, forKey: "duchbagCounter")
+            userDefaults.set(true, forKey: "gameInProgress")
+            userDefaults.set(0, forKey: "duchbagCounter")
         }
         return swiftUIViewController
     }
