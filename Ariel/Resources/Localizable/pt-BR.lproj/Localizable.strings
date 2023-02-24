@@ -108,11 +108,17 @@
 
 // MARK: - Dialogue Texts
 // First Text
-"DialogueTexts_first_text" = "(firstText) Lorem ipsum {World} sit amet, [consectetur] #adipiscing# elit, sed do eiusmod #tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-"DialogueTexts_first_leftCard" = "Nada a ver";
-"DialogueTexts_first_rightCard" = "Pô, vdd";
+"first_text" = "(firstText) Textin";
+"first_leftCard" = "Nada a ver";
+"first_rightCard" = "Pô, vdd";
 
 // Second Text
-"DialogueTexts_second_text" = "(secondText) Sed ut (perspiciatis) unde omnis {iste} natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.";
-"DialogueTexts_second_leftCard" = "Nem ferrando";
-"DialogueTexts_second_rightCard" = "Pode crer";
+"second_text" = "(secondText) Sed ut (perspiciatis) unde omnis {iste} natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.";
+"second_leftCard" = "Nem ferrando";
+"second_rightCard" = "Pode crer";
+
+// MC_01 Text
+"MC_01_text" = "(thirdText) Sed ut (perspiciatis) unde omnis {iste} natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.";
+"MC_01_leftCard" = "Vapo";
+"MC_01_rightCard" = "Mengo";
+

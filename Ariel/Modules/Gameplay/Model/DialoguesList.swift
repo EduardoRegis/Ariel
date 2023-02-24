@@ -22,8 +22,8 @@ class DialogueManager {
             return Dialogues.firstText.getDialogue()
         case "secondText":
             return Dialogues.secondText.getDialogue()
-        case "thirdText":
-            return Dialogues.thirdText.getDialogue()
+        case "MC_01":
+            return Dialogues.MC_01.getDialogue()
         case "fourthText":
             return Dialogues.fourthText.getDialogue()
         case "fifthText":
@@ -38,6 +38,8 @@ class DialogueManager {
             return Dialogues.ninthText.getDialogue()
         case "tenthText":
             return Dialogues.tenthText.getDialogue()
+        case "novoDialogo":
+            return Dialogues.novoDialogo.getDialogue()
         default:
             return nil
         }
@@ -46,7 +48,7 @@ class DialogueManager {
 
 enum Dialogues {
     
-    case firstText, secondText, thirdText, fourthText, fifthText, sixthText, seventhText, eighthText, ninthText, tenthText
+    case firstText, secondText, MC_01, fourthText, fifthText, sixthText, seventhText, eighthText, ninthText, tenthText, novoDialogo
     // lembrar de colocar um case para cada diálogo aqui também
     
     func getDialogue() -> Dialogue {
@@ -57,21 +59,22 @@ enum Dialogues {
                             rightCardText: DialogueTexts.first_rightCard.localized(),
                             imageName: "ariel still",
                             herosJourneysStage: HerosJourneysStageTexts.teste.localized(),
-                            nextLeftDialogue: "secondText",
-                            nextRightDialogue: "thirdText") // se não possuir parâmetro soundTrigger, ele apenas não emitirá nenhum efeito
+                            nextLeftDialogue: "novoDialogo",
+                            nextRightDialogue: "MC_01") // se não possuir parâmetro soundTrigger, ele apenas não emitirá nenhum efeito
         case .secondText:
             return Dialogue(descriptionText: DialogueTexts.second_text.localized(),
                             leftCardText: DialogueTexts.second_leftCard.localized(),
                             rightCardText: DialogueTexts.second_rightCard.localized(),
                             imageName: "Treinador",
                             herosJourneysStage: HerosJourneysStageTexts.teste.localized(),
-                            nextLeftDialogue: "thirdText",
+                            nextLeftDialogue: "MC_01",
                             nextRightDialogue: "fourthText",
-                            soundTrigger: "sliderButtonReleased") // aqui tem o parâmetro soundTrigger, onde vc coloca o nome do arquivo de som a ser tocado
-        case .thirdText:
-            return Dialogue(descriptionText: "(thirdText) CUESTA 🇦🇷 NA MEIA 🧦 ESQUERDA⬅️⬅️AMEAÇOU 🔫🔪 NÃO BATEU 🚫🥊 VEM PRA TABELA 📉📈 PEGLOW ☄️ PRO CUESTA 🇦🇷 BATEU CRUZADO 💴⚔️✝️ EDENILSOOOOOOOOOOOOOOOOON 👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾👨🏾  QUARENTA E UM ANOS 4️⃣1️⃣ 👉👌👴🏻🏆GOOOOOOOOOOOOOOL ⚽👨🏾🤸🏾‍♂️👨🏾 pipipi 🧏‍♂️🙋‍♂️🙋‍♂️🗽🚩",
-                            leftCardText: "Mó paia",
-                            rightCardText: "Com certeza",
+                            soundTrigger: "sliderButtonReleased",
+                            soundLoop: true) // aqui tem o parâmetro soundTrigger, onde vc coloca o nome do arquivo de som a ser tocado
+        case .MC_01:
+            return Dialogue(descriptionText: DialogueTexts.MC_01_text.localized(),
+                            leftCardText: DialogueTexts.MC_01_leftCard.localized(),
+                            rightCardText: DialogueTexts.MC_01_rightCard.localized(),
                             imageName: "Capela",
                             herosJourneysStage: "Teste",
                             nextLeftDialogue: "fourthText",
@@ -133,6 +136,14 @@ enum Dialogues {
                             nextRightDialogue: "")
         case .tenthText:
             return Dialogue(descriptionText: "(tenthText) Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                            leftCardText: "Tá zoando",
+                            rightCardText: "Pode crer",
+                            imageName: "smd_logo",
+                            herosJourneysStage: "Teste",
+                            nextLeftDialogue: "",
+                            nextRightDialogue: "")
+        case .novoDialogo:
+            return Dialogue(descriptionText: "teste dialogo novo",
                             leftCardText: "Tá zoando",
                             rightCardText: "Pode crer",
                             imageName: "smd_logo",

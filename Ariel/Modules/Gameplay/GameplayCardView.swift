@@ -35,7 +35,7 @@ struct GameplayCardView: View {
                     }.padding(.leading, 20)
                 }
                 .frame(width: gp.size.width, height: gp.size.height * 0.1, alignment: .leading)
-                .background(.black)
+                .background(.gray)
                 VStack {
                     Text(coloringWords(text: self.descriptionText))
                         .onChange(of: self.dialogue.descriptionText)
@@ -48,8 +48,9 @@ struct GameplayCardView: View {
                             isTextTimerActive.toggle()
                             self.stringLimit = newValue.count
                         }
+                        .font(.system(size: 12.0))
                 }
-                .frame(width: gp.size.width * 0.6, height: gp.size.height * 0.3, alignment: .top)
+                .frame(width: gp.size.width * 0.9, height: gp.size.height * 0.3, alignment: .top)
                 .onReceive(textTimer, perform: { _ in
                     guard isTextTimerActive else { return }
                     if stringCounter < self.dialogue.descriptionText.count {

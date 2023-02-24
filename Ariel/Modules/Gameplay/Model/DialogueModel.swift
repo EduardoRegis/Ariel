@@ -18,10 +18,11 @@ struct Dialogue: Hashable {
     var soundTrigger: String?
     var achievementTrigger: String?
     var genericTrigger: String?
+    var soundLoop: Bool?
     
     init (descriptionText: String, leftCardText: String, rightCardText: String,
           imageName: String, herosJourneysStage: String, nextLeftDialogue: String? = "",
-          nextRightDialogue: String? = "", soundTrigger: String? = "", achievementTrigger: String? = "", genericTrigger: String? = "") {
+          nextRightDialogue: String? = "", soundTrigger: String? = "", achievementTrigger: String? = "", genericTrigger: String? = "", soundLoop: Bool? = false) {
         self.descriptionText = descriptionText
         self.leftCardText = leftCardText
         self.rightCardText = rightCardText
@@ -32,5 +33,6 @@ struct Dialogue: Hashable {
         self.soundTrigger = soundTrigger
         self.achievementTrigger = achievementTrigger
         self.genericTrigger = genericTrigger
+        self.soundLoop = soundLoop
     }
 }
