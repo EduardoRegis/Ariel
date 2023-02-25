@@ -206,6 +206,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2E1870CE29A989940062F64D /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
 		2E60C0ED297EFFA9007A2C01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +266,7 @@
 		2EC8FBD5297AC49D00C7203C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2E1870CE29A989940062F64D /* Achievements */,
 				2EC8FBF1297AE10C00C7203C /* Help */,
 				2EC8FBF0297AE10500C7203C /* Configurations */,
 				2EC8FBEF297AE0FD00C7203C /* Credits */,

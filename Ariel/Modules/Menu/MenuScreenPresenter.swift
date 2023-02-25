@@ -62,6 +62,10 @@ class MenuScreenPresenter {
         self.router.navigateToArchetypes()
     }
     
+    func navigateToAchievement() {
+        self.router.navigateToAchievement()
+    }
+    
     func navigateToCredits() {
         self.router.navigateToCredits()
     }
