@@ -12,6 +12,8 @@ protocol AchievementsScreenPresenterDelegate: BasePresenterDelegate {
 
 class AchievementsScreenPresenter {
     
+    var achievements: [String] = []
+    
     weak var delegate: AchievementsScreenPresenterDelegate?
     let router: AchievementsScreenRouter
     
@@ -29,7 +31,15 @@ class AchievementsScreenPresenter {
     func didAppear() {
     }
     
+    func getAchievements(completion: @escaping () -> Void) {
+        achievements = UserDefaults.standard.stringArray(forKey: "achievements") ?? []
+        DispatchQueue.main.async {
+            completion()
+        }
+    }
+    
     func backToMenu() {
         self.router.backToMenu()
     }
 }
+

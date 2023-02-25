@@ -30,6 +30,7 @@ class AchievementsScreenViewController: BaseViewController {
         super.viewDidLoad()
         presenter.didLoad()
         configureUI()
+        getAchievements()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +58,21 @@ class AchievementsScreenViewController: BaseViewController {
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.backgroundColor = UIColor.clear
     }
+    
+    func getAchievements() {
+        presenter.getAchievements(completion: { [self] in
+            reloadData()
+        })
+    }
+    
+    func reloadData() {
+        collectionView.reloadData()
+//        if (presenter.isListEmpty()) {
+//            showEmptyBox()
+//        } else {
+//            hideEmptyBox()
+//        }
+    }
 
     // MARK: - Actions
     @IBAction func backAction(_ sender: Any) {
@@ -75,12 +91,12 @@ extension AchievementsScreenViewController: AchievementsScreenPresenterDelegate 
 extension AchievementsScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return presenter.achievements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = AchievementCollectionViewCell.dequeueCell(from: collectionView, for: indexPath)
-        cell.fill(name: "teste")
+        cell.fill(name: presenter.achievements[indexPath.row])
         return cell
     }
     
