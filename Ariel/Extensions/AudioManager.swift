@@ -25,6 +25,7 @@ class AudioManager {
         let url = URL(fileURLWithPath: pathToFind)
         
         do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
             musicPlayer = try AVAudioPlayer(contentsOf: url)
             musicPlayer?.setVolume(UserDefaults.standard.float(forKey: "MusicVolume"), fadeDuration: 0)
             musicPlayer?.play()
@@ -42,6 +43,7 @@ class AudioManager {
         let url = URL(fileURLWithPath: pathToFind)
         
         do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
             ambiencePlayer = try AVAudioPlayer(contentsOf: url)
             ambiencePlayer?.setVolume(UserDefaults.standard.float(forKey: "AmbienceVolume"), fadeDuration: 0)
             ambiencePlayer?.numberOfLoops = -1
@@ -60,6 +62,7 @@ class AudioManager {
         let url = URL(fileURLWithPath: pathToFind)
         
         do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
             soundEffectPlayer = try AVAudioPlayer(contentsOf: url)
             soundEffectPlayer?.setVolume(UserDefaults.standard.float(forKey: "SoundEffectVolume"), fadeDuration: 0)
             soundEffectPlayer?.play()
@@ -71,5 +74,4 @@ class AudioManager {
     func ajustSoundEffectVolume() {
         soundEffectPlayer?.setVolume(UserDefaults.standard.float(forKey: "SoundEffectVolume"), fadeDuration: 0.2)
     }
-    
 }
