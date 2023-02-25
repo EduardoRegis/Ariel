@@ -67,11 +67,6 @@ class AchievementsScreenViewController: BaseViewController {
     
     func reloadData() {
         collectionView.reloadData()
-//        if (presenter.isListEmpty()) {
-//            showEmptyBox()
-//        } else {
-//            hideEmptyBox()
-//        }
     }
 
     // MARK: - Actions
