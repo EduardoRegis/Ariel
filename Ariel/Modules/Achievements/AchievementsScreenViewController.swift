@@ -80,6 +80,7 @@ extension AchievementsScreenViewController: UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = AchievementCollectionViewCell.dequeueCell(from: collectionView, for: indexPath)
+        cell.fill(name: "teste")
         return cell
     }
     
