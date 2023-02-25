@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F0F77297839AD00D37CB4 /* StringSplited.swift */; };
+		2E1870D029A9A49A0062F64D /* AchievementsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E1870CF29A9A49A0062F64D /* AchievementsScreenViewController.xib */; };
+		2E1870D229A9A4D30062F64D /* AchievementsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1870D129A9A4D30062F64D /* AchievementsScreenViewController.swift */; };
+		2E1870D429A9A5DD0062F64D /* AchievementsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1870D329A9A5DD0062F64D /* AchievementsScreenPresenter.swift */; };
+		2E1870D629A9A6240062F64D /* AchievementsScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1870D529A9A6240062F64D /* AchievementsScreenRouter.swift */; };
 		2E60C0EF297EFFD6007A2C01 /* ArchetypesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0EE297EFFD6007A2C01 /* ArchetypesModel.swift */; };
 		2E60C0F1297F0025007A2C01 /* ArchetypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */; };
 		2E60C0F3297F0A51007A2C01 /* nierCityRuins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */; };
@@ -91,6 +95,10 @@
 
 /* Begin PBXFileReference section */
 		2E0F0F77297839AD00D37CB4 /* StringSplited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSplited.swift; sourceTree = "<group>"; };
+		2E1870CF29A9A49A0062F64D /* AchievementsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementsScreenViewController.xib; sourceTree = "<group>"; };
+		2E1870D129A9A4D30062F64D /* AchievementsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsScreenViewController.swift; sourceTree = "<group>"; };
+		2E1870D329A9A5DD0062F64D /* AchievementsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsScreenPresenter.swift; sourceTree = "<group>"; };
+		2E1870D529A9A6240062F64D /* AchievementsScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsScreenRouter.swift; sourceTree = "<group>"; };
 		2E60C0EE297EFFD6007A2C01 /* ArchetypesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesModel.swift; sourceTree = "<group>"; };
 		2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesList.swift; sourceTree = "<group>"; };
 		2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nierCityRuins.mp3; sourceTree = "<group>"; };
@@ -209,6 +217,10 @@
 		2E1870CE29A989940062F64D /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
+				2E1870CF29A9A49A0062F64D /* AchievementsScreenViewController.xib */,
+				2E1870D129A9A4D30062F64D /* AchievementsScreenViewController.swift */,
+				2E1870D329A9A5DD0062F64D /* AchievementsScreenPresenter.swift */,
+				2E1870D529A9A6240062F64D /* AchievementsScreenRouter.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
@@ -596,6 +608,7 @@
 				2EC8FC1A297B068E00C7203C /* HelpScreenViewController.xib in Resources */,
 				2E60C10C29815C6E007A2C01 /* Localizable.strings in Resources */,
 				2EC8FC11297B012F00C7203C /* ConfigurationsScreenViewController.xib in Resources */,
+				2E1870D029A9A49A0062F64D /* AchievementsScreenViewController.xib in Resources */,
 				2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */,
 				2EC8FBEC297ACF4000C7203C /* MenuScreenViewController.xib in Resources */,
 				2E60C0FB297F342B007A2C01 /* sliderButtonReleased.mp3 in Resources */,
@@ -750,10 +763,12 @@
 				2E60C0F1297F0025007A2C01 /* ArchetypesList.swift in Sources */,
 				2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */,
 				2EC8FC14297B02F700C7203C /* HelpScreenRouter.swift in Sources */,
+				2E1870D629A9A6240062F64D /* AchievementsScreenRouter.swift in Sources */,
 				2E60C11F29819913007A2C01 /* LocalizableDialogueStrings.swift in Sources */,
 				2EC8FBFB297AFAC500C7203C /* ArchetypesScreenRouter.swift in Sources */,
 				2EC8FC03297AFD7800C7203C /* CreditsScreenRouter.swift in Sources */,
 				2EC8FBD8297AC4CB00C7203C /* SplashScreenRouter.swift in Sources */,
+				2E1870D229A9A4D30062F64D /* AchievementsScreenViewController.swift in Sources */,
 				2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */,
 				2EC8FBFF297AFAFC00C7203C /* ArchetypesScreenPresenter.swift in Sources */,
 				2E60C11129815D04007A2C01 /* Localizable.swift in Sources */,
@@ -770,6 +785,7 @@
 				2E60C11329815D3B007A2C01 /* LocalizableProjectStrings.swift in Sources */,
 				2EC8FC16297B056300C7203C /* HelpScreenViewController.swift in Sources */,
 				2EC8FBE8297ACE4B00C7203C /* MenuScreenViewController.swift in Sources */,
+				2E1870D429A9A5DD0062F64D /* AchievementsScreenPresenter.swift in Sources */,
 				2EC8FBEA297ACEA300C7203C /* MenuScreenPresenter.swift in Sources */,
 				2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */,
 				2EC8FC0D297B00A300C7203C /* ConfigurationsScreenViewController.swift in Sources */,

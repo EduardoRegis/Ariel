@@ -61,6 +61,11 @@ enum HelpScreenTexts: String, Localizable {
     case back = "HelpScreenTexts_back"
 }
 
+enum AchievementsScreenTexts: String, Localizable {
+    case title = "AchievementsScreenTexts_title"
+    case back = "AchievementsScreenTexts_back"
+}
+
 enum ArchetypesScreenTexts: String, Localizable {
     case firstTitle = "ArchetypesScreenTexts_firstTitle"
     case firstDesc = "ArchetypesScreenTexts_firstDesc"

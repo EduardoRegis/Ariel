@@ -53,6 +53,10 @@
 "HelpScreenTexts_fourthDesc" = "Para fazer sua escolha, mova o mouse da esquerda para a direita para ver as opções. Clique na tela para escolher aquela opção.";
 "HelpScreenTexts_back" = "Back";
 
+// MARK: - Achievements Screen Texts
+"AchievementsScreenTexts_title" = "Achievements";
+"AchievementsScreenTexts_back" = "Back";
+
 // MARK: - Archetypes Screen Texts
 "ArchetypesScreenTexts_firstTitle" = "Hero";
 "ArchetypesScreenTexts_firstDesc" = "Lorem ipsum World sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
