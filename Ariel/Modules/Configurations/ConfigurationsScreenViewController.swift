@@ -69,6 +69,7 @@ class ConfigurationsScreenViewController: BaseViewController {
         soundEffectSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
         soundEffectSlider.tag = 2
         
+        backButton.applyCustomButton()
         backButton.setTitle(ConfigScreenTexts.back.localized(), for: .normal)
     }
 

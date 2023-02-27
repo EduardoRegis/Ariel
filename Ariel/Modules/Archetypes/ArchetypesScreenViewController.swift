@@ -57,11 +57,13 @@ class ArchetypesScreenViewController: BaseViewController {
                 if index >= UserDefaults.standard.integer(forKey: "activeArchetypes") {
                     button.isEnabled = false
                 }
+                button.applyCustomButton()
             }
         }
         if let archetypeModel = ArchetypeManager.shared.getArchetypeByString(name: "1") {
             getInfoFormModel(archetype: archetypeModel)
         }
+        backButton.applyCustomButton()
         backButton.setTitle(ArchetypesScreenTexts.back.localized(), for: .normal)
     }
     

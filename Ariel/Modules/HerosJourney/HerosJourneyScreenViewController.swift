@@ -57,12 +57,13 @@ class HerosJourneyScreenViewController: BaseViewController {
                 if index >= UserDefaults.standard.integer(forKey: "activeHerosJourney") {
                     button.isEnabled = false
                 }
+                button.applyCustomButton()
             }
         }
         if let herosJourney = HerosJourneyManager.shared.getHerosJourneyByString(name: "1") {
             getinfoFormModel(herosJourney: herosJourney)
         }
-        
+        self.backButton.applyCustomButton()
         self.backButton.setTitle(HerosJourneyScreenTexts.back.localized(), for: .normal)
     }
     
