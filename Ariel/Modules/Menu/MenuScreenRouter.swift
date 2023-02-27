@@ -33,6 +33,11 @@ class MenuScreenRouter: BaseRouter {
         self.push(CreditsScreenRouter.makeModule(), animated: true)
     }
     
+    func navigateToAchievement() {
+        print("GO TO ACHIEVEMENTS")
+        self.push(AchievementsScreenRouter.makeModule(), animated: true)
+    }
+    
     func navigateToConfigurations() {
         print("GO TO CONFIGURATIONS")
         self.push(ConfigurationsScreenRouter.makeModule(), animated: true)

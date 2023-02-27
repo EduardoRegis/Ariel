@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuScreenViewController" customModule="Ariel" customModuleProvider="target">
             <connections>
+                <outlet property="achievementButton" destination="CgT-1q-oj0" id="lDk-Bf-5oA"/>
                 <outlet property="archetypesButton" destination="8Bz-vo-4tD" id="cLs-D4-XzE"/>
                 <outlet property="configurationsButton" destination="2Mp-P6-gCQ" id="njK-18-RU1"/>
                 <outlet property="continueButton" destination="gW4-Wc-fDx" id="tTu-15-jzO"/>
@@ -27,9 +28,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gu0-wX-7aE">
-                    <rect key="frame" x="41.333333333333343" y="252.33333333333337" width="331.33333333333326" height="231.66666666666663"/>
+                    <rect key="frame" x="41.333333333333343" y="242.33333333333337" width="331.33333333333326" height="251.66666666666663"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aet-WP-pei">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aet-WP-pei" userLabel="NewJourneyButton">
                             <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="34.333333333333336"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Nova Jornada"/>
@@ -37,7 +38,7 @@
                                 <action selector="newJourneyAction:" destination="-1" eventType="touchUpInside" id="iyL-q0-BTL"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gW4-Wc-fDx">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gW4-Wc-fDx" userLabel="ContinueButton">
                             <rect key="frame" x="0.0" y="49.333333333333343" width="331.33333333333331" height="34.333333333333343"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Continuar"/>
@@ -45,7 +46,7 @@
                                 <action selector="continueAction:" destination="-1" eventType="touchUpInside" id="XfO-dy-jMF"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4R-1c-XRR">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4R-1c-XRR" userLabel="HerosJourneyButton">
                             <rect key="frame" x="0.0" y="98.666666666666657" width="331.33333333333331" height="34.333333333333343"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Jornada do Herói"/>
@@ -53,7 +54,7 @@
                                 <action selector="herosJourneyAction:" destination="-1" eventType="touchUpInside" id="XIs-B9-G6f"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-vo-4tD">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-vo-4tD" userLabel="ArchetypesButton">
                             <rect key="frame" x="0.0" y="147.99999999999997" width="331.33333333333331" height="34.333333333333343"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Arquétipos"/>
@@ -62,26 +63,34 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-Wq-yaJ">
-                            <rect key="frame" x="0.0" y="197.33333333333334" width="331.33333333333331" height="34.333333333333343"/>
+                            <rect key="frame" x="0.0" y="197.33333333333334" width="331.33333333333331" height="54.333333333333343"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFg-IF-jdf">
-                                    <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="34.333333333333336"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFg-IF-jdf" userLabel="CreditsButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="54.333333333333336"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                     <connections>
                                         <action selector="creditsAction:" destination="-1" eventType="touchUpInside" id="1Xk-Ct-40v"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-P6-gCQ">
-                                    <rect key="frame" x="115.33333333333331" y="0.0" width="100.66666666666669" height="34.333333333333336"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-1q-oj0" userLabel="AchievementsButton">
+                                    <rect key="frame" x="86.666666666666657" y="0.0" width="71.666666666666657" height="54.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    <connections>
+                                        <action selector="achievementAction:" destination="-1" eventType="touchUpInside" id="mxF-X5-n9D"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-P6-gCQ" userLabel="ConfigurationButton">
+                                    <rect key="frame" x="173.33333333333331" y="0.0" width="71.333333333333314" height="54.333333333333336"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                     <connections>
                                         <action selector="configurationsAction:" destination="-1" eventType="touchUpInside" id="1uv-fg-3DT"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-9L-x3w">
-                                    <rect key="frame" x="230.99999999999997" y="0.0" width="100.33333333333334" height="34.333333333333336"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-9L-x3w" userLabel="HelpsButton">
+                                    <rect key="frame" x="259.66666666666669" y="0.0" width="71.666666666666686" height="54.333333333333336"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                     <connections>

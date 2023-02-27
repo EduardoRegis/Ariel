@@ -17,6 +17,7 @@ class MenuScreenViewController: BaseViewController {
     @IBOutlet weak var herosJourneyButton: UIButton!
     @IBOutlet weak var archetypesButton: UIButton!
     @IBOutlet weak var creditsButton: UIButton!
+    @IBOutlet weak var achievementButton: UIButton!
     @IBOutlet weak var configurationsButton: UIButton!
     @IBOutlet weak var helpsButton: UIButton!
     
@@ -55,6 +56,9 @@ class MenuScreenViewController: BaseViewController {
         creditsButton.setTitle("", for: .normal)
         creditsButton.setImage(UIImage(systemName: "person.3.fill"), for: .normal)
         
+        achievementButton.setTitle("", for: .normal)
+        achievementButton.setImage(UIImage(systemName: "trophy.fill"), for: .normal)
+        
         configurationsButton.setTitle("", for: .normal)
         configurationsButton.setImage(UIImage(systemName: "gearshape.fill"), for: .normal)
         
@@ -86,6 +90,10 @@ class MenuScreenViewController: BaseViewController {
     
     @IBAction func creditsAction(_ sender: Any) {
         self.presenter.navigateToCredits()
+    }
+    
+    @IBAction func achievementAction(_ sender: Any) {
+        self.presenter.navigateToAchievement()
     }
     
     @IBAction func configurationsAction(_ sender: Any) {

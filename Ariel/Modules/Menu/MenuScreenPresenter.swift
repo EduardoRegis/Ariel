@@ -36,7 +36,7 @@ class MenuScreenPresenter {
         print("\nbabaca ", userDefaults.integer(forKey: "duchbagCounter"))
         print("hero's Journey ", userDefaults.integer(forKey: "activeHerosJourney"))
         print("archetypes ", userDefaults.integer(forKey: "activeArchetypes"))
-        print("achievements", userDefaults.stringArray(forKey: "achievements"))
+        print("achievements", userDefaults.stringArray(forKey: "achievements") as Any)
         
     }
     
@@ -60,6 +60,10 @@ class MenuScreenPresenter {
     
     func navigateToArchetypes() {
         self.router.navigateToArchetypes()
+    }
+    
+    func navigateToAchievement() {
+        self.router.navigateToAchievement()
     }
     
     func navigateToCredits() {

@@ -13,11 +13,15 @@ enum HerosJourneysStageTexts: String, Localizable {
 
 enum DialogueTexts: String, Localizable {
     // First Text
-    case first_text = "DialogueTexts_first_text"
-    case first_leftCard = "DialogueTexts_first_leftCard"
-    case first_rightCard = "DialogueTexts_first_rightCard"
+    case first_text = "first_text"
+    case first_leftCard = "first_leftCard"
+    case first_rightCard = "first_rightCard"
     // Second Text
-    case second_text = "DialogueTexts_second_text"
-    case second_leftCard = "DialogueTexts_second_leftCard"
-    case second_rightCard = "DialogueTexts_second_rightCard"
+    case second_text = "second_text"
+    case second_leftCard = "second_leftCard"
+    case second_rightCard = "second_rightCard"
+    // MC_01 Text
+    case MC_01_text = "MC_01_text"
+    case MC_01_leftCard = "MC_01_leftCard"
+    case MC_01_rightCard = "MC_01_rightCard"
 }
