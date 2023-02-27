@@ -87,6 +87,7 @@ struct GameplayCardView: View {
                 .frame(width: gp.size.width, height: gp.size.height * 0.5, alignment: .top)
             }
         }
+        .background(Color("color_background"))
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 var data = Dialogues.firstText.getDialogue()
@@ -124,6 +125,9 @@ struct GameplayCardView: View {
     
     func coloringWords(text: String) -> NSMutableAttributedString {
         let mutableAttributedString = NSMutableAttributedString.init(string: text)
+        mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor,
+                                             value: UIColor(named: "color_tint") as Any,
+                                             range: (text as NSString).range(of: text))
         for (index, name) in self.coloredWords.enumerated() {
             let range = (text as NSString).range(of: name)
             mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: RegexColors[index], range: range)
