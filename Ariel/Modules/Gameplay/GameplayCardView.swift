@@ -36,19 +36,23 @@ struct GameplayCardView: View {
                 }
                 .frame(width: gp.size.width, height: gp.size.height * 0.1, alignment: .leading)
                 .background(.gray)
-                VStack {
-                    Text(coloringWords(text: self.descriptionText))
-                        .onChange(of: self.dialogue.descriptionText)
-                        { newValue in
-                            if isTextTimerActive == false {
-                                self.coloredWords = self.matchesForRegexesInText(text: newValue)
-                                self.removeCurlyBraces()
+                GeometryReader { textGp in
+                    ScrollView {
+                        Text(coloringWords(text: self.descriptionText))
+                            .onChange(of: self.dialogue.descriptionText)
+                            { newValue in
+                                if isTextTimerActive == false {
+                                    self.coloredWords = self.matchesForRegexesInText(text: newValue)
+                                    self.removeCurlyBraces()
+                                }
+                                self.descriptionText = ""
+                                isTextTimerActive.toggle()
+                                self.stringLimit = newValue.count
                             }
-                            self.descriptionText = ""
-                            isTextTimerActive.toggle()
-                            self.stringLimit = newValue.count
-                        }
-                        .font(.system(size: 12.0))
+                            .font(.system(size: 12.0))
+                            .lineLimit(nil)
+                            .frame(width: textGp.size.width)
+                    }
                 }
                 .frame(width: gp.size.width * 0.9, height: gp.size.height * 0.3, alignment: .top)
                 .onReceive(textTimer, perform: { _ in

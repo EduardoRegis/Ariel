@@ -35,10 +35,7 @@ class SplashScreenPresenter {
     }
     
     @objc func checkInternet() {
-//        let connection = ConnectionObject.sharedInstance
-//        if connection.isConnectedToInternet() {
         navigateToMenu()
-//        }
     }
 }
 
