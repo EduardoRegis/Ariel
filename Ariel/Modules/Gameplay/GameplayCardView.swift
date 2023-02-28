@@ -52,14 +52,23 @@ struct GameplayCardView: View {
                                     isTextTimerActive.toggle()
                                     self.stringLimit = newValue.count
                                 }
+                                .onTapGesture {
+                                    self.isTextTimerActive = false
+                                    var newText = self.dialogue.descriptionText
+                                    
+                                    for (char) in SpecialCharacteresToRegexText {
+                                        newText = newText.filter { $0 != char.first }
+                                    }
+                                    
+                                    self.descriptionText = newText
+                                    scrollView.scrollTo(bottomId, anchor: .bottom)
+                                }
                             Spacer()
                                 .id(bottomId)
                                 .onAppear {
                                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
                                         _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
                                             if isTextTimerActive {
-                                                print(colorsIndexes)
-                                                print(coloredWords)
                                                 scrollView.scrollTo(bottomId, anchor: .bottom)
                                             }
                                         }
