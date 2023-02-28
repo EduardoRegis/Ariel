@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-let defaultTimeForCharTyped: CGFloat = 0.012
+let defaultTimeForCharTyped: CGFloat = 0.006
 
 struct GameplayCardView: View {
-
+    
     @State private var dialogue: Dialogue = Dialogues.firstText.getDialogue()
     @State var nextDialogue: String = ""
     @Environment(\.presentationMode) var presentationMode
@@ -24,6 +24,8 @@ struct GameplayCardView: View {
     @State private var stringLimit: Int = 10
     let textTimer = Timer.publish(every: defaultTimeForCharTyped, on: .main, in: .common).autoconnect()
     
+    @Namespace var bottomId
+    
     var body: some View {
         GeometryReader { gp in
             VStack {
@@ -36,25 +38,28 @@ struct GameplayCardView: View {
                 }
                 .frame(width: gp.size.width, height: gp.size.height * 0.1, alignment: .leading)
                 .background(.gray)
-                GeometryReader { textGp in
+                VStack() {
                     ScrollView {
-                        Text(coloringWords(text: self.descriptionText))
-                            .onChange(of: self.dialogue.descriptionText)
-                            { newValue in
-                                if isTextTimerActive == false {
-                                    self.coloredWords = self.matchesForRegexesInText(text: newValue)
-                                    self.removeCurlyBraces()
-                                }
-                                self.descriptionText = ""
-                                isTextTimerActive.toggle()
-                                self.stringLimit = newValue.count
+                        ScrollViewReader { scrollView in
+                            Button("teste"){
+                                scrollView.scrollTo(bottomId)
                             }
-                            .font(.system(size: 12.0))
-                            .lineLimit(nil)
-                            .frame(width: textGp.size.width)
+                            Text(coloringWords(text: self.descriptionText))
+                                .onChange(of: self.dialogue.descriptionText)
+                                { newValue in
+                                    if isTextTimerActive == false {
+                                        self.coloredWords = self.matchesForRegexesInText(text: newValue)
+                                        self.removeCurlyBraces()
+                                    }
+                                    self.descriptionText = ""
+                                    isTextTimerActive.toggle()
+                                    self.stringLimit = newValue.count
+                                }
+                            Spacer()
+                                .id(bottomId)
+                        }
                     }
                 }
-                .frame(width: gp.size.width * 0.9, height: gp.size.height * 0.3, alignment: .top)
                 .onReceive(textTimer, perform: { _ in
                     guard isTextTimerActive else { return }
                     if stringCounter < self.dialogue.descriptionText.count {
@@ -67,6 +72,7 @@ struct GameplayCardView: View {
                         stringCounter = 0
                     }
                 })
+                .frame(width: gp.size.width * 0.9, height: gp.size.height * 0.3, alignment: .top)
                 VStack {
                     ZStack {
                         Rectangle()
@@ -77,15 +83,15 @@ struct GameplayCardView: View {
                         CardView(nextDialogue: self.$nextDialogue,
                                  isTextTimerActive: self.$isTextTimerActive,
                                  dialogue: dialogue)
-                            .onChange(of: nextDialogue)
-                                { newValue in
-                                    if let newDialogue = DialogueManager.shared.getDialogueByString(name: nextDialogue) {
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                            self.dialogue = newDialogue
-                                            checkTrigger(dialogue: newDialogue)
-                                        }
-                                    }
+                        .onChange(of: nextDialogue)
+                        { newValue in
+                            if let newDialogue = DialogueManager.shared.getDialogueByString(name: nextDialogue) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    self.dialogue = newDialogue
+                                    checkTrigger(dialogue: newDialogue)
                                 }
+                            }
+                        }
                     }
                 }
                 .frame(width: gp.size.width, height: gp.size.height * 0.5, alignment: .top)
