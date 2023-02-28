@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let defaultTimeForCharTyped: CGFloat = 0.006
+let defaultTimeForCharTyped: CGFloat = 0.012
 
 struct GameplayCardView: View {
     
@@ -41,9 +41,6 @@ struct GameplayCardView: View {
                 VStack() {
                     ScrollView {
                         ScrollViewReader { scrollView in
-                            Button("teste"){
-                                scrollView.scrollTo(bottomId)
-                            }
                             Text(coloringWords(text: self.descriptionText))
                                 .onChange(of: self.dialogue.descriptionText)
                                 { newValue in
@@ -57,6 +54,17 @@ struct GameplayCardView: View {
                                 }
                             Spacer()
                                 .id(bottomId)
+                                .onAppear {
+                                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+                                        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+                                            if isTextTimerActive {
+                                                print(colorsIndexes)
+                                                print(coloredWords)
+                                                scrollView.scrollTo(bottomId, anchor: .bottom)
+                                            }
+                                        }
+                                    })
+                                }
                         }
                     }
                 }
@@ -140,7 +148,7 @@ struct GameplayCardView: View {
                                              range: (text as NSString).range(of: text))
         for (index, name) in self.coloredWords.enumerated() {
             let range = (text as NSString).range(of: name)
-            mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: RegexColors[index], range: range)
+            mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: RegexColors[colorsIndexes[index]], range: range)
         }
         return mutableAttributedString
     }
@@ -154,8 +162,9 @@ struct GameplayCardView: View {
         for (index, name) in regexes.enumerated() {
             let result = matchesForRegexInText(regex: name, text: text)
             regexesResults.append(contentsOf: result)
-            self.colorsIndexes = Array(repeating: index, count: result.count)
+            self.colorsIndexes.append(contentsOf: Array(repeating: index, count: result.count))
         }
+        
         return regexesResults
     }
     
