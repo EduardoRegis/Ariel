@@ -56,14 +56,16 @@ class HerosJourneyScreenViewController: BaseViewController {
                 button.addTarget(self, action:#selector(handleRegister(sender:)), for: .touchUpInside)
                 if index >= UserDefaults.standard.integer(forKey: "activeHerosJourney") {
                     button.isEnabled = false
+                    button.applyDisabledCustomButton()
+                } else {
+                    button.applyEnabledCustomButton()
                 }
-                button.applyCustomButton()
             }
         }
         if let herosJourney = HerosJourneyManager.shared.getHerosJourneyByString(name: "1") {
             getinfoFormModel(herosJourney: herosJourney)
         }
-        self.backButton.applyCustomButton()
+        self.backButton.applyEnabledCustomButton()
         self.backButton.setTitle(HerosJourneyScreenTexts.back.localized(), for: .normal)
     }
     

@@ -47,7 +47,7 @@ class AchievementsScreenViewController: BaseViewController {
     func configureUI() {
         self.titleLabel.text = AchievementsScreenTexts.title.localized()
         self.prepareCollection()
-        self.backButton.applyCustomButton()
+        self.backButton.applyEnabledCustomButton()
         self.backButton.setTitle(AchievementsScreenTexts.back.localized(), for: .normal)
     }
     

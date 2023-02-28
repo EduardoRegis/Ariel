@@ -52,7 +52,7 @@ class CreditsScreenViewController: BaseViewController {
                 label.text = presenter.memberFunction(index: index)
             }
         }
-        self.backButton.applyCustomButton()
+        self.backButton.applyEnabledCustomButton()
         self.backButton.setTitle(CreditsScreenTexts.back.localized(), for: .normal)
     }
 

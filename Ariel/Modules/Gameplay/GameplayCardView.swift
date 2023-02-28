@@ -136,7 +136,7 @@ struct GameplayCardView: View {
     }
     
     func matchesForRegexesInText(text: String!) -> [String] {
-        let regexes = ["\\{(.*?)\\}", "\\[(.*?)\\]", "\\%(.*?)\\%", "\\#(.*?)\\#"]
+        let regexes = ["\\{(.*?)\\}", "\\[(.*?)\\]", "\\|(.*?)\\%", "\\&(.*?)\\#"]
         var regexesResults: [String] = []
         
         self.colorsIndexes = []

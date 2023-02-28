@@ -56,14 +56,16 @@ class ArchetypesScreenViewController: BaseViewController {
                 button.addTarget(self, action:#selector(handleRegister(sender:)), for: .touchUpInside)
                 if index >= UserDefaults.standard.integer(forKey: "activeArchetypes") {
                     button.isEnabled = false
+                    button.applyDisabledCustomButton()
+                } else {
+                    button.applyEnabledCustomButton()
                 }
-                button.applyCustomButton()
             }
         }
         if let archetypeModel = ArchetypeManager.shared.getArchetypeByString(name: "1") {
             getInfoFormModel(archetype: archetypeModel)
         }
-        backButton.applyCustomButton()
+        backButton.applyEnabledCustomButton()
         backButton.setTitle(ArchetypesScreenTexts.back.localized(), for: .normal)
     }
     

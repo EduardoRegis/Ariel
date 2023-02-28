@@ -55,31 +55,31 @@ class MenuScreenViewController: BaseViewController {
     func configureUI() {
         creditsButton.setTitle("", for: .normal)
         creditsButton.setImage(UIImage(systemName: "person.3.fill"), for: .normal)
-        creditsButton.applyCustomButton()
+        creditsButton.applyEnabledCustomButton()
         
         achievementButton.setTitle("", for: .normal)
         achievementButton.setImage(UIImage(systemName: "trophy.fill"), for: .normal)
-        achievementButton.applyCustomButton()
+        achievementButton.applyEnabledCustomButton()
         
         configurationsButton.setTitle("", for: .normal)
         configurationsButton.setImage(UIImage(systemName: "gearshape.fill"), for: .normal)
-        configurationsButton.applyCustomButton()
+        configurationsButton.applyEnabledCustomButton()
         
         helpsButton.setTitle("", for: .normal)
         helpsButton.setImage(UIImage(systemName: "questionmark.circle.fill"), for: .normal)
-        helpsButton.applyCustomButton()
+        helpsButton.applyEnabledCustomButton()
         
         newJourneyButton.setTitle(MenuScreenTexts.newJourney.localized(), for: .normal)
-        newJourneyButton.applyCustomButton()
+        newJourneyButton.applyEnabledCustomButton()
         
         continueButton.setTitle(MenuScreenTexts.continueJourney.localized(), for: .normal)
-        continueButton.applyCustomButton()
+        continueButton.applyEnabledCustomButton()
         
         herosJourneyButton.setTitle(MenuScreenTexts.herosJourney.localized(), for: .normal)
-        herosJourneyButton.applyCustomButton()
+        herosJourneyButton.applyEnabledCustomButton()
         
         archetypesButton.setTitle(MenuScreenTexts.archetypes.localized(), for: .normal)
-        archetypesButton.applyCustomButton()
+        archetypesButton.applyEnabledCustomButton()
     }
 
     // MARK: - Actions
