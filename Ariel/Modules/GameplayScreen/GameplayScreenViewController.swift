@@ -41,6 +41,7 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setNewDialogue(newDialogue: Dialogues.firstText.getDialogue())
         presenter.willAppear()
     }
     
@@ -49,11 +50,17 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
         presenter.didAppear()
     }
     
+    // MARK: - Methods
+    func setNewDialogue(newDialogue: Dialogue) {
+        dialogue = newDialogue
+        descriptionLabel.text = newDialogue.descriptionText
+        swipeableCardView.reloadData()
+    }
+    
     // MARK: - Actions
     @IBAction func backAction(_ sender: Any) {
-        dialogue = Dialogues.secondText.getDialogue()
-        swipeableCardView.reloadData()
-//        self.presenter.backToMenu()
+        self.setNewDialogue(newDialogue: Dialogues.secondText.getDialogue())
+        self.presenter.backToMenu()
     }
 }
 
