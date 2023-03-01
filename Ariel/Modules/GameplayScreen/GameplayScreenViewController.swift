@@ -54,10 +54,10 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     func setNewDialogue(newDialogue: Dialogue) {
         
         dialogue = newDialogue
-        
+        presenter.checkTrigger(dialogue: newDialogue)
         presenter.setupDialogue(newDialogue: newDialogue)
         
-        descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, completion: {
+        descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, characterDelay: 1.0, completion: {
             self.swipeableCardView.reloadData()
         })
     }

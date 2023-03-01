@@ -92,4 +92,39 @@ class GameplayScreenPresenter {
         
         return regexesResults
     }
+    
+    func checkTrigger(dialogue: Dialogue) {
+        
+        let userDefaults = UserDefaults.standard
+        
+        if let genericTrigger = dialogue.genericTrigger, genericTrigger != "" {
+            if genericTrigger.contains("babaca") {
+                userDefaults.set(userDefaults.integer(forKey: "duchbagCounter") + 1, forKey: "duchbagCounter")
+            } else if genericTrigger.contains("herosJourney") {
+                let triggerSplited = genericTrigger.components(separatedBy: "_")
+                guard let herosJourneyIndex = Int(triggerSplited[1]) else { return }
+                if herosJourneyIndex > userDefaults.integer(forKey: "activeHerosJourney") {
+                    userDefaults.set(herosJourneyIndex, forKey: "activeHerosJourney")
+                }
+            } else if genericTrigger.contains("archetype") {
+                let triggerSplited = genericTrigger.components(separatedBy: "_")
+                guard let archetypeIndex = Int(triggerSplited[1]) else { return }
+                if archetypeIndex > userDefaults.integer(forKey: "activeArchetypes") {
+                    userDefaults.set(archetypeIndex, forKey: "activeArchetypes")
+                }
+            }
+        }
+        
+        if let achievementTrigger = dialogue.achievementTrigger, achievementTrigger != "" {
+            var strings: [String] = userDefaults.stringArray(forKey: "achievements") ?? []
+            
+            if !strings.contains(achievementTrigger) {
+                strings.append(achievementTrigger)
+                userDefaults.set(strings, forKey: "achievements")
+                
+                SnackBarHelper.shared.showSuccessMessage(message: AchievementManager.shared.getAchievementByString(name: achievementTrigger))
+            }
+        }
+        
+    }
 }
