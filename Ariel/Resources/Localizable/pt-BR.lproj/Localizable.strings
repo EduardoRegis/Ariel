@@ -112,7 +112,7 @@
 
 // MARK: - Dialogue Texts
 // First Text
-"first_text" = "(firstText) Sed ut {perspiciatis} unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et {quasi} architecto beatae vitae dicta sunt explicabo. unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, [eaque] ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. unde omnis iste {natus} error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo {inventore} veritatis et quasi architecto beatae vitae dicta sunt explicabo.";
+"first_text" = "(firstText) Sed ut {perspiciatis} unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et {quasi} architecto beatae vitae dicta sunt explicabo. unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, [eaque] ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.";
 "first_leftCard" = "Nada a ver";
 "first_rightCard" = "Pô, vdd";
 

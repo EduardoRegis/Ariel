@@ -42,7 +42,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-g7-0v2">
-                    <rect key="frame" x="5" y="59" width="365" height="323"/>
+                    <rect key="frame" x="15" y="59" width="345" height="323"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" name="color_tint"/>
                     <nil key="highlightedColor"/>
@@ -66,8 +66,8 @@
                 <constraint firstAttribute="bottom" secondItem="9D4-te-HdR" secondAttribute="bottom" constant="15" id="Qqr-Y8-otV"/>
                 <constraint firstItem="5Wy-zv-iNx" firstAttribute="top" secondItem="4rP-Mx-0Su" secondAttribute="top" id="XW7-uC-4lp"/>
                 <constraint firstAttribute="trailing" secondItem="5Wy-zv-iNx" secondAttribute="trailing" id="fSM-BO-XZa"/>
-                <constraint firstItem="AhN-g7-0v2" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" constant="5" id="hKf-bw-fhP"/>
-                <constraint firstAttribute="trailing" secondItem="AhN-g7-0v2" secondAttribute="trailing" constant="5" id="lZS-o7-5am"/>
+                <constraint firstItem="AhN-g7-0v2" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" constant="15" id="hKf-bw-fhP"/>
+                <constraint firstAttribute="trailing" secondItem="AhN-g7-0v2" secondAttribute="trailing" constant="15" id="lZS-o7-5am"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="231" y="30"/>

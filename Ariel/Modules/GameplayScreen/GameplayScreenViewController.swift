@@ -53,13 +53,24 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     // MARK: - Methods
     func setNewDialogue(newDialogue: Dialogue) {
         dialogue = newDialogue
-        descriptionLabel.text = newDialogue.descriptionText
+        presenter.coloredWords = presenter.matchesForRegexesInText(text: newDialogue.descriptionText)
+        
+        presenter.removeSpecialCharacters()
+        
+        var textWithoutSpecialCharacters: String = newDialogue.descriptionText
+        
+        for (char) in SpecialCharacteresToRegexText {
+            textWithoutSpecialCharacters = textWithoutSpecialCharacters.filter { $0 != char.first }
+        }
+        
+        presenter.descriptionText = presenter.coloringWords(text: textWithoutSpecialCharacters)
+        
+        descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!)
         swipeableCardView.reloadData()
     }
     
     // MARK: - Actions
     @IBAction func backAction(_ sender: Any) {
-        self.setNewDialogue(newDialogue: Dialogues.secondText.getDialogue())
         self.presenter.backToMenu()
     }
 }

@@ -38,6 +38,7 @@
 		2E60C11329815D3B007A2C01 /* LocalizableProjectStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11229815D3B007A2C01 /* LocalizableProjectStrings.swift */; };
 		2E60C11529818E76007A2C01 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11429818E76007A2C01 /* Achievements.swift */; };
 		2E60C11F29819913007A2C01 /* LocalizableDialogueStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11E29819913007A2C01 /* LocalizableDialogueStrings.swift */; };
+		2E71E72A29AFCFB3008D7595 /* UILabel+Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E71E72929AFCFB3008D7595 /* UILabel+Writing.swift */; };
 		2EC7DBB329AC309F008D4AEA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7DBB229AC309E008D4AEA /* CustomButton.swift */; };
 		2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */; };
 		2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCF297AC37300C7203C /* BaseRouter.swift */; };
@@ -148,6 +149,7 @@
 		2E60C11229815D3B007A2C01 /* LocalizableProjectStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableProjectStrings.swift; sourceTree = "<group>"; };
 		2E60C11429818E76007A2C01 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		2E60C11E29819913007A2C01 /* LocalizableDialogueStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableDialogueStrings.swift; sourceTree = "<group>"; };
+		2E71E72929AFCFB3008D7595 /* UILabel+Writing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Writing.swift"; sourceTree = "<group>"; };
 		2EC7DBB229AC309E008D4AEA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringWordsInText.swift; sourceTree = "<group>"; };
 		2EC8FBCF297AC37300C7203C /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				2E5A502A29AEDDBB001D6B95 /* UIView+Constraints.swift */,
 				2EED080629AEED090075F8C8 /* CGPoint+SwipeableAdditions.swift */,
 				2EED080829AEED5A0075F8C8 /* CGRect+SwipeAdditions.swift */,
+				2E71E72929AFCFB3008D7595 /* UILabel+Writing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -889,6 +892,7 @@
 				2EC8FC03297AFD7800C7203C /* CreditsScreenRouter.swift in Sources */,
 				2EC8FBD8297AC4CB00C7203C /* SplashScreenRouter.swift in Sources */,
 				2E1870D229A9A4D30062F64D /* AchievementsScreenViewController.swift in Sources */,
+				2E71E72A29AFCFB3008D7595 /* UILabel+Writing.swift in Sources */,
 				2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */,
 				2E5A501C29AED999001D6B95 /* GameplayScreenViewController.swift in Sources */,
 				2EC8FBFF297AFAFC00C7203C /* ArchetypesScreenPresenter.swift in Sources */,
