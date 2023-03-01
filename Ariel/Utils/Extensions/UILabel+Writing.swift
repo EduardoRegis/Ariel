@@ -9,7 +9,7 @@ import UIKit
 
 extension UILabel {
     
-    func setTyping(text: String, characterDelay: TimeInterval = 2.0) {
+    func setTyping(text: String, characterDelay: TimeInterval = 2.0, completion: @escaping () -> Void) {
       self.text = ""
         
       let writingTask = DispatchWorkItem { [weak self] in
@@ -25,13 +25,18 @@ extension UILabel {
       queue.asyncAfter(deadline: .now() + 0.05, execute: writingTask)
     }
     
-    func setTypingAttributed(newText: NSMutableAttributedString, characterDelay: TimeInterval = 2.0) {
+    func setTypingAttributed(newText: NSMutableAttributedString, characterDelay: TimeInterval = 2.0, completion: @escaping () -> Void) {
         
         let writingTask = DispatchWorkItem { [weak self] in
             for i in 0...newText.length {
                 DispatchQueue.main.async {
                     let str: NSAttributedString = newText.attributedSubstring(from: NSRange(location: 0, length: i))
                     self?.attributedText = str
+                }
+                if (i + 1) == newText.length {
+                    DispatchQueue.main.async {
+                        completion()
+                    }
                 }
                 Thread.sleep(forTimeInterval: characterDelay/100)
             }

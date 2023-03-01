@@ -21,7 +21,7 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     @IBOutlet weak var swipeableCardView: SwipeableCardViewContainer!
     
     // MARK: - Properties
-    var dialogue: Dialogue = Dialogues.firstText.getDialogue()
+    var dialogue: Dialogue?
     var presenter: GameplayScreenPresenter!
     
     // MARK: - View Lifecycle
@@ -52,21 +52,14 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     
     // MARK: - Methods
     func setNewDialogue(newDialogue: Dialogue) {
+        
         dialogue = newDialogue
-        presenter.coloredWords = presenter.matchesForRegexesInText(text: newDialogue.descriptionText)
         
-        presenter.removeSpecialCharacters()
+        presenter.setupDialogue(newDialogue: newDialogue)
         
-        var textWithoutSpecialCharacters: String = newDialogue.descriptionText
-        
-        for (char) in SpecialCharacteresToRegexText {
-            textWithoutSpecialCharacters = textWithoutSpecialCharacters.filter { $0 != char.first }
-        }
-        
-        presenter.descriptionText = presenter.coloringWords(text: textWithoutSpecialCharacters)
-        
-        descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!)
-        swipeableCardView.reloadData()
+        descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, completion: {
+            self.swipeableCardView.reloadData()
+        })
     }
     
     // MARK: - Actions

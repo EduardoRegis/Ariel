@@ -35,6 +35,16 @@ class GameplayScreenPresenter {
         self.router.backToMenu()
     }
     
+    func setupDialogue(newDialogue: Dialogue) {
+        self.coloredWords = self.matchesForRegexesInText(text: newDialogue.descriptionText)
+        self.removeSpecialCharacters()
+        var textWithoutSpecialCharacters: String = newDialogue.descriptionText
+        for (char) in SpecialCharacteresToRegexText {
+            textWithoutSpecialCharacters = textWithoutSpecialCharacters.filter { $0 != char.first }
+        }
+        self.descriptionText = self.coloringWords(text: textWithoutSpecialCharacters)
+    }
+    
     func coloringWords(text: String) -> NSMutableAttributedString {
         let mutableAttributedString = NSMutableAttributedString.init(string: text)
         mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor,
