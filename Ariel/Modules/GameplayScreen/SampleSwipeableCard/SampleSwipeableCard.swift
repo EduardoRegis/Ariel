@@ -10,9 +10,14 @@ import CoreMotion
 
 class SampleSwipeableCard: SwipeableCardViewCard {
     
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var backgroundContainerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textContainer: UIView!
+    @IBOutlet weak var cardText: UILabel!
+    
+    // MARK: - Variables
+    var dialogue: Dialogue?
     
     /// Core Motion Manager
     private let motionManager = CMMotionManager()
@@ -31,15 +36,44 @@ class SampleSwipeableCard: SwipeableCardViewCard {
 
     private func configure(forViewModel viewModel: Dialogue?) {
         if let viewModel = viewModel {
-            imageView.image = UIImage(named: viewModel.imageName) 
-            backgroundContainerView.layer.cornerRadius = 14.0
+            self.dialogue = viewModel
+            self.imageView.image = UIImage(named: viewModel.imageName)
+            self.backgroundContainerView.layer.cornerRadius = 14.0
         }
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-
+        self.textContainer.alpha = 0
         configureShadow()
+    }
+    
+    // MARK: - Methods
+    func showTextInCard(direction: SwipeDirection) {
+        switch direction {
+        case .left:
+            self.cardText.text = dialogue?.leftCardText
+            UIView.animate(withDuration: 0.5) {
+                self.textContainer.alpha = 0.4
+            }
+        case .right:
+            self.cardText.text = dialogue?.rightCardText
+            UIView.animate(withDuration: 0.5) {
+                self.textContainer.alpha = 0.4
+            }
+        default:
+            self.cardText.text = ""
+            UIView.animate(withDuration: 0.5) {
+                self.textContainer.alpha = 0
+            }
+        }
+    }
+    
+    func hideTextInCard() {
+        self.cardText.text = ""
+        UIView.animate(withDuration: 0.5) {
+            self.textContainer.alpha = 0
+        }
     }
 
     // MARK: - Shadow

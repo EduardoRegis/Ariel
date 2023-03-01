@@ -99,18 +99,15 @@ extension SwipeableCardViewContainer {
     }
     
     func showTextInCard(direction: SwipeDirection) {
-        switch direction {
-        case .left:
-            print("swipe to left")
-        case .right:
-            print("swipe to right")
-        default:
-            break
+        if let cardView = cardViews.first as? SampleSwipeableCard {
+            cardView.showTextInCard(direction: direction)
         }
     }
     
     func hideTextInCard() {
-        print("hiding text")
+        if let cardView = cardViews.first as? SampleSwipeableCard {
+            cardView.hideTextInCard()
+        }
     }
 
     func didEndSwipe(onView view: SwipeableView) {

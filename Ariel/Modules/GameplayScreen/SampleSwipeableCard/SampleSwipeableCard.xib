@@ -11,7 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SampleSwipeableCard" customModule="Ariel" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundContainerView" destination="dHm-Ek-9UE" id="fFw-Vc-AKC"/>
+                <outlet property="cardText" destination="YXm-Ew-hmj" id="Rhw-UF-kLO"/>
                 <outlet property="imageView" destination="KpA-gh-Ztd" id="Zfj-uq-oea"/>
+                <outlet property="textContainer" destination="mah-ob-NWS" id="le1-E7-ysu"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,13 +27,33 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KpA-gh-Ztd">
                             <rect key="frame" x="5" y="5" width="285" height="350"/>
                         </imageView>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mah-ob-NWS" userLabel="TextContainer">
+                            <rect key="frame" x="20" y="20" width="255" height="320"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-Ew-hmj">
+                                    <rect key="frame" x="127.66666666666666" y="160" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="YXm-Ew-hmj" firstAttribute="centerX" secondItem="mah-ob-NWS" secondAttribute="centerX" id="6Ri-SP-0Wq"/>
+                                <constraint firstItem="YXm-Ew-hmj" firstAttribute="centerY" secondItem="mah-ob-NWS" secondAttribute="centerY" id="VYY-gI-c3H"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="mah-ob-NWS" firstAttribute="top" secondItem="dHm-Ek-9UE" secondAttribute="top" constant="20" id="BlB-NA-4Bn"/>
+                        <constraint firstItem="mah-ob-NWS" firstAttribute="leading" secondItem="dHm-Ek-9UE" secondAttribute="leading" constant="20" id="CQ9-LQ-JFv"/>
                         <constraint firstAttribute="bottom" secondItem="KpA-gh-Ztd" secondAttribute="bottom" constant="5" id="YyS-Wp-d6Q"/>
                         <constraint firstAttribute="trailing" secondItem="KpA-gh-Ztd" secondAttribute="trailing" constant="5" id="b1E-CT-1lv"/>
+                        <constraint firstAttribute="bottom" secondItem="mah-ob-NWS" secondAttribute="bottom" constant="20" id="h6h-n6-LtL"/>
                         <constraint firstItem="KpA-gh-Ztd" firstAttribute="leading" secondItem="dHm-Ek-9UE" secondAttribute="leading" constant="5" id="ijp-ej-jVc"/>
                         <constraint firstItem="KpA-gh-Ztd" firstAttribute="top" secondItem="dHm-Ek-9UE" secondAttribute="top" constant="5" id="mJj-ql-JAh"/>
+                        <constraint firstAttribute="trailing" secondItem="mah-ob-NWS" secondAttribute="trailing" constant="20" id="rkh-lS-ePy"/>
                     </constraints>
                 </view>
             </subviews>
