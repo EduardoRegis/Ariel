@@ -23,15 +23,15 @@ class SampleSwipeableCard: SwipeableCardViewCard {
     /// Inner Margin
     private static let kInnerMargin: CGFloat = 20.0
 
-    var viewModel: SampleSwipeableCellViewModel? {
+    var viewModel: Dialogue? {
         didSet {
             configure(forViewModel: viewModel)
         }
     }
 
-    private func configure(forViewModel viewModel: SampleSwipeableCellViewModel?) {
+    private func configure(forViewModel viewModel: Dialogue?) {
         if let viewModel = viewModel {
-            imageView.image = viewModel.image
+            imageView.image = UIImage(named: viewModel.imageName) 
             backgroundContainerView.layer.cornerRadius = 14.0
         }
     }

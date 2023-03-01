@@ -24,7 +24,7 @@ class SwipeableView: UIView {
     static var swipePercentageMargin: CGFloat = 0.6
 
     // MARK: Card Finalize Swipe Animation
-    static var finalizeSwipeActionAnimationDuration: TimeInterval = 0.8
+    static var finalizeSwipeActionAnimationDuration: TimeInterval = 1.0
 
     // MARK: Card Reset Animation
     static var cardViewResetAnimationSpringBounciness: CGFloat = 10.0
@@ -83,7 +83,13 @@ class SwipeableView: UIView {
         case .changed:
             let rotationStrength = min(panGestureTranslation.x / frame.width, SwipeableView.maximumRotation)
             let rotationAngle = SwipeableView.animationDirectionY * SwipeableView.rotationAngle * rotationStrength
-
+            
+            if let dragDirection = dragDirection, dragPercentage >= SwipeableView.swipePercentageMargin {
+                delegate?.showTextInCard(direction: dragDirection)
+            } else {
+                delegate?.hideTextInCard()
+            }
+            
             var transform = CATransform3DIdentity
             transform = CATransform3DRotate(transform, rotationAngle, 0, 0, 1)
             transform = CATransform3DTranslate(transform, panGestureTranslation.x, panGestureTranslation.y, 0)
@@ -123,7 +129,7 @@ class SwipeableView: UIView {
             let targetLine = (swipePoint, CGPoint.zero)
 
             return rect.perimeterLines
-                .flatMap { CGPoint.intersectionBetweenLines(targetLine, line2: $0) }
+                .compactMap { CGPoint.intersectionBetweenLines(targetLine, line2: $0) }
                 .map { centerDistance / $0.distanceTo(.zero) }
                 .min() ?? 0.0
         }
