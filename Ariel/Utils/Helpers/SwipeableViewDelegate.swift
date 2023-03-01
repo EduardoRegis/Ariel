@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SwipeableViewDelegate: class {
+protocol SwipeableViewDelegate: AnyObject {
     func didTap(view: SwipeableView)
     func didBeginSwipe(onView view: SwipeableView)
     func didEndSwipe(onView view: SwipeableView)

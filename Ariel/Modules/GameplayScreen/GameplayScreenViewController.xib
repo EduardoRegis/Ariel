@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameplayScreenViewController" customModule="Ariel" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="uPV-pp-HxJ" id="DWu-Ki-ypp"/>
+                <outlet property="descriptionLabel" destination="AhN-g7-0v2" id="wP7-Zu-7ER"/>
                 <outlet property="swipeableCardView" destination="9D4-te-HdR" id="Vj9-Vz-6HS"/>
                 <outlet property="view" destination="4rP-Mx-0Su" id="Jf6-23-CYv"/>
             </connections>
@@ -20,27 +22,65 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wy-zv-iNx" userLabel="Header">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPV-pp-HxJ">
+                            <rect key="frame" x="14.999999999999996" y="5" width="39.666666666666657" height="34.333333333333336"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="siR-Mj-WLo"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="uPV-pp-HxJ" firstAttribute="centerY" secondItem="5Wy-zv-iNx" secondAttribute="centerY" id="DBA-bw-8h9"/>
+                        <constraint firstItem="uPV-pp-HxJ" firstAttribute="leading" secondItem="5Wy-zv-iNx" secondAttribute="leading" constant="15" id="WrB-kJ-nFi"/>
+                        <constraint firstAttribute="height" constant="44" id="bqP-cL-TZ2"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-g7-0v2">
+                    <rect key="frame" x="5" y="59" width="365" height="323"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="color_tint"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9D4-te-HdR" customClass="SwipeableCardViewContainer" customModule="Ariel" customModuleProvider="target">
-                    <rect key="frame" x="5" y="206" width="365" height="400"/>
+                    <rect key="frame" x="5" y="397" width="365" height="400"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="400" id="o8y-gD-JI3"/>
                     </constraints>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="xNr-wN-cvM"/>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="color_background"/>
             <constraints>
-                <constraint firstItem="9D4-te-HdR" firstAttribute="centerY" secondItem="xNr-wN-cvM" secondAttribute="centerY" id="CyE-6d-Uy9"/>
-                <constraint firstItem="xNr-wN-cvM" firstAttribute="trailing" secondItem="9D4-te-HdR" secondAttribute="trailing" constant="5" id="K35-Ji-hnU"/>
-                <constraint firstItem="9D4-te-HdR" firstAttribute="centerX" secondItem="xNr-wN-cvM" secondAttribute="centerX" id="LNM-ZG-RUy"/>
-                <constraint firstItem="9D4-te-HdR" firstAttribute="leading" secondItem="xNr-wN-cvM" secondAttribute="leading" constant="5" id="PSh-xw-P1W"/>
+                <constraint firstItem="AhN-g7-0v2" firstAttribute="top" secondItem="5Wy-zv-iNx" secondAttribute="bottom" constant="15" id="3K7-t9-hub"/>
+                <constraint firstItem="5Wy-zv-iNx" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" id="A0f-J2-Hlz"/>
+                <constraint firstAttribute="trailing" secondItem="9D4-te-HdR" secondAttribute="trailing" constant="5" id="K35-Ji-hnU"/>
+                <constraint firstItem="9D4-te-HdR" firstAttribute="top" secondItem="AhN-g7-0v2" secondAttribute="bottom" constant="15" id="L3b-zJ-rMQ"/>
+                <constraint firstItem="9D4-te-HdR" firstAttribute="centerX" secondItem="4rP-Mx-0Su" secondAttribute="centerX" id="LNM-ZG-RUy"/>
+                <constraint firstItem="9D4-te-HdR" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" constant="5" id="PSh-xw-P1W"/>
+                <constraint firstAttribute="bottom" secondItem="9D4-te-HdR" secondAttribute="bottom" constant="15" id="Qqr-Y8-otV"/>
+                <constraint firstItem="5Wy-zv-iNx" firstAttribute="top" secondItem="4rP-Mx-0Su" secondAttribute="top" id="XW7-uC-4lp"/>
+                <constraint firstAttribute="trailing" secondItem="5Wy-zv-iNx" secondAttribute="trailing" id="fSM-BO-XZa"/>
+                <constraint firstItem="AhN-g7-0v2" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" constant="5" id="hKf-bw-fhP"/>
+                <constraint firstAttribute="trailing" secondItem="AhN-g7-0v2" secondAttribute="trailing" constant="5" id="lZS-o7-5am"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="231" y="30"/>
         </view>
     </objects>
     <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <namedColor name="color_background">
+            <color red="0.10199999809265137" green="0.10199999809265137" blue="0.10199999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="color_tint">
+            <color red="0.83899998664855957" green="0.83899998664855957" blue="0.84299999475479126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

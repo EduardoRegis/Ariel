@@ -89,7 +89,7 @@ extension SwipeableCardViewContainer {
 
     func didTap(view: SwipeableView) {
         if let cardView = view as? SwipeableCardViewCard,
-            let index = cardViews.index(of: cardView) {
+           let index = cardViews.firstIndex(of: cardView) {
             delegate?.didSelect(card: cardView, atIndex: index)
         }
     }

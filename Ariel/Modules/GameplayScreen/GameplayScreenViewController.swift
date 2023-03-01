@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SwipeableCardViewDataSource: class {
+protocol SwipeableCardViewDataSource: AnyObject {
     func numberOfCards() -> Int
     func card(forItemAtIndex index: Int) -> SwipeableCardViewCard
     func viewForEmptyCards() -> UIView?
@@ -15,6 +15,9 @@ protocol SwipeableCardViewDataSource: class {
 
 class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSource {
     
+    // MARK: - Outlets
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var swipeableCardView: SwipeableCardViewContainer!
     
     // MARK: - Properties
@@ -43,6 +46,11 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.didAppear()
+    }
+    
+    // MARK: - Actions
+    @IBAction func backAction(_ sender: Any) {
+        self.presenter.backToMenu()
     }
 }
 
