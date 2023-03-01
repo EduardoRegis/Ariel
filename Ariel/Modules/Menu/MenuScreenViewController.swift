@@ -55,20 +55,31 @@ class MenuScreenViewController: BaseViewController {
     func configureUI() {
         creditsButton.setTitle("", for: .normal)
         creditsButton.setImage(UIImage(systemName: "person.3.fill"), for: .normal)
+        creditsButton.applyEnabledCustomButton()
         
         achievementButton.setTitle("", for: .normal)
         achievementButton.setImage(UIImage(systemName: "trophy.fill"), for: .normal)
+        achievementButton.applyEnabledCustomButton()
         
         configurationsButton.setTitle("", for: .normal)
         configurationsButton.setImage(UIImage(systemName: "gearshape.fill"), for: .normal)
+        configurationsButton.applyEnabledCustomButton()
         
         helpsButton.setTitle("", for: .normal)
         helpsButton.setImage(UIImage(systemName: "questionmark.circle.fill"), for: .normal)
+        helpsButton.applyEnabledCustomButton()
         
         newJourneyButton.setTitle(MenuScreenTexts.newJourney.localized(), for: .normal)
+        newJourneyButton.applyEnabledCustomButton()
+        
         continueButton.setTitle(MenuScreenTexts.continueJourney.localized(), for: .normal)
+        continueButton.applyEnabledCustomButton()
+        
         herosJourneyButton.setTitle(MenuScreenTexts.herosJourney.localized(), for: .normal)
+        herosJourneyButton.applyEnabledCustomButton()
+        
         archetypesButton.setTitle(MenuScreenTexts.archetypes.localized(), for: .normal)
+        archetypesButton.applyEnabledCustomButton()
     }
 
     // MARK: - Actions

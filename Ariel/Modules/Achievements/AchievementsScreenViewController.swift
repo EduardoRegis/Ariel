@@ -5,6 +5,11 @@
 //  Created by Eduardo Oliveira on 24/02/23.
 //
 
+
+
+
+
+
 import UIKit
 
 class AchievementsScreenViewController: BaseViewController {
@@ -47,6 +52,7 @@ class AchievementsScreenViewController: BaseViewController {
     func configureUI() {
         self.titleLabel.text = AchievementsScreenTexts.title.localized()
         self.prepareCollection()
+        self.backButton.applyEnabledCustomButton()
         self.backButton.setTitle(AchievementsScreenTexts.back.localized(), for: .normal)
     }
     

@@ -18,4 +18,4 @@ let RegexColors: [UIColor] = [UIColor.systemRed,
                        UIColor.systemOrange,
                        UIColor.systemBlue]
 
-let SpecialCharacteresToRegexText: [String] = ["{", "}", "[", "]", "%", "#"]
+let SpecialCharacteresToRegexText: [String] = ["{", "}", "[", "]", "|", "%", "&", "#"]

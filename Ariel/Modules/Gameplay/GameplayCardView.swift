@@ -10,7 +10,7 @@ import SwiftUI
 let defaultTimeForCharTyped: CGFloat = 0.012
 
 struct GameplayCardView: View {
-
+    
     @State private var dialogue: Dialogue = Dialogues.firstText.getDialogue()
     @State var nextDialogue: String = ""
     @Environment(\.presentationMode) var presentationMode
@@ -24,6 +24,8 @@ struct GameplayCardView: View {
     @State private var stringLimit: Int = 10
     let textTimer = Timer.publish(every: defaultTimeForCharTyped, on: .main, in: .common).autoconnect()
     
+    @Namespace var bottomId
+    
     var body: some View {
         GeometryReader { gp in
             VStack {
@@ -36,21 +38,45 @@ struct GameplayCardView: View {
                 }
                 .frame(width: gp.size.width, height: gp.size.height * 0.1, alignment: .leading)
                 .background(.gray)
-                VStack {
-                    Text(coloringWords(text: self.descriptionText))
-                        .onChange(of: self.dialogue.descriptionText)
-                        { newValue in
-                            if isTextTimerActive == false {
-                                self.coloredWords = self.matchesForRegexesInText(text: newValue)
-                                self.removeCurlyBraces()
-                            }
-                            self.descriptionText = ""
-                            isTextTimerActive.toggle()
-                            self.stringLimit = newValue.count
+                VStack() {
+                    ScrollView {
+                        ScrollViewReader { scrollView in
+                            Text(coloringWords(text: self.descriptionText))
+                                .onChange(of: self.dialogue.descriptionText)
+                                { newValue in
+                                    if isTextTimerActive == false {
+                                        self.coloredWords = self.matchesForRegexesInText(text: newValue)
+                                        self.removeCurlyBraces()
+                                    }
+                                    self.descriptionText = ""
+                                    isTextTimerActive.toggle()
+                                    self.stringLimit = newValue.count
+                                }
+                                .onTapGesture {
+                                    self.isTextTimerActive = false
+                                    var newText = self.dialogue.descriptionText
+                                    
+                                    for (char) in SpecialCharacteresToRegexText {
+                                        newText = newText.filter { $0 != char.first }
+                                    }
+                                    
+                                    self.descriptionText = newText
+                                    scrollView.scrollTo(bottomId, anchor: .bottom)
+                                }
+                            Spacer()
+                                .id(bottomId)
+                                .onAppear {
+                                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+                                        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+                                            if isTextTimerActive {
+                                                scrollView.scrollTo(bottomId, anchor: .bottom)
+                                            }
+                                        }
+                                    })
+                                }
                         }
-                        .font(.system(size: 12.0))
+                    }
                 }
-                .frame(width: gp.size.width * 0.9, height: gp.size.height * 0.3, alignment: .top)
                 .onReceive(textTimer, perform: { _ in
                     guard isTextTimerActive else { return }
                     if stringCounter < self.dialogue.descriptionText.count {
@@ -63,6 +89,7 @@ struct GameplayCardView: View {
                         stringCounter = 0
                     }
                 })
+                .frame(width: gp.size.width * 0.9, height: gp.size.height * 0.3, alignment: .top)
                 VStack {
                     ZStack {
                         Rectangle()
@@ -73,20 +100,21 @@ struct GameplayCardView: View {
                         CardView(nextDialogue: self.$nextDialogue,
                                  isTextTimerActive: self.$isTextTimerActive,
                                  dialogue: dialogue)
-                            .onChange(of: nextDialogue)
-                                { newValue in
-                                    if let newDialogue = DialogueManager.shared.getDialogueByString(name: nextDialogue) {
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                            self.dialogue = newDialogue
-                                            checkTrigger(dialogue: newDialogue)
-                                        }
-                                    }
+                        .onChange(of: nextDialogue)
+                        { newValue in
+                            if let newDialogue = DialogueManager.shared.getDialogueByString(name: nextDialogue) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    self.dialogue = newDialogue
+                                    checkTrigger(dialogue: newDialogue)
                                 }
+                            }
+                        }
                     }
                 }
                 .frame(width: gp.size.width, height: gp.size.height * 0.5, alignment: .top)
             }
         }
+        .background(Color("color_background"))
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 var data = Dialogues.firstText.getDialogue()
@@ -124,15 +152,18 @@ struct GameplayCardView: View {
     
     func coloringWords(text: String) -> NSMutableAttributedString {
         let mutableAttributedString = NSMutableAttributedString.init(string: text)
+        mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor,
+                                             value: UIColor(named: "color_tint") as Any,
+                                             range: (text as NSString).range(of: text))
         for (index, name) in self.coloredWords.enumerated() {
             let range = (text as NSString).range(of: name)
-            mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: RegexColors[index], range: range)
+            mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: RegexColors[colorsIndexes[index]], range: range)
         }
         return mutableAttributedString
     }
     
     func matchesForRegexesInText(text: String!) -> [String] {
-        let regexes = ["\\{(.*?)\\}", "\\[(.*?)\\]", "\\%(.*?)\\%", "\\#(.*?)\\#"]
+        let regexes = ["\\{(.*?)\\}", "\\[(.*?)\\]", "\\|(.*?)\\%", "\\&(.*?)\\#"]
         var regexesResults: [String] = []
         
         self.colorsIndexes = []
@@ -140,8 +171,9 @@ struct GameplayCardView: View {
         for (index, name) in regexes.enumerated() {
             let result = matchesForRegexInText(regex: name, text: text)
             regexesResults.append(contentsOf: result)
-            self.colorsIndexes = Array(repeating: index, count: result.count)
+            self.colorsIndexes.append(contentsOf: Array(repeating: index, count: result.count))
         }
+        
         return regexesResults
     }
     

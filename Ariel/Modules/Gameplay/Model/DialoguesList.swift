@@ -59,7 +59,7 @@ enum Dialogues {
                             rightCardText: DialogueTexts.first_rightCard.localized(),
                             imageName: "ariel still",
                             herosJourneysStage: HerosJourneysStageTexts.teste.localized(),
-                            nextLeftDialogue: "novoDialogo",
+                            nextLeftDialogue: "secondText",
                             nextRightDialogue: "MC_01") // se não possuir parâmetro soundTrigger, ele apenas não emitirá nenhum efeito
         case .secondText:
             return Dialogue(descriptionText: DialogueTexts.second_text.localized(),
@@ -67,7 +67,7 @@ enum Dialogues {
                             rightCardText: DialogueTexts.second_rightCard.localized(),
                             imageName: "Treinador",
                             herosJourneysStage: HerosJourneysStageTexts.teste.localized(),
-                            nextLeftDialogue: "MC_01",
+                            nextLeftDialogue: "thirdText",
                             nextRightDialogue: "fourthText",
                             soundTrigger: "sliderButtonReleased",
                             soundLoop: true) // aqui tem o parâmetro soundTrigger, onde vc coloca o nome do arquivo de som a ser tocado

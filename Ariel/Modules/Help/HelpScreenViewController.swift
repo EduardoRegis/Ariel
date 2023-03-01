@@ -68,7 +68,7 @@ class HelpScreenViewController: BaseViewController {
                 label.text = presenter.helpDescription(index: index)
             }
         }
-        
+        self.backButton.applyEnabledCustomButton()
         self.backButton.setTitle(HelpScreenTexts.back.localized(), for: .normal)
     }
 

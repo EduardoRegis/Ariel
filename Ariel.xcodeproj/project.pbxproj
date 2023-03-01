@@ -28,6 +28,7 @@
 		2E60C11329815D3B007A2C01 /* LocalizableProjectStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11229815D3B007A2C01 /* LocalizableProjectStrings.swift */; };
 		2E60C11529818E76007A2C01 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11429818E76007A2C01 /* Achievements.swift */; };
 		2E60C11F29819913007A2C01 /* LocalizableDialogueStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C11E29819913007A2C01 /* LocalizableDialogueStrings.swift */; };
+		2EC7DBB329AC309F008D4AEA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7DBB229AC309E008D4AEA /* CustomButton.swift */; };
 		2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */; };
 		2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBCF297AC37300C7203C /* BaseRouter.swift */; };
 		2EC8FBD2297AC3AD00C7203C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */; };
@@ -119,6 +120,7 @@
 		2E60C11229815D3B007A2C01 /* LocalizableProjectStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableProjectStrings.swift; sourceTree = "<group>"; };
 		2E60C11429818E76007A2C01 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		2E60C11E29819913007A2C01 /* LocalizableDialogueStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableDialogueStrings.swift; sourceTree = "<group>"; };
+		2EC7DBB229AC309E008D4AEA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringWordsInText.swift; sourceTree = "<group>"; };
 		2EC8FBCF297AC37300C7203C /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		2EC8FBD1297AC3AD00C7203C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */,
 				2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */,
 				2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */,
+				2EC7DBB229AC309E008D4AEA /* CustomButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				2EC8FC0B297B005F00C7203C /* ConfigurationsScreenRouter.swift in Sources */,
 				2EC8FC0F297B00F800C7203C /* ConfigurationsScreenPresenter.swift in Sources */,
 				2EC8FC20297DC22800C7203C /* HerosJourneyModel.swift in Sources */,
+				2EC7DBB329AC309F008D4AEA /* CustomButton.swift in Sources */,
 				2E60C11329815D3B007A2C01 /* LocalizableProjectStrings.swift in Sources */,
 				2EC8FC16297B056300C7203C /* HelpScreenViewController.swift in Sources */,
 				2EC8FBE8297ACE4B00C7203C /* MenuScreenViewController.swift in Sources */,

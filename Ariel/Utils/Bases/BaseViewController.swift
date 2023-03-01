@@ -17,6 +17,10 @@ class BaseViewController: UIViewController, BaseViewControllerMethods {
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var greyView = UIView()
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(named: "color_background")
+    }
+    
     @objc func showLoader() {
         guard let window = AppDelegate.windowView else { return }
         
