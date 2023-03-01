@@ -7,6 +7,7 @@ target 'Ariel' do
   
     # Pods for Ariel
     pod 'SwiftMessages'
+    pod 'pop', '1.0.10'
   
     target 'ArielTests' do
       inherit! :search_paths

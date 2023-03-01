@@ -84,7 +84,8 @@ class MenuScreenViewController: BaseViewController {
 
     // MARK: - Actions
     @IBAction func newJourneyAction(_ sender: Any) {
-        self.present(presenter.navigateToGameplay(isNewJourney: true), animated: true, completion: nil)
+        self.presenter.navigateToGameplay()
+//        self.present(presenter.navigateToGameplay(isNewJourney: true), animated: true, completion: nil)
     }
     
     @IBAction func continueAction(_ sender: Any) {

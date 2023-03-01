@@ -15,6 +15,16 @@
 		2E1870D929A9AD010062F64D /* AchievementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E1870D829A9AD010062F64D /* AchievementCollectionViewCell.xib */; };
 		2E1870DB29A9AD460062F64D /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1870DA29A9AD460062F64D /* AchievementCollectionViewCell.swift */; };
 		2E1870DF29A9AFDA0062F64D /* ReusableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1870DE29A9AFDA0062F64D /* ReusableCells.swift */; };
+		2E5A501A29AED982001D6B95 /* GameplayScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5A501929AED982001D6B95 /* GameplayScreenViewController.xib */; };
+		2E5A501C29AED999001D6B95 /* GameplayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A501B29AED999001D6B95 /* GameplayScreenViewController.swift */; };
+		2E5A501F29AEDAC1001D6B95 /* SwipeableCardViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A501E29AEDAC1001D6B95 /* SwipeableCardViewCard.swift */; };
+		2E5A502329AEDB2A001D6B95 /* SwipeableCardViewCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5A502229AEDB2A001D6B95 /* SwipeableCardViewCard.xib */; };
+		2E5A502529AEDC64001D6B95 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502429AEDC64001D6B95 /* SwipeableView.swift */; };
+		2E5A502729AEDD19001D6B95 /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502629AEDD19001D6B95 /* SwipeableViewDelegate.swift */; };
+		2E5A502929AEDD84001D6B95 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502829AEDD84001D6B95 /* NibView.swift */; };
+		2E5A502B29AEDDBB001D6B95 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502A29AEDDBB001D6B95 /* UIView+Constraints.swift */; };
+		2E5A502D29AEDF21001D6B95 /* SwipeableCardViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502C29AEDF21001D6B95 /* SwipeableCardViewContainer.swift */; };
+		2E5A502F29AEDF71001D6B95 /* SwipeableCardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502E29AEDF71001D6B95 /* SwipeableCardViewDelegate.swift */; };
 		2E60C0EF297EFFD6007A2C01 /* ArchetypesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0EE297EFFD6007A2C01 /* ArchetypesModel.swift */; };
 		2E60C0F1297F0025007A2C01 /* ArchetypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */; };
 		2E60C0F3297F0A51007A2C01 /* nierCityRuins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */; };
@@ -65,6 +75,14 @@
 		2EC8FC1E297DB31100C7203C /* ColorsToRegexText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */; };
 		2EC8FC20297DC22800C7203C /* HerosJourneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1F297DC22800C7203C /* HerosJourneyModel.swift */; };
 		2EC8FC24297DC2D800C7203C /* HerosJourneyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC23297DC2D800C7203C /* HerosJourneyList.swift */; };
+		2EED07FA29AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED07F929AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift */; };
+		2EED07FD29AEE67F0075F8C8 /* SampleSwipeableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED07FC29AEE67F0075F8C8 /* SampleSwipeableCard.swift */; };
+		2EED07FF29AEE7340075F8C8 /* SampleSwipeableCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EED07FE29AEE7340075F8C8 /* SampleSwipeableCard.xib */; };
+		2EED080129AEEAB70075F8C8 /* GameplayScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED080029AEEAB70075F8C8 /* GameplayScreenRouter.swift */; };
+		2EED080329AEEB120075F8C8 /* GameplayScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED080229AEEB120075F8C8 /* GameplayScreenPresenter.swift */; };
+		2EED080529AEECC00075F8C8 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED080429AEECC00075F8C8 /* SwipeDirection.swift */; };
+		2EED080729AEED090075F8C8 /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED080629AEED090075F8C8 /* CGPoint+SwipeableAdditions.swift */; };
+		2EED080929AEED5A0075F8C8 /* CGRect+SwipeAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED080829AEED5A0075F8C8 /* CGRect+SwipeAdditions.swift */; };
 		2EFF845529704F8200984165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF845429704F8200984165 /* AppDelegate.swift */; };
 		2EFF845E29704F8300984165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845D29704F8300984165 /* Assets.xcassets */; };
 		2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFF845F29704F8300984165 /* LaunchScreen.storyboard */; };
@@ -106,6 +124,16 @@
 		2E1870D829A9AD010062F64D /* AchievementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementCollectionViewCell.xib; sourceTree = "<group>"; };
 		2E1870DA29A9AD460062F64D /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
 		2E1870DE29A9AFDA0062F64D /* ReusableCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCells.swift; sourceTree = "<group>"; };
+		2E5A501929AED982001D6B95 /* GameplayScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameplayScreenViewController.xib; sourceTree = "<group>"; };
+		2E5A501B29AED999001D6B95 /* GameplayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayScreenViewController.swift; sourceTree = "<group>"; };
+		2E5A501E29AEDAC1001D6B95 /* SwipeableCardViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewCard.swift; sourceTree = "<group>"; };
+		2E5A502229AEDB2A001D6B95 /* SwipeableCardViewCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeableCardViewCard.xib; sourceTree = "<group>"; };
+		2E5A502429AEDC64001D6B95 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
+		2E5A502629AEDD19001D6B95 /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
+		2E5A502829AEDD84001D6B95 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		2E5A502A29AEDDBB001D6B95 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		2E5A502C29AEDF21001D6B95 /* SwipeableCardViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewContainer.swift; sourceTree = "<group>"; };
+		2E5A502E29AEDF71001D6B95 /* SwipeableCardViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDelegate.swift; sourceTree = "<group>"; };
 		2E60C0EE297EFFD6007A2C01 /* ArchetypesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesModel.swift; sourceTree = "<group>"; };
 		2E60C0F0297F0025007A2C01 /* ArchetypesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchetypesList.swift; sourceTree = "<group>"; };
 		2E60C0F2297F0A51007A2C01 /* nierCityRuins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nierCityRuins.mp3; sourceTree = "<group>"; };
@@ -157,6 +185,14 @@
 		2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsToRegexText.swift; sourceTree = "<group>"; };
 		2EC8FC1F297DC22800C7203C /* HerosJourneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyModel.swift; sourceTree = "<group>"; };
 		2EC8FC23297DC2D800C7203C /* HerosJourneyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyList.swift; sourceTree = "<group>"; };
+		2EED07F929AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSwipeableCellViewModel.swift; sourceTree = "<group>"; };
+		2EED07FC29AEE67F0075F8C8 /* SampleSwipeableCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSwipeableCard.swift; sourceTree = "<group>"; };
+		2EED07FE29AEE7340075F8C8 /* SampleSwipeableCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleSwipeableCard.xib; sourceTree = "<group>"; };
+		2EED080029AEEAB70075F8C8 /* GameplayScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayScreenRouter.swift; sourceTree = "<group>"; };
+		2EED080229AEEB120075F8C8 /* GameplayScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayScreenPresenter.swift; sourceTree = "<group>"; };
+		2EED080429AEECC00075F8C8 /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		2EED080629AEED090075F8C8 /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
+		2EED080829AEED5A0075F8C8 /* CGRect+SwipeAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipeAdditions.swift"; sourceTree = "<group>"; };
 		2EFF845129704F8200984165 /* Ariel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ariel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFF845429704F8200984165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EFF845D29704F8300984165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +255,9 @@
 				2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */,
 				2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */,
 				2EC7DBB229AC309E008D4AEA /* CustomButton.swift */,
+				2E5A502A29AEDDBB001D6B95 /* UIView+Constraints.swift */,
+				2EED080629AEED090075F8C8 /* CGPoint+SwipeableAdditions.swift */,
+				2EED080829AEED5A0075F8C8 /* CGRect+SwipeAdditions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +293,31 @@
 			path = Bases;
 			sourceTree = "<group>";
 		};
+		2E5A501829AED798001D6B95 /* GameplayScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2EED07FB29AEE65F0075F8C8 /* SampleSwipeableCard */,
+				2E5A501D29AEDA9D001D6B95 /* SwipeableCard */,
+				2EED080029AEEAB70075F8C8 /* GameplayScreenRouter.swift */,
+				2E5A501B29AED999001D6B95 /* GameplayScreenViewController.swift */,
+				2EED080229AEEB120075F8C8 /* GameplayScreenPresenter.swift */,
+				2E5A501929AED982001D6B95 /* GameplayScreenViewController.xib */,
+			);
+			path = GameplayScreen;
+			sourceTree = "<group>";
+		};
+		2E5A501D29AEDA9D001D6B95 /* SwipeableCard */ = {
+			isa = PBXGroup;
+			children = (
+				2EED07F829AEE5400075F8C8 /* Model */,
+				2E5A501E29AEDAC1001D6B95 /* SwipeableCardViewCard.swift */,
+				2E5A502229AEDB2A001D6B95 /* SwipeableCardViewCard.xib */,
+				2E5A502C29AEDF21001D6B95 /* SwipeableCardViewContainer.swift */,
+				2E5A502E29AEDF71001D6B95 /* SwipeableCardViewDelegate.swift */,
+			);
+			path = SwipeableCard;
+			sourceTree = "<group>";
+		};
 		2E60C0ED297EFFA9007A2C01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +344,10 @@
 				2E60C0FE2980A759007A2C01 /* Snackbars.swift */,
 				2E60C11429818E76007A2C01 /* Achievements.swift */,
 				2E1870DE29A9AFDA0062F64D /* ReusableCells.swift */,
+				2E5A502429AEDC64001D6B95 /* SwipeableView.swift */,
+				2E5A502629AEDD19001D6B95 /* SwipeableViewDelegate.swift */,
+				2E5A502829AEDD84001D6B95 /* NibView.swift */,
+				2EED080429AEECC00075F8C8 /* SwipeDirection.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -308,6 +376,7 @@
 		2EC8FBD5297AC49D00C7203C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2E5A501829AED798001D6B95 /* GameplayScreen */,
 				2E1870CE29A989940062F64D /* Achievements */,
 				2EC8FBF1297AE10C00C7203C /* Help */,
 				2EC8FBF0297AE10500C7203C /* Configurations */,
@@ -435,6 +504,23 @@
 				2EC8FC23297DC2D800C7203C /* HerosJourneyList.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2EED07F829AEE5400075F8C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2EED07F929AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2EED07FB29AEE65F0075F8C8 /* SampleSwipeableCard */ = {
+			isa = PBXGroup;
+			children = (
+				2EED07FC29AEE67F0075F8C8 /* SampleSwipeableCard.swift */,
+				2EED07FE29AEE7340075F8C8 /* SampleSwipeableCard.xib */,
+			);
+			path = SampleSwipeableCard;
 			sourceTree = "<group>";
 		};
 		2EFF844829704F8200984165 = {
@@ -632,12 +718,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EC8FC09297AFE5D00C7203C /* CreditsScreenViewController.xib in Resources */,
+				2E5A502329AEDB2A001D6B95 /* SwipeableCardViewCard.xib in Resources */,
 				2E60C0F3297F0A51007A2C01 /* nierCityRuins.mp3 in Resources */,
 				2EC8FC1A297B068E00C7203C /* HelpScreenViewController.xib in Resources */,
 				2E60C10C29815C6E007A2C01 /* Localizable.strings in Resources */,
 				2EC8FC11297B012F00C7203C /* ConfigurationsScreenViewController.xib in Resources */,
 				2E1870D029A9A49A0062F64D /* AchievementsScreenViewController.xib in Resources */,
+				2E5A501A29AED982001D6B95 /* GameplayScreenViewController.xib in Resources */,
 				2E1870D929A9AD010062F64D /* AchievementCollectionViewCell.xib in Resources */,
+				2EED07FF29AEE7340075F8C8 /* SampleSwipeableCard.xib in Resources */,
 				2EFF846129704F8300984165 /* LaunchScreen.storyboard in Resources */,
 				2EC8FBEC297ACF4000C7203C /* MenuScreenViewController.xib in Resources */,
 				2E60C0FB297F342B007A2C01 /* sliderButtonReleased.mp3 in Resources */,
@@ -791,6 +880,7 @@
 				2EC8FBFD297AFAE700C7203C /* ArchetypesScreenViewController.swift in Sources */,
 				2EC8FC1C297C3E4100C7203C /* ConstantsAndEnums.swift in Sources */,
 				2E60C0F1297F0025007A2C01 /* ArchetypesList.swift in Sources */,
+				2E5A501F29AEDAC1001D6B95 /* SwipeableCardViewCard.swift in Sources */,
 				2EC8FBCD297AC30400C7203C /* ColoringWordsInText.swift in Sources */,
 				2EC8FC14297B02F700C7203C /* HelpScreenRouter.swift in Sources */,
 				2E1870D629A9A6240062F64D /* AchievementsScreenRouter.swift in Sources */,
@@ -800,28 +890,42 @@
 				2EC8FBD8297AC4CB00C7203C /* SplashScreenRouter.swift in Sources */,
 				2E1870D229A9A4D30062F64D /* AchievementsScreenViewController.swift in Sources */,
 				2E0F0F78297839AD00D37CB4 /* StringSplited.swift in Sources */,
+				2E5A501C29AED999001D6B95 /* GameplayScreenViewController.swift in Sources */,
 				2EC8FBFF297AFAFC00C7203C /* ArchetypesScreenPresenter.swift in Sources */,
 				2E60C11129815D04007A2C01 /* Localizable.swift in Sources */,
 				2EC8FBF7297AF01300C7203C /* HerosJourneyScreenPresenter.swift in Sources */,
 				2EC8FC1E297DB31100C7203C /* ColorsToRegexText.swift in Sources */,
+				2EED080929AEED5A0075F8C8 /* CGRect+SwipeAdditions.swift in Sources */,
+				2E5A502F29AEDF71001D6B95 /* SwipeableCardViewDelegate.swift in Sources */,
 				2EC8FC07297AFE2100C7203C /* CreditsScreenPresenter.swift in Sources */,
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
+				2EED07FA29AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift in Sources */,
+				2EED080329AEEB120075F8C8 /* GameplayScreenPresenter.swift in Sources */,
+				2E5A502729AEDD19001D6B95 /* SwipeableViewDelegate.swift in Sources */,
 				2E1870DB29A9AD460062F64D /* AchievementCollectionViewCell.swift in Sources */,
+				2EED080129AEEAB70075F8C8 /* GameplayScreenRouter.swift in Sources */,
 				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,
 				2EFF848C2970841C00984165 /* DialoguesList.swift in Sources */,
 				2E60C0FF2980A759007A2C01 /* Snackbars.swift in Sources */,
 				2EC8FC0B297B005F00C7203C /* ConfigurationsScreenRouter.swift in Sources */,
 				2EC8FC0F297B00F800C7203C /* ConfigurationsScreenPresenter.swift in Sources */,
 				2EC8FC20297DC22800C7203C /* HerosJourneyModel.swift in Sources */,
+				2E5A502B29AEDDBB001D6B95 /* UIView+Constraints.swift in Sources */,
 				2EC7DBB329AC309F008D4AEA /* CustomButton.swift in Sources */,
+				2EED07FD29AEE67F0075F8C8 /* SampleSwipeableCard.swift in Sources */,
 				2E60C11329815D3B007A2C01 /* LocalizableProjectStrings.swift in Sources */,
 				2EC8FC16297B056300C7203C /* HelpScreenViewController.swift in Sources */,
 				2EC8FBE8297ACE4B00C7203C /* MenuScreenViewController.swift in Sources */,
+				2EED080529AEECC00075F8C8 /* SwipeDirection.swift in Sources */,
+				2E5A502529AEDC64001D6B95 /* SwipeableView.swift in Sources */,
 				2E1870D429A9A5DD0062F64D /* AchievementsScreenPresenter.swift in Sources */,
 				2EC8FBEA297ACEA300C7203C /* MenuScreenPresenter.swift in Sources */,
 				2EC8FBD0297AC37300C7203C /* BaseRouter.swift in Sources */,
+				2E5A502929AEDD84001D6B95 /* NibView.swift in Sources */,
+				2EED080729AEED090075F8C8 /* CGPoint+SwipeableAdditions.swift in Sources */,
 				2EC8FC0D297B00A300C7203C /* ConfigurationsScreenViewController.swift in Sources */,
 				2EFF848729706F0B00984165 /* CardView.swift in Sources */,
+				2E5A502D29AEDF21001D6B95 /* SwipeableCardViewContainer.swift in Sources */,
 				2EC8FBF5297AEF6B00C7203C /* HerosJourneyScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

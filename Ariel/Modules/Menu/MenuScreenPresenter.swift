@@ -54,6 +54,10 @@ class MenuScreenPresenter {
         return swiftUIViewController
     }
     
+    func navigateToGameplay() {
+        self.router.navigateToGameplay()
+    }
+    
     func navigateToHerosJourney() {
         self.router.navigateToHerosJourney()
     }
