@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameplayScreenViewController" customModule="Ariel" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="uPV-pp-HxJ" id="DWu-Ki-ypp"/>
+                <outlet property="backgroundCard" destination="5hC-v0-rRx" id="ge7-Kn-Gt2"/>
                 <outlet property="descriptionLabel" destination="AhN-g7-0v2" id="wP7-Zu-7ER"/>
                 <outlet property="swipeableCardView" destination="9D4-te-HdR" id="Vj9-Vz-6HS"/>
                 <outlet property="view" destination="4rP-Mx-0Su" id="Jf6-23-CYv"/>
@@ -23,10 +24,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wy-zv-iNx" userLabel="Header">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPV-pp-HxJ">
-                            <rect key="frame" x="14.999999999999996" y="5" width="39.666666666666657" height="34.333333333333336"/>
+                            <rect key="frame" x="14.999999999999996" y="16.000000000000004" width="39.666666666666657" height="34.333333333333343"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
                             <connections>
@@ -38,15 +39,19 @@
                     <constraints>
                         <constraint firstItem="uPV-pp-HxJ" firstAttribute="centerY" secondItem="5Wy-zv-iNx" secondAttribute="centerY" id="DBA-bw-8h9"/>
                         <constraint firstItem="uPV-pp-HxJ" firstAttribute="leading" secondItem="5Wy-zv-iNx" secondAttribute="leading" constant="15" id="WrB-kJ-nFi"/>
-                        <constraint firstAttribute="height" constant="44" id="bqP-cL-TZ2"/>
+                        <constraint firstAttribute="height" constant="66" id="bqP-cL-TZ2"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-g7-0v2">
-                    <rect key="frame" x="15" y="59" width="345" height="323"/>
+                    <rect key="frame" x="15" y="81" width="345" height="301"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" name="color_tint"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-v0-rRx" userLabel="BackgroundCard">
+                    <rect key="frame" x="15" y="407" width="345" height="380"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9D4-te-HdR" customClass="SwipeableCardViewContainer" customModule="Ariel" customModuleProvider="target">
                     <rect key="frame" x="5" y="397" width="365" height="400"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,6 +63,7 @@
             <color key="backgroundColor" name="color_background"/>
             <constraints>
                 <constraint firstItem="AhN-g7-0v2" firstAttribute="top" secondItem="5Wy-zv-iNx" secondAttribute="bottom" constant="15" id="3K7-t9-hub"/>
+                <constraint firstItem="5hC-v0-rRx" firstAttribute="width" secondItem="9D4-te-HdR" secondAttribute="width" constant="-20" id="3tR-7Z-fvK"/>
                 <constraint firstItem="5Wy-zv-iNx" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" id="A0f-J2-Hlz"/>
                 <constraint firstAttribute="trailing" secondItem="9D4-te-HdR" secondAttribute="trailing" constant="5" id="K35-Ji-hnU"/>
                 <constraint firstItem="9D4-te-HdR" firstAttribute="top" secondItem="AhN-g7-0v2" secondAttribute="bottom" constant="15" id="L3b-zJ-rMQ"/>
@@ -68,13 +74,16 @@
                 <constraint firstAttribute="trailing" secondItem="5Wy-zv-iNx" secondAttribute="trailing" id="fSM-BO-XZa"/>
                 <constraint firstItem="AhN-g7-0v2" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" constant="15" id="hKf-bw-fhP"/>
                 <constraint firstAttribute="trailing" secondItem="AhN-g7-0v2" secondAttribute="trailing" constant="15" id="lZS-o7-5am"/>
+                <constraint firstItem="5hC-v0-rRx" firstAttribute="centerY" secondItem="9D4-te-HdR" secondAttribute="centerY" id="rye-ZI-Bnr"/>
+                <constraint firstItem="5hC-v0-rRx" firstAttribute="height" secondItem="9D4-te-HdR" secondAttribute="height" constant="-20" id="vsS-OR-4PM"/>
+                <constraint firstItem="5hC-v0-rRx" firstAttribute="centerX" secondItem="9D4-te-HdR" secondAttribute="centerX" id="wo3-yo-tnv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="231" y="30"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="chevron.left" catalog="system" width="32" height="32"/>
         <namedColor name="color_background">
             <color red="0.10199999809265137" green="0.10199999809265137" blue="0.10199999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

@@ -11,7 +11,7 @@ protocol SwipeableCardViewDataSource: AnyObject {
     func numberOfCards() -> Int
     func card(forItemAtIndex index: Int) -> SwipeableCardViewCard
     func viewForEmptyCards() -> UIView?
-    func loadDialogue(dialogue: Dialogue)
+    func setNewDialogue(newDialogue: Dialogue)
 }
 
 class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSource {
@@ -20,6 +20,7 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var swipeableCardView: SwipeableCardViewContainer!
+    @IBOutlet weak var backgroundCard: UIView!
     
     // MARK: - Properties
     var dialogue: Dialogue?
@@ -37,30 +38,20 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         swipeableCardView.dataSource = self
+        backgroundCard.layer.cornerRadius = 14.0
         presenter.didLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setNewDialogue(newDialogue: Dialogues.firstText.getDialogue())
+        self.swipeableCardView.removeAllCardViews()
         presenter.willAppear()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.didAppear()
-    }
-    
-    // MARK: - Methods
-    func setNewDialogue(newDialogue: Dialogue) {
-        
-        dialogue = newDialogue
-        presenter.checkTrigger(dialogue: newDialogue)
-        presenter.setupDialogue(newDialogue: newDialogue)
-        
-        descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, characterDelay: 1.0, completion: {
-            self.swipeableCardView.reloadData()
-        })
     }
     
     // MARK: - Actions
@@ -87,8 +78,14 @@ extension GameplayScreenViewController {
         return nil
     }
     
-    func loadDialogue(dialogue: Dialogue) {
-        setNewDialogue(newDialogue: dialogue)
+    func setNewDialogue(newDialogue: Dialogue) {
+        dialogue = newDialogue
+        presenter.checkTrigger(dialogue: newDialogue)
+        presenter.setupDialogue(newDialogue: newDialogue)
+        
+        descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, characterDelay: 1.0, completion: {
+            self.swipeableCardView.reloadData()
+        })
     }
 
 }

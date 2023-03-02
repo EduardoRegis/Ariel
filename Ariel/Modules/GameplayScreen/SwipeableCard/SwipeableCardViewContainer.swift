@@ -62,7 +62,7 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
         remainingCards -= 1
     }
 
-    private func removeAllCardViews() {
+    func removeAllCardViews() {
         for cardView in visibleCardViews {
             cardView.removeFromSuperview()
         }
@@ -122,11 +122,11 @@ extension SwipeableCardViewContainer {
                 case .right:
                     guard let dialogueName = cardView.dialogue?.nextRightDialogue else { return }
                     guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
-                    dataSource.loadDialogue(dialogue: nextDialogue)
+                    dataSource.setNewDialogue(newDialogue: nextDialogue)
                 case .left:
                     guard let dialogueName = cardView.dialogue?.nextLeftDialogue else { return }
                     guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
-                    dataSource.loadDialogue(dialogue: nextDialogue)
+                    dataSource.setNewDialogue(newDialogue: nextDialogue)
                 default:
                     break
                 }

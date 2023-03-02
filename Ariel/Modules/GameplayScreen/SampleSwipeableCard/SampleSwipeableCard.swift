@@ -38,7 +38,9 @@ class SampleSwipeableCard: SwipeableCardViewCard {
         if let viewModel = viewModel {
             self.dialogue = viewModel
             self.imageView.image = UIImage(named: viewModel.imageName)
+            self.imageView.layer.cornerRadius = 14.0
             self.backgroundContainerView.layer.cornerRadius = 14.0
+            self.textContainer.layer.cornerRadius = 13.0
         }
     }
 
