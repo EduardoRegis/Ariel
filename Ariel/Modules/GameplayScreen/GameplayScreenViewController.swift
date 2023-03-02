@@ -65,19 +65,19 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
         self.view.layoutIfNeeded()
     }
     
+    func automaticScrollToBottom() {
+        if self.descriptionLabel.frame.height > desciptionContainer.frame.height {
+            let bottomOffset = CGPoint(x: 0, y: descriptionScrollView.contentSize.height - descriptionScrollView.bounds.height + descriptionScrollView.contentInset.bottom)
+            descriptionScrollView.setContentOffset(bottomOffset, animated: true)
+        }
+    }
+    
     func resizeScrollViewHeight() {
-        let descriptionHeight = self.descriptionLabel.frame.height
-        self.contentScrollViewHeightConstraint.constant = max(
-            self.contentScrollViewHeightConstraint.constant,
-            descriptionHeight)
-        
-        print(
-            "resize: ",
-            self.descriptionLabel.frame.height,
-            self.contentScrollViewHeightConstraint.constant
-        )
-        
-        self.view.layoutIfNeeded()
+        if self.contentScrollViewHeightConstraint.constant < self.descriptionLabel.frame.height {
+            self.contentScrollViewHeightConstraint.constant = self.descriptionLabel.frame.height
+            self.automaticScrollToBottom()
+            self.view.layoutIfNeeded()
+        }
     }
     
     // MARK: - Actions
@@ -89,39 +89,43 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
 // MARK: - SwipeableCardViewDataSource
 
 extension GameplayScreenViewController {
-
+    
     func numberOfCards() -> Int {
         return 1
     }
-
+    
     func card(forItemAtIndex index: Int) -> SwipeableCardViewCard {
         let cardView = SampleSwipeableCard()
         cardView.viewModel = dialogue
         return cardView
     }
-
+    
     func viewForEmptyCards() -> UIView? {
         return nil
     }
     
     func setNewDialogue(newDialogue: Dialogue) {
         
-        resetScrollViewHeight()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+            
+            resetScrollViewHeight()
+            
             dialogue = newDialogue
             presenter.checkTrigger(dialogue: newDialogue)
             presenter.setupDialogue(newDialogue: newDialogue)
             
+            if let soundEffect = dialogue?.soundTrigger {
+                presenter.triggeringSound(name: soundEffect)
+            }
+            
             descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, characterDelay: 1.0, typeLetterCompletion: { [self] in
                 resizeScrollViewHeight()
             },  beforeCompletion: { [self] in
+                automaticScrollToBottom()
                 swipeableCardView.reloadData()
             })
         }
-        
     }
-
 }
 
 // MARK: - GameplayScreenPresenterDelegate

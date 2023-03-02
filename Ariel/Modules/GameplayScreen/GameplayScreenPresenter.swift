@@ -45,6 +45,12 @@ class GameplayScreenPresenter {
         self.descriptionText = self.coloringWords(text: textWithoutSpecialCharacters)
     }
     
+    func triggeringSound(name: String) {
+        if name != "" {
+            AudioManager.shared.playSoundEffect(name: name)
+        }
+    }
+    
     func coloringWords(text: String) -> NSMutableAttributedString {
         let mutableAttributedString = NSMutableAttributedString.init(string: text)
         mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor,

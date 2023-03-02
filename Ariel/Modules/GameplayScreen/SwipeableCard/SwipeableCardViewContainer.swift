@@ -123,33 +123,28 @@ extension SwipeableCardViewContainer {
         guard let dataSource = dataSource else {
             return
         }
+        
+        if let cardView = self.cardViews.first as? SampleSwipeableCard {
+            switch direction {
+            case .right:
+                AudioManager.shared.playSoundEffect(name: "cardSideChoosen")
+                guard let dialogueName = cardView.dialogue?.nextRightDialogue else { return }
+                guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
+                dataSource.setNewDialogue(newDialogue: nextDialogue)
+            case .left:
+                AudioManager.shared.playSoundEffect(name: "cardSideChoosen")
+                guard let dialogueName = cardView.dialogue?.nextLeftDialogue else { return }
+                guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
+                dataSource.setNewDialogue(newDialogue: nextDialogue)
+            default:
+                break
+            }
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
             // Remove swiped card
-            
-            if let cardView = self.cardViews.first as? SampleSwipeableCard {
-                switch direction {
-                case .right:
-                    guard let dialogueName = cardView.dialogue?.nextRightDialogue else { return }
-                    guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
-                    dataSource.setNewDialogue(newDialogue: nextDialogue)
-                case .left:
-                    guard let dialogueName = cardView.dialogue?.nextLeftDialogue else { return }
-                    guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
-                    dataSource.setNewDialogue(newDialogue: nextDialogue)
-                default:
-                    break
-                }
-            }
-            
             view.removeFromSuperview()
         })
     }
-    
-    
-    
-    func callNewCard() {
-        
-    }
-
 }
 
