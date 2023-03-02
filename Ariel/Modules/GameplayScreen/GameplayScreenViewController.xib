@@ -13,7 +13,10 @@
             <connections>
                 <outlet property="backButton" destination="uPV-pp-HxJ" id="DWu-Ki-ypp"/>
                 <outlet property="backgroundCard" destination="5hC-v0-rRx" id="ge7-Kn-Gt2"/>
+                <outlet property="contentScrollViewHeightConstraint" destination="ZsI-Yh-Mud" id="Hcx-Ul-ppl"/>
+                <outlet property="desciptionContainer" destination="mNr-zn-mwM" id="2CM-rQ-EvZ"/>
                 <outlet property="descriptionLabel" destination="AhN-g7-0v2" id="wP7-Zu-7ER"/>
+                <outlet property="descriptionScrollView" destination="3JV-C2-vmI" id="tjz-Fi-vjS"/>
                 <outlet property="swipeableCardView" destination="9D4-te-HdR" id="Vj9-Vz-6HS"/>
                 <outlet property="view" destination="4rP-Mx-0Su" id="Jf6-23-CYv"/>
             </connections>
@@ -42,30 +45,19 @@
                         <constraint firstAttribute="height" constant="66" id="bqP-cL-TZ2"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-v0-rRx" userLabel="BackgroundCard">
-                    <rect key="frame" x="15" y="407" width="345" height="380"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9D4-te-HdR" customClass="SwipeableCardViewContainer" customModule="Ariel" customModuleProvider="target">
-                    <rect key="frame" x="5" y="397" width="365" height="400"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="o8y-gD-JI3"/>
-                    </constraints>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNr-zn-mwM" userLabel="Text Container">
-                    <rect key="frame" x="16" y="98" width="343" height="267"/>
+                    <rect key="frame" x="16" y="98" width="343" height="291"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3JV-C2-vmI">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="267"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="291"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-AS-Fj5" userLabel="Content View">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="500"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-g7-0v2" userLabel="Description Label">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333332"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.329999999999998" id="8gQ-cj-mGN"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="8gQ-cj-mGN"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" name="color_tint"/>
@@ -76,7 +68,7 @@
                                     <constraints>
                                         <constraint firstItem="AhN-g7-0v2" firstAttribute="leading" secondItem="Zcf-AS-Fj5" secondAttribute="leading" id="4TJ-AR-ceD"/>
                                         <constraint firstAttribute="trailing" secondItem="AhN-g7-0v2" secondAttribute="trailing" id="Lrh-8n-XcL"/>
-                                        <constraint firstAttribute="height" constant="500" id="ZsI-Yh-Mud"/>
+                                        <constraint firstAttribute="height" constant="30" id="ZsI-Yh-Mud"/>
                                         <constraint firstItem="AhN-g7-0v2" firstAttribute="top" secondItem="Zcf-AS-Fj5" secondAttribute="top" id="nqq-pD-iT8"/>
                                     </constraints>
                                 </view>
@@ -98,6 +90,17 @@
                         <constraint firstAttribute="bottom" secondItem="3JV-C2-vmI" secondAttribute="bottom" id="yHi-Cq-s6d"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-v0-rRx" userLabel="BackgroundCard">
+                    <rect key="frame" x="15" y="407" width="345" height="380"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9D4-te-HdR" customClass="SwipeableCardViewContainer" customModule="Ariel" customModuleProvider="target">
+                    <rect key="frame" x="5" y="397" width="365" height="400"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="o8y-gD-JI3"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" name="color_background"/>
             <constraints>
@@ -106,7 +109,7 @@
                 <constraint firstAttribute="trailing" secondItem="mNr-zn-mwM" secondAttribute="trailing" constant="16" id="ATS-0L-vhf"/>
                 <constraint firstAttribute="trailing" secondItem="9D4-te-HdR" secondAttribute="trailing" constant="5" id="K35-Ji-hnU"/>
                 <constraint firstItem="9D4-te-HdR" firstAttribute="centerX" secondItem="4rP-Mx-0Su" secondAttribute="centerX" id="LNM-ZG-RUy"/>
-                <constraint firstItem="9D4-te-HdR" firstAttribute="top" secondItem="mNr-zn-mwM" secondAttribute="bottom" constant="32" id="NRp-b4-TcE"/>
+                <constraint firstItem="9D4-te-HdR" firstAttribute="top" secondItem="mNr-zn-mwM" secondAttribute="bottom" constant="8" id="NRp-b4-TcE"/>
                 <constraint firstItem="mNr-zn-mwM" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" constant="16" id="NiY-OJ-vY2"/>
                 <constraint firstItem="9D4-te-HdR" firstAttribute="leading" secondItem="4rP-Mx-0Su" secondAttribute="leading" constant="5" id="PSh-xw-P1W"/>
                 <constraint firstAttribute="bottom" secondItem="9D4-te-HdR" secondAttribute="bottom" constant="15" id="Qqr-Y8-otV"/>

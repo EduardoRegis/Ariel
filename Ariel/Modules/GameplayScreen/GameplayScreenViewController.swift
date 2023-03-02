@@ -18,9 +18,13 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     
     // MARK: - Outlets
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var desciptionContainer: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionScrollView: UIScrollView!
     @IBOutlet weak var swipeableCardView: SwipeableCardViewContainer!
     @IBOutlet weak var backgroundCard: UIView!
+    
+    @IBOutlet weak var contentScrollViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     var dialogue: Dialogue?
@@ -54,6 +58,28 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
         presenter.didAppear()
     }
     
+    // MARK: - Methods
+    func resetScrollViewHeight() {
+        self.descriptionLabel.attributedText = .none
+        self.contentScrollViewHeightConstraint.constant = 30
+        self.view.layoutIfNeeded()
+    }
+    
+    func resizeScrollViewHeight() {
+        let descriptionHeight = self.descriptionLabel.frame.height
+        self.contentScrollViewHeightConstraint.constant = max(
+            self.contentScrollViewHeightConstraint.constant,
+            descriptionHeight)
+        
+        print(
+            "resize: ",
+            self.descriptionLabel.frame.height,
+            self.contentScrollViewHeightConstraint.constant
+        )
+        
+        self.view.layoutIfNeeded()
+    }
+    
     // MARK: - Actions
     @IBAction func backAction(_ sender: Any) {
         self.presenter.backToMenu()
@@ -79,13 +105,21 @@ extension GameplayScreenViewController {
     }
     
     func setNewDialogue(newDialogue: Dialogue) {
-        dialogue = newDialogue
-        presenter.checkTrigger(dialogue: newDialogue)
-        presenter.setupDialogue(newDialogue: newDialogue)
         
-        descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, characterDelay: 1.0, completion: {
-            self.swipeableCardView.reloadData()
-        })
+        resetScrollViewHeight()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+            dialogue = newDialogue
+            presenter.checkTrigger(dialogue: newDialogue)
+            presenter.setupDialogue(newDialogue: newDialogue)
+            
+            descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, characterDelay: 1.0, typeLetterCompletion: { [self] in
+                resizeScrollViewHeight()
+            },  beforeCompletion: { [self] in
+                swipeableCardView.reloadData()
+            })
+        }
+        
     }
 
 }

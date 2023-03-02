@@ -26,16 +26,21 @@ extension UILabel {
     }
     
     func setTypingAttributed(newText: NSMutableAttributedString, characterDelay: TimeInterval = 2.0, completion: @escaping () -> Void) {
+        setTypingAttributed(newText: newText, characterDelay: characterDelay, typeLetterCompletion: {}, beforeCompletion: completion)
+    }
+    
+    func setTypingAttributed(newText: NSMutableAttributedString, characterDelay: TimeInterval = 2.0, typeLetterCompletion: @escaping () -> Void, beforeCompletion: @escaping () -> Void) {
         
         let writingTask = DispatchWorkItem { [weak self] in
             for i in 0...newText.length {
                 DispatchQueue.main.async {
                     let str: NSAttributedString = newText.attributedSubstring(from: NSRange(location: 0, length: i))
                     self?.attributedText = str
+                    typeLetterCompletion()
                 }
                 if (i + 1) == newText.length {
                     DispatchQueue.main.async {
-                        completion()
+                        beforeCompletion()
                     }
                 }
                 Thread.sleep(forTimeInterval: characterDelay/100)
