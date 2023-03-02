@@ -67,7 +67,7 @@ enum Dialogues {
                             rightCardText: DialogueTexts.second_rightCard.localized(),
                             imageName: "Treinador",
                             herosJourneysStage: HerosJourneysStageTexts.teste.localized(),
-                            nextLeftDialogue: "thirdText",
+                            nextLeftDialogue: "MC_01",
                             nextRightDialogue: "fourthText",
                             soundTrigger: "sliderButtonReleased",
                             soundLoop: true) // aqui tem o parâmetro soundTrigger, onde vc coloca o nome do arquivo de som a ser tocado

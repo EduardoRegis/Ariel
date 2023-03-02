@@ -12,5 +12,5 @@ protocol SwipeableViewDelegate: AnyObject {
     func didBeginSwipe(onView view: SwipeableView)
     func showTextInCard(direction: SwipeDirection)
     func hideTextInCard()
-    func didEndSwipe(onView view: SwipeableView)
+    func didEndSwipe(onView view: SwipeableView, direction: SwipeDirection)
 }

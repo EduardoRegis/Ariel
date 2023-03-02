@@ -11,6 +11,7 @@ protocol SwipeableCardViewDataSource: AnyObject {
     func numberOfCards() -> Int
     func card(forItemAtIndex index: Int) -> SwipeableCardViewCard
     func viewForEmptyCards() -> UIView?
+    func loadDialogue(dialogue: Dialogue)
 }
 
 class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSource {
@@ -84,6 +85,10 @@ extension GameplayScreenViewController {
 
     func viewForEmptyCards() -> UIView? {
         return nil
+    }
+    
+    func loadDialogue(dialogue: Dialogue) {
+        setNewDialogue(newDialogue: dialogue)
     }
 
 }

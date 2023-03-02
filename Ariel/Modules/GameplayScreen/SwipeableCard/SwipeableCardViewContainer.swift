@@ -110,35 +110,33 @@ extension SwipeableCardViewContainer {
         }
     }
 
-    func didEndSwipe(onView view: SwipeableView) {
+    func didEndSwipe(onView view: SwipeableView, direction: SwipeDirection) {
         guard let dataSource = dataSource else {
             return
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
             // Remove swiped card
-            view.removeFromSuperview()
-
-            // Only add a new card if there are cards remaining
-            if self.remainingCards > 0 {
-
-                // Calculate new card's index
-                let newIndex = dataSource.numberOfCards() - self.remainingCards
-
-                // Add new card as Subview
-                self.addCardView(cardView: dataSource.card(forItemAtIndex: newIndex), atIndex: 2)
-
-                // Update all existing card's frames based on new indexes, animate frame change
-                // to reveal new card from underneath the stack of existing cards.
-                for (cardIndex, cardView) in self.visibleCardViews.reversed().enumerated() {
-                    UIView.animate(withDuration: 0.2, animations: {
-                        cardView.center = self.center
-                        self.setFrame(forCardView: cardView, atIndex: cardIndex)
-                        self.layoutIfNeeded()
-                    })
+            
+            if let cardView = self.cardViews.first as? SampleSwipeableCard {
+                switch direction {
+                case .right:
+                    guard let dialogueName = cardView.dialogue?.nextRightDialogue else { return }
+                    guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
+                    dataSource.loadDialogue(dialogue: nextDialogue)
+                case .left:
+                    guard let dialogueName = cardView.dialogue?.nextLeftDialogue else { return }
+                    guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
+                    dataSource.loadDialogue(dialogue: nextDialogue)
+                default:
+                    break
                 }
             }
+            
+            view.removeFromSuperview()
         })
     }
+    
+    
     
     func callNewCard() {
         
