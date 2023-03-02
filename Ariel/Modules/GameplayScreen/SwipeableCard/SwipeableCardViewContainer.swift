@@ -71,14 +71,23 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
 
     private func setFrame(forCardView cardView: SwipeableCardViewCard, atIndex index: Int) {
         var cardViewFrame = bounds
+        var offScreenFrame = bounds
         let horizontalInset = (CGFloat(index) * SwipeableCardViewContainer.horizontalInset)
         let verticalInset = CGFloat(index) * SwipeableCardViewContainer.verticalInset
 
         cardViewFrame.size.width -= 2 * horizontalInset
-        cardViewFrame.origin.x += horizontalInset
-        cardViewFrame.origin.y += verticalInset
+        cardViewFrame.origin.x += (horizontalInset)
+        cardViewFrame.origin.y += (verticalInset)
+        
+        offScreenFrame.size.width -= 2 * horizontalInset
+        offScreenFrame.origin.x += (horizontalInset - 500)
+        offScreenFrame.origin.y += (verticalInset - 1000)
 
-        cardView.frame = cardViewFrame
+        cardView.frame = offScreenFrame
+        
+        UIView.animate(withDuration: 0.5) {
+            cardView.frame = cardViewFrame
+        }
     }
 
 }
