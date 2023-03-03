@@ -18,7 +18,7 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     
     // MARK: - Outlets
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var desciptionContainer: UIView!
+    @IBOutlet weak var descriptionContainer: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var descriptionScrollView: UIScrollView!
     @IBOutlet weak var swipeableCardView: SwipeableCardViewContainer!
@@ -43,6 +43,8 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
         super.viewDidLoad()
         swipeableCardView.dataSource = self
         backgroundCard.layer.cornerRadius = 14.0
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.cutTextAnimation(_:)))
+        descriptionContainer.addGestureRecognizer(tap)
         presenter.didLoad()
     }
     
@@ -66,7 +68,7 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     }
     
     func automaticScrollToBottom() {
-        if self.descriptionLabel.frame.height > desciptionContainer.frame.height {
+        if self.descriptionLabel.frame.height > descriptionContainer.frame.height {
             let bottomOffset = CGPoint(x: 0, y: descriptionScrollView.contentSize.height - descriptionScrollView.bounds.height + descriptionScrollView.contentInset.bottom)
             descriptionScrollView.setContentOffset(bottomOffset, animated: true)
         }
@@ -78,6 +80,10 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
             self.automaticScrollToBottom()
             self.view.layoutIfNeeded()
         }
+    }
+    
+    @objc func cutTextAnimation(_ sender: UITapGestureRecognizer? = nil) {
+        self.descriptionLabel.typingMode = false
     }
     
     // MARK: - Actions
@@ -121,7 +127,6 @@ extension GameplayScreenViewController {
             descriptionLabel.setTypingAttributed(newText: presenter.descriptionText!, characterDelay: 1.0, typeLetterCompletion: { [self] in
                 resizeScrollViewHeight()
             },  beforeCompletion: { [self] in
-                automaticScrollToBottom()
                 swipeableCardView.reloadData()
             })
         }

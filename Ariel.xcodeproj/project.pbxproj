@@ -20,7 +20,6 @@
 		2E5A501F29AEDAC1001D6B95 /* SwipeableCardViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A501E29AEDAC1001D6B95 /* SwipeableCardViewCard.swift */; };
 		2E5A502329AEDB2A001D6B95 /* SwipeableCardViewCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5A502229AEDB2A001D6B95 /* SwipeableCardViewCard.xib */; };
 		2E5A502529AEDC64001D6B95 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502429AEDC64001D6B95 /* SwipeableView.swift */; };
-		2E5A502729AEDD19001D6B95 /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502629AEDD19001D6B95 /* SwipeableViewDelegate.swift */; };
 		2E5A502929AEDD84001D6B95 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502829AEDD84001D6B95 /* NibView.swift */; };
 		2E5A502B29AEDDBB001D6B95 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502A29AEDDBB001D6B95 /* UIView+Constraints.swift */; };
 		2E5A502D29AEDF21001D6B95 /* SwipeableCardViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A502C29AEDF21001D6B95 /* SwipeableCardViewContainer.swift */; };
@@ -73,7 +72,6 @@
 		2EC8FC18297B064200C7203C /* HelpScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC17297B064200C7203C /* HelpScreenPresenter.swift */; };
 		2EC8FC1A297B068E00C7203C /* HelpScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC8FC19297B068E00C7203C /* HelpScreenViewController.xib */; };
 		2EC8FC1C297C3E4100C7203C /* ConstantsAndEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */; };
-		2EC8FC1E297DB31100C7203C /* ColorsToRegexText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */; };
 		2EC8FC20297DC22800C7203C /* HerosJourneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC1F297DC22800C7203C /* HerosJourneyModel.swift */; };
 		2EC8FC24297DC2D800C7203C /* HerosJourneyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC8FC23297DC2D800C7203C /* HerosJourneyList.swift */; };
 		2EED07FA29AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED07F929AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift */; };
@@ -130,7 +128,6 @@
 		2E5A501E29AEDAC1001D6B95 /* SwipeableCardViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewCard.swift; sourceTree = "<group>"; };
 		2E5A502229AEDB2A001D6B95 /* SwipeableCardViewCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeableCardViewCard.xib; sourceTree = "<group>"; };
 		2E5A502429AEDC64001D6B95 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
-		2E5A502629AEDD19001D6B95 /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
 		2E5A502829AEDD84001D6B95 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		2E5A502A29AEDDBB001D6B95 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		2E5A502C29AEDF21001D6B95 /* SwipeableCardViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewContainer.swift; sourceTree = "<group>"; };
@@ -184,7 +181,6 @@
 		2EC8FC17297B064200C7203C /* HelpScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenPresenter.swift; sourceTree = "<group>"; };
 		2EC8FC19297B068E00C7203C /* HelpScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpScreenViewController.xib; sourceTree = "<group>"; };
 		2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAndEnums.swift; sourceTree = "<group>"; };
-		2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsToRegexText.swift; sourceTree = "<group>"; };
 		2EC8FC1F297DC22800C7203C /* HerosJourneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyModel.swift; sourceTree = "<group>"; };
 		2EC8FC23297DC2D800C7203C /* HerosJourneyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosJourneyList.swift; sourceTree = "<group>"; };
 		2EED07F929AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSwipeableCellViewModel.swift; sourceTree = "<group>"; };
@@ -254,7 +250,6 @@
 				2E0F0F77297839AD00D37CB4 /* StringSplited.swift */,
 				2EC8FBCC297AC30400C7203C /* ColoringWordsInText.swift */,
 				2EC8FC1B297C3E4100C7203C /* ConstantsAndEnums.swift */,
-				2EC8FC1D297DB31100C7203C /* ColorsToRegexText.swift */,
 				2E60C0F7297F1BB5007A2C01 /* AudioManager.swift */,
 				2EC7DBB229AC309E008D4AEA /* CustomButton.swift */,
 				2E5A502A29AEDDBB001D6B95 /* UIView+Constraints.swift */,
@@ -348,7 +343,6 @@
 				2E60C11429818E76007A2C01 /* Achievements.swift */,
 				2E1870DE29A9AFDA0062F64D /* ReusableCells.swift */,
 				2E5A502429AEDC64001D6B95 /* SwipeableView.swift */,
-				2E5A502629AEDD19001D6B95 /* SwipeableViewDelegate.swift */,
 				2E5A502829AEDD84001D6B95 /* NibView.swift */,
 				2EED080429AEECC00075F8C8 /* SwipeDirection.swift */,
 			);
@@ -898,14 +892,12 @@
 				2EC8FBFF297AFAFC00C7203C /* ArchetypesScreenPresenter.swift in Sources */,
 				2E60C11129815D04007A2C01 /* Localizable.swift in Sources */,
 				2EC8FBF7297AF01300C7203C /* HerosJourneyScreenPresenter.swift in Sources */,
-				2EC8FC1E297DB31100C7203C /* ColorsToRegexText.swift in Sources */,
 				2EED080929AEED5A0075F8C8 /* CGRect+SwipeAdditions.swift in Sources */,
 				2E5A502F29AEDF71001D6B95 /* SwipeableCardViewDelegate.swift in Sources */,
 				2EC8FC07297AFE2100C7203C /* CreditsScreenPresenter.swift in Sources */,
 				2EFF848529706B3E00984165 /* GameplayCardView.swift in Sources */,
 				2EED07FA29AEE5870075F8C8 /* SampleSwipeableCellViewModel.swift in Sources */,
 				2EED080329AEEB120075F8C8 /* GameplayScreenPresenter.swift in Sources */,
-				2E5A502729AEDD19001D6B95 /* SwipeableViewDelegate.swift in Sources */,
 				2E1870DB29A9AD460062F64D /* AchievementCollectionViewCell.swift in Sources */,
 				2EED080129AEEAB70075F8C8 /* GameplayScreenRouter.swift in Sources */,
 				2EFF848A2970838600984165 /* DialogueModel.swift in Sources */,

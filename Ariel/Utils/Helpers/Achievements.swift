@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 class AchievementManager {
     
     static var shared: AchievementManager = {

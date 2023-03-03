@@ -8,6 +8,14 @@
 import UIKit
 import pop
 
+protocol SwipeableViewDelegate: AnyObject {
+    func didTap(view: SwipeableView)
+    func didBeginSwipe(onView view: SwipeableView)
+    func showTextInCard(direction: SwipeDirection)
+    func hideTextInCard()
+    func didEndSwipe(onView view: SwipeableView, direction: SwipeDirection)
+}
+
 class SwipeableView: UIView {
 
     var delegate: SwipeableViewDelegate?

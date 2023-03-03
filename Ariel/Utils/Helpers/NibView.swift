@@ -8,7 +8,6 @@
 import UIKit
 
 internal protocol NibView where Self: UIView {
-
 }
 
 extension NibView {

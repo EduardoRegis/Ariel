@@ -9,6 +9,19 @@ import UIKit
 
 extension UILabel {
     
+    struct Holder {
+        static var _typingMode: Bool = false
+    }
+    
+    var typingMode:Bool {
+        get {
+            return Holder._typingMode
+        }
+        set(newValue) {
+            Holder._typingMode = newValue
+        }
+    }
+    
     func setTyping(text: String, characterDelay: TimeInterval = 2.0, completion: @escaping () -> Void) {
       self.text = ""
         
@@ -31,17 +44,29 @@ extension UILabel {
     
     func setTypingAttributed(newText: NSMutableAttributedString, characterDelay: TimeInterval = 2.0, typeLetterCompletion: @escaping () -> Void, beforeCompletion: @escaping () -> Void) {
         
+        self.typingMode = true
+
         let writingTask = DispatchWorkItem { [weak self] in
             for i in 0...newText.length {
-                DispatchQueue.main.async {
-                    let str: NSAttributedString = newText.attributedSubstring(from: NSRange(location: 0, length: i))
-                    self?.attributedText = str
-                    typeLetterCompletion()
-                }
-                if (i + 1) == newText.length {
+                if (self?.typingMode == true) {
                     DispatchQueue.main.async {
+                        let str: NSAttributedString = newText.attributedSubstring(from: NSRange(location: 0, length: i))
+                        self?.attributedText = str
+                        typeLetterCompletion()
+                    }
+                    if (i + 1) == newText.length {
+                        DispatchQueue.main.async {
+                            self?.typingMode = false
+                            beforeCompletion()
+                        }
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self?.attributedText = newText
+                        self?.typingMode = false
                         beforeCompletion()
                     }
+                    break
                 }
                 Thread.sleep(forTimeInterval: characterDelay/100)
             }
