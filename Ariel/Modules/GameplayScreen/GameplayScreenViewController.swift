@@ -75,8 +75,8 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     }
     
     func resizeScrollViewHeight() {
-        if self.contentScrollViewHeightConstraint.constant < self.descriptionLabel.frame.height {
-            self.contentScrollViewHeightConstraint.constant = self.descriptionLabel.frame.height
+        if self.contentScrollViewHeightConstraint.constant < self.descriptionLabel.frame.height + 30 {
+            self.contentScrollViewHeightConstraint.constant = self.descriptionLabel.frame.height + 30
             self.automaticScrollToBottom()
             self.view.layoutIfNeeded()
         }
@@ -84,6 +84,9 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     
     @objc func cutTextAnimation(_ sender: UITapGestureRecognizer? = nil) {
         self.descriptionLabel.typingMode = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+            contentScrollViewHeightConstraint.constant = descriptionLabel.frame.height
+        }
     }
     
     // MARK: - Actions
