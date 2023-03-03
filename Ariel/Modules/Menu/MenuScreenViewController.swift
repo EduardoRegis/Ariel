@@ -43,7 +43,11 @@ class MenuScreenViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.willAppear()
-        continueButton.isEnabled = UserDefaults.standard.bool(forKey: "gameInProgress")
+        if let gameInProgress = UserDefaults.standard.string(forKey: "lastDialogueSaved"), gameInProgress != "" {
+            continueButton.isEnabled = true
+        } else {
+            continueButton.isEnabled = false
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,12 +88,13 @@ class MenuScreenViewController: BaseViewController {
 
     // MARK: - Actions
     @IBAction func newJourneyAction(_ sender: Any) {
-        self.presenter.navigateToGameplay()
+        self.presenter.navigateToGameplayNewJourney()
 //        self.present(presenter.navigateToGameplay(isNewJourney: true), animated: true, completion: nil)
     }
     
     @IBAction func continueAction(_ sender: Any) {
-        self.present(presenter.navigateToGameplay(isNewJourney: false), animated: true, completion: nil)
+        self.presenter.navigateToGameplayContinue()
+//        self.present(presenter.navigateToGameplay(isNewJourney: false), animated: true, completion: nil)
     }
     
     @IBAction func herosJourneyAction(_ sender: Any) {

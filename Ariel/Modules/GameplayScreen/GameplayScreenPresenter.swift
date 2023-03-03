@@ -14,13 +14,15 @@ class GameplayScreenPresenter {
     
     weak var delegate: GameplayScreenPresenterDelegate?
     let router: GameplayScreenRouter
+    var isNewJourney: Bool
     var colorsIndexes: [Int] = []
     var coloredWords: [String] = []
     var descriptionText: NSMutableAttributedString?
 
-    init(delegate: GameplayScreenPresenterDelegate, router: GameplayScreenRouter) {
+    init(delegate: GameplayScreenPresenterDelegate, router: GameplayScreenRouter, isNewJourney: Bool) {
         self.delegate = delegate
         self.router = router
+        self.isNewJourney = isNewJourney
     }
     func didLoad() {
     }

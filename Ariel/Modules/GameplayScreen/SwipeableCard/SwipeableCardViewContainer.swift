@@ -130,11 +130,13 @@ extension SwipeableCardViewContainer {
                 AudioManager.shared.playSoundEffect(name: "cardSideChoosen")
                 guard let dialogueName = cardView.dialogue?.nextRightDialogue else { return }
                 guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
+                UserDefaults.standard.set(dialogueName, forKey: "lastDialogueSaved")
                 dataSource.setNewDialogue(newDialogue: nextDialogue)
             case .left:
                 AudioManager.shared.playSoundEffect(name: "cardSideChoosen")
                 guard let dialogueName = cardView.dialogue?.nextLeftDialogue else { return }
                 guard let nextDialogue = DialogueManager.shared.getDialogueByString(name: dialogueName) else { return }
+                UserDefaults.standard.set(dialogueName, forKey: "lastDialogueSaved")
                 dataSource.setNewDialogue(newDialogue: nextDialogue)
             default:
                 break

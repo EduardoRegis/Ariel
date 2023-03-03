@@ -50,13 +50,23 @@ class GameplayScreenViewController: BaseViewController, SwipeableCardViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setNewDialogue(newDialogue: Dialogues.firstText.getDialogue())
         self.swipeableCardView.removeAllCardViews()
         presenter.willAppear()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if presenter.isNewJourney {
+            setNewDialogue(newDialogue: Dialogues.firstText.getDialogue())
+        } else {
+            if let lastDialogueSaved = UserDefaults.standard.string(forKey: "lastDialogueSaved"),
+               let dialogueSaved = DialogueManager.shared.getDialogueByString(name: lastDialogueSaved) {
+                    setNewDialogue(newDialogue: dialogueSaved)
+            } else {
+                setNewDialogue(newDialogue: Dialogues.firstText.getDialogue())
+            }
+        }
         presenter.didAppear()
     }
     
@@ -115,7 +125,7 @@ extension GameplayScreenViewController {
     
     func setNewDialogue(newDialogue: Dialogue) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
             
             resetScrollViewHeight()
             

@@ -18,9 +18,14 @@ class MenuScreenRouter: BaseRouter {
         return viewController
     }
     
-    func navigateToGameplay() {
-        print("GO TO GAMEPLAY")
-        self.push(GameplayScreenRouter.makeModule(), animated: true)
+    func navigateToGameplayNewJourney() {
+        print("GO TO GAMEPLAY IN A NEW JOURNEY")
+        self.push(GameplayScreenRouter.makeModule(isNewJourney: true), animated: true)
+    }
+    
+    func navigateToGameplayContinue() {
+        print("GO TO GAMEPLAY IN A CONTINUE JOURNEY")
+        self.push(GameplayScreenRouter.makeModule(isNewJourney: false), animated: true)
     }
     
     func navigateToHerosJourney() {
